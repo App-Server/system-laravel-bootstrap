@@ -17,13 +17,31 @@
         <h3 class="cms">System</h3>
       </div>        
       <a href="{{ url('/dashboard') }}" class="nav-link {{ Request::is('dashobard') ? 'active' : '' }}"><i class="bi bi-house-door"></i>Home</a>
-      <a href="{{ url('/customer/create') }}" class="nav-link {{ Request::is('customer/create') ? 'active' : '' }}"><i class="bi bi-person-check"></i>Create customer</a>
-      <a href="{{ url('/customer') }}" class="nav-link {{ Request::is('customer') ? 'active' : '' }}"><i class="bi bi-person-vcard"></i>Customer</a>
-      <a href="{{ url('/service-order') }}" class="nav-link {{ Request::is('service-order') ? 'active' : '' }}"><i class="bi bi-file-richtext"></i>Service Order</a>
+      {{-- <a href="{{ url('/customer/create') }}" class="nav-link {{ Request::is('customer/create') ? 'active' : '' }}"><i class="bi bi-person-check"></i>Create customer</a> --}}
+      
+      <a href="{{ url('/customer') }}" class="nav-link 
+        {{ Request::is('customer') ? 'active' : '' }} 
+        {{ Request::is('customer/*') ? 'active' : '' }} 
+        {{ Request::is('customer/*/edit') ? 'active' : '' }}">
+        <i class="bi bi-person-vcard"></i>Customer
+      </a>
+
+      <a href="{{ url('/service-order') }}" class="nav-link 
+        {{ Request::is('service-order') ? 'active' : '' }}
+        {{ Request::is('service-order/*') ? 'active' : '' }}">
+        <i class="bi bi-file-richtext"></i>Service Order
+      </a>
       <a href="{{ url('/service-registration') }}" class="nav-link {{ Request::is('service-registration') ? 'active' : '' }}"><i class="bi bi-file-richtext-fill"></i>Service Registration</a>        
       <a href="{{ url('/register-product') }}" class="nav-link {{ Request::is('register-product') ? 'active' : '' }}"><i class="bi bi-box-seam"></i>Product Registration</a>
-      <a href="{{ url('/order/create') }}" class="nav-link {{ Request::is('palce-order') ? 'active' : '' }}"><i class="bi bi-boxes"></i>Place Order</a>
-      <a href="{{ url('/order') }}" class="nav-link {{ Request::is('order') ? 'active' : '' }}"><i class="bi bi-border-all"></i>Order</a>
+      {{-- <a href="{{ url('/order/create') }}" class="nav-link {{ Request::is('order') ? 'active' : '' }}"><i class="bi bi-boxes"></i>Place Order</a> --}}
+      
+      <a href="{{ url('/order') }}" class="nav-link 
+        {{ Request::is('order') ? 'active' : '' }}
+        {{ Request::is('order/*') ? 'active' : '' }}
+        {{ Request::is('order/*/edit') ? 'active' : '' }}"> 
+        <i class="bi bi-boxes"></i>Order
+      </a>
+
       <a href="{{ url('/stock-entry') }}" class="nav-link {{ Request::is('stock-entry') ? 'active' : '' }}"><i class="bi bi-cart3"></i>Stock Entry</a>
       <a href="{{ url('/stock-output') }}" class="nav-link {{ Request::is('stock-output') ? 'active' : '' }}"><i class="bi bi-cart4"></i>Stock Output</a>
       {{-- <a href="{{ url('/employees') }}" class="nav-link {{ Request::is('employees') ? 'active' : '' }}"><i class="bi bi-border-all"></i>Employees</a>  --}}

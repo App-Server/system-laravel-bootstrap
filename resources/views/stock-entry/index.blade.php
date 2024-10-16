@@ -4,7 +4,7 @@
             <div class="titlebody"><h5>Stock Entry</h5></div>
             
             <!-- Button trigger modal -->
-            <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
                 Stock Entry
             </button>
           
@@ -58,6 +58,25 @@
             <div class="container-fluid">
                 <br>
                 <div class="card" style="width: 100%;">
+                    <div class="card-header">
+                        <div class="row g-3 needs-validation" > 
+                            <div class="col-md-5">
+                                <label for="validationCustom04" class="form-label"><i class="bi bi-box-seam"></i><strong>Product Name</strong></label>
+                            </div>
+                            <div class="col-md-2">
+                                <label for="validationCustom04" class="form-label"><i class="bi bi-cart3"></i><strong>Quantity</strong></label>
+                            </div>
+                            <div class="col-md-2">
+                                <label for="validationCustom04" class="form-label"><i class="bi bi-cash-coin"></i><strong>Cost</strong></label>
+                            </div>
+                            <div class="col-md-2">
+                                <label for="validationCustom04" class="form-label"><i class="bi bi-currency-dollar"></i><strong>Total</strong></label>
+                            </div>
+                            <div class="col-md-1">
+                                <label for="validationCustom04" class="form-label"><i class="bi bi-eye"></i><strong>Details</strong></label>
+                            </div>
+                        </div>
+                    </div>
                     <ul class="list-group list-group-flush">
                         @foreach ($stockentrytable as $stockentry)
                             <li class="list-group-item">

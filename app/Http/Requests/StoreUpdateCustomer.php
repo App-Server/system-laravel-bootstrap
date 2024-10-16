@@ -26,12 +26,10 @@ class StoreUpdateCustomer extends FormRequest
         return [
             'customer' => 'required',
             'email' => 'required',
-            'type_of_person' => 'required',
+            'taxpayer_identification_number' => 'required',
             'address' => 'required',
-            'cnpj' => 'required',
-            'cpf' => 'required',
-            'cep' => 'required',
-            'telephone' => 'required',
+            'postal' => 'required',
+            'phone_number' => 'required',
         ];
     }
 }

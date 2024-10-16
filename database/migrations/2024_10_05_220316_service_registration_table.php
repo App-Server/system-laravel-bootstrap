@@ -13,12 +13,12 @@ class ServiceRegistrationTable extends Migration
      */
     public function up()
     {
-        Schema::create('service_registration_table', function (Blueprint $serviceregistration) {
-            $serviceregistration->id();
-            $serviceregistration->string('service_name')->nullable();
-            $serviceregistration->string('description')->nullable();
-            $serviceregistration->timestamps();
-        });
+        // Schema::create('service_registration_table', function (Blueprint $serviceregistration) {
+        //     $serviceregistration->id();
+        //     $serviceregistration->string('service_name')->nullable();
+        //     $serviceregistration->string('description')->nullable();
+        //     $serviceregistration->timestamps();
+        // });
     }
 
     /**

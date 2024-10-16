@@ -26,7 +26,6 @@ class StoreUpdateStockOutput extends FormRequest
         return [
             'product_name' => 'required',
             'quantity' => 'required',
-            'observations' => 'required',
         ];
     }
 }

@@ -25,7 +25,7 @@ class StoreUpdateServiceRegistration extends FormRequest
     {
         return [
             'service_name' => 'required',
-            'description' => 'required',
+            
         ];
     }
 }

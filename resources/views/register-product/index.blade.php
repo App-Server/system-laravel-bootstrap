@@ -3,7 +3,7 @@
         <div class="container-fluid">
             <div class="titlebody"><h5>Product Register<h5></div>
             
-            <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
                 Product Register
             </button>
 
@@ -59,21 +59,28 @@
             <div class="container-fluid">
                 <br>
                 <div class="card" style="width: 100%;">
+                    <div class="card-header">
+                        <div class="row g-3 needs-validation" > 
+                            <div class="col-md-11">
+                                <label for="validationCustom04" class="form-label"><i class="bi bi-box-seam"></i><strong>Product Name</strong></label>
+                            </div>
+                            <div class="col-md-1">
+                                <label for="validationCustom04" class="form-label"><i class="bi bi-pencil-square"></i><strong>Edit</strong></label>
+                            </div>
+                        </div>
+                    </div>
                     <ul class="list-group list-group-flush">
                         @foreach ($registerProducts as $registerProduct)
                             <li class="list-group-item">
                                 <div class="row g-3 needs-validation" >
-                                    <div class="row">
-                                        <div class="col">
-                                            <div class="col">
-                                                <br>
-                                                <label for="validationCustomUsername" class="form-label"><i class="bi bi-box-seam"></i></label>
-                                                <label for="validationCustomUsername" class="form-label">
-                                                    {{ $registerProduct->product_name }}
-                                                </label>
-                                            </div>
-                                        </div>
+                                    
+                                    <div class="col-md-11">
+                                        <label for="validationCustomUsername" class="form-label"><i class="bi bi-box-seam"></i>{{ $registerProduct->product_name }}</label>
                                     </div>
+                                    <div class="col-md-1">
+                                        <label for="validationCustomUsername" class="form-label"><a href="#" class="btn btn-info">Edit</a></label>
+                                    </div>
+                                       
                                     
                                 </div>
                             </li>

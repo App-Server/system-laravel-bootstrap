@@ -13,13 +13,16 @@ class ServiceOrderTable extends Migration
      */
     public function up()
     {
-        Schema::create('service_order_table', function (Blueprint $serviceordertable) {
-            $serviceordertable->id();
-            $serviceordertable->string('service_name')->nullable();
-            $serviceordertable->string('service_cost')->nullable();
-            $serviceordertable->string('observations')->nullable();
-            $serviceordertable->timestamps();
-        });
+        // Schema::create('service_order_table', function (Blueprint $serviceordertable) {
+        //     $serviceordertable->id();
+        //     $serviceordertable->string('customer')->nullable();
+        //     $serviceordertable->string('service')->nullable();
+        //     $serviceordertable->string('price')->nullable();
+        //     $serviceordertable->string('date')->nullable();
+        //     $serviceordertable->string('time')->nullable();
+        //     $serviceordertable->string('observations')->nullable();
+        //     $serviceordertable->timestamps();
+        // });
     }
 
     /**

@@ -9,16 +9,14 @@ class CustomerModels extends Model
 {
     use HasFactory;
 
-    protected $table = 'customer_table';
+    protected $table = 'customer';
 
     protected $fillable = [
         'customer',
         'email',
-        'type_of_person',
+        'taxpayer_identification_number',
         'address' ,
-        'cnpj',
-        'cpf',
-        'cep' ,
-        'telephone',
+        'postal',
+        'phone_number',
     ];
 }

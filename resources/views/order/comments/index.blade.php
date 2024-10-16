@@ -1,12 +1,12 @@
-<x-layout title="Comments">
+<x-layout title="Status Update">
     <div class="main-content ">
         <div class="container-fluid">
             <div class="titlebody">
-                <h5>Comments Status Order</h5>
+                <h5>Update Status Order</h5>
             </div>
             
            <!-- Button trigger modal -->
-            <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
                 Status Update
             </button>
             
@@ -31,7 +31,7 @@
                                 </div>
                                 <div class="mb-3">
                                     <label for="floatingTextarea2"><i class="bi bi-card-text"></i>Observation</label>
-                                    <textarea type="name" name="body" class="form-control" id="comments" id="floatingTextarea2" style="height: 100px" required></textarea>
+                                    <textarea type="name" name="body" class="form-control" id="comments" id="floatingTextarea2" style="height: 100px" ></textarea>
                                 </div>
                                 <button type="submit" class="btn btn-primary">Submit</button>
                             </form> 
@@ -39,11 +39,41 @@
                     </div>
                 </div>
             </div>
-
+            <br><br>
             <x-validation-alert />
 
             <div class="container-fluid">
+                <div class="card" >
+                    <div class="card-header">
+                      <div class="row">
+                        <div class="col">
+                            <ul class="list-group list-group-flush">
+                                <div class="col-md-12">
+                                    <label for="validationCustom04" class="form-label"><i class="bi bi-box-seam"></i><strong>Product:</strong>{{ $order->product_name }}</label>
+                                </div>
+                                <div class="col-md-12">
+                                    <label for="validationCustom04" class="form-label"><i class="bi bi-cart3"></i><strong>Quantity:</strong>{{ $order->quantity }}</label>
+                                </div>
+                                <div class="col-md-12">
+                                    <label for="validationCustom04" class="form-label"><i class="bi bi-person"></i><strong>Person:</strong>{{ $order->person }}</label>
+                                </div>
+                                <div class="col-md-12">
+                                    <label for="validationCustom04" class="form-label"><i class="bi bi-calendar2-week"></i><strong>delivery_time:</strong>{{ $order->delivery_time }}</label>
+                                </div>
+                                <div class="col-md-12">
+                                    <label for="validationCustom04" class="form-label"><i class="bi bi-exclamation-triangle-fill"></i><strong>priority:</strong>{{ $order->priority }}</label>
+                                </div>
+                                <div class="col-md-12">
+                                    <label for="validationCustom04" class="form-label"><i class="bi bi-chat-dots"></i><strong>observations:</strong>{{ $order->observations }}</label>
+                                </div>
+                            </ul>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+    
                 <br>
+                <h5>Status History</h5>
                 <div class="card" style="width: 100%;">
                     <ul class="list-group list-group-flush">
                         @foreach ($comments as $comment)
@@ -75,6 +105,7 @@
                     </ul>
                 </div>
             </div>
+            {{--  --}}
         </div>
     </div>
 </x-layout>

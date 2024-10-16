@@ -7,14 +7,16 @@ use Illuminate\Http\Request;
 use Ordertable;
 use App\Models\Comment;
 use App\Models\RegisterProductModels;
+use App\Models\User;
 
 class Order extends Controller
 {
     public function index()
     {
         $orderstable = OrderModels::all();
-        
-        return view('order.index', compact('orderstable'));
+        $productregistration = RegisterProductModels::all();
+        $users = User::all();
+        return view('order.index', compact('orderstable', 'productregistration', 'users'));
     }
 
     public function create()
@@ -28,7 +30,7 @@ class Order extends Controller
         $data = $request->all();
         $ordertable = OrderModels::create($data);
         session()->flash('success', 'Order registered successfully!');
-        return redirect()->route('order.create');
+        return redirect()->route('order.index');
     }
 
     // public function show($id)

@@ -25,7 +25,6 @@ class StoreOrderComments extends FormRequest
     {
         return [
             'status' => 'required',
-            'body' => 'required',
         ];
     }
 }

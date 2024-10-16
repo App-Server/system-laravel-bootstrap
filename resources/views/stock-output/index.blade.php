@@ -4,7 +4,7 @@
             <div class="titlebody"><h5>Stock Output</h5></div>
             
             <!-- Button trigger modal -->
-            <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
                 Stock Output
             </button>
           
@@ -59,12 +59,25 @@
                     </div>
                 </div>
             </div>
-            
+            <br><br>
             <x-validation-alert />
 
             <div class="container-fluid">
                 <br>
                 <div class="card" style="width: 100%;">
+                    <div class="card-header">
+                        <div class="row g-3 needs-validation" > 
+                            <div class="col-md-6">
+                                <label for="validationCustom04" class="form-label"><i class="bi bi-box-seam"></i><strong>Product Name</strong></label>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="validationCustom04" class="form-label"><i class="bi bi-cart3"></i><strong>Quantity</strong></label>
+                            </div>
+                            <div class="col-md-2">
+                                <label for="validationCustom04" class="form-label"><i class="bi bi-calendar3"></i><strong>Date Output</strong></label>
+                            </div>
+                        </div>
+                    </div>
                     <ul class="list-group list-group-flush">
                         @foreach ($stockoutputtable as $stockoutput)
                             <li class="list-group-item">
@@ -84,6 +97,7 @@
                     </ul>
                 </div>
             </div>
+            {{--  --}}
         </div>  
     </div>  
 </x-layout>

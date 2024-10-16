@@ -13,13 +13,13 @@ class CreateCommentsTable extends Migration
      */
     public function up()
     {
-        Schema::create('comments', function (Blueprint $table) {
-            $table->id();
-            $table->text('body')->nullable();
-            $table->string('status')->nullable();
-            $table->foreignId('order_models_id')->constrained('orders')->onDelete('cascade'); // Correct table name
-            $table->timestamps();
-        });
+        // Schema::create('comments', function (Blueprint $table) {
+        //     $table->id();
+        //     $table->text('body')->nullable();
+        //     $table->string('status')->nullable();
+        //     $table->foreignId('order_models_id')->constrained('orders')->onDelete('cascade'); // Correct table name
+        //     $table->timestamps();
+        // });
         
     }
 

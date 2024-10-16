@@ -24,9 +24,11 @@ class StoreUpdateServiceOrder extends FormRequest
     public function rules()
     {
         return [
-            'service_name' => 'required',
-            'service_cost' => 'required',
-            'observations' => 'nullable',
+            'customer' => 'required',
+            'service' => 'required',
+            'price' => 'required',
+            'date' => 'required',
+            'time' =>'required',
         ];
     }
 }

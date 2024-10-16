@@ -13,14 +13,14 @@ class StockOutputTable extends Migration
      */
     public function up()
     {
-        Schema::create('stock_output_table', function (Blueprint $stockoutputtable) {
-            $stockoutputtable->id();
-            $stockoutputtable->string('person')->nullable();
-            $stockoutputtable->string('product_name')->nullable();
-            $stockoutputtable->string('quantity')->nullable();
-            $stockoutputtable->string('observations')->nullable();
-            $stockoutputtable->timestamps();
-        });
+        // Schema::create('stock_output_table', function (Blueprint $stockoutputtable) {
+        //     $stockoutputtable->id();
+        //     $stockoutputtable->string('person')->nullable();
+        //     $stockoutputtable->string('product_name')->nullable();
+        //     $stockoutputtable->string('quantity')->nullable();
+        //     $stockoutputtable->string('observations')->nullable();
+        //     $stockoutputtable->timestamps();
+        // });
     }
 
     /**

@@ -13,18 +13,18 @@ class CustomerTable extends Migration
      */
     public function up()
     {
-        Schema::create('customer_table', function (Blueprint $customerTable) {
-            $customerTable->id();
-            $customerTable->string('customer')->nullable();
-            $customerTable->string('email')->nullable();
-            $customerTable->string('type_of_person')->nullable();
-            $customerTable->string('address')->nullable();
-            $customerTable->string('cnpj')->nullable();
-            $customerTable->string('cpf')->nullable();
-            $customerTable->string('cep')->nullable();
-            $customerTable->string('telephone')->nullable();
-            $customerTable->timestamps();
-        });
+        // Schema::create('customer_table', function (Blueprint $customerTable) {
+        //     $customerTable->id();
+        //     $customerTable->string('customer')->nullable();
+        //     $customerTable->string('email')->nullable();
+        //     $customerTable->string('type_of_person')->nullable();
+        //     $customerTable->string('address')->nullable();
+        //     $customerTable->string('cnpj')->nullable();
+        //     $customerTable->string('cpf')->nullable();
+        //     $customerTable->string('cep')->nullable();
+        //     $customerTable->string('telephone')->nullable();
+        //     $customerTable->timestamps();
+        // });
     }
 
     /**

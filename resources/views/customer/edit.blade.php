@@ -16,7 +16,7 @@
                             <label for="validationCustom01" class="form-label">email</label>
                             <input type="name" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{ $customer->email }}" required>
                         </div>
-                        <div class="col-md-4">
+                        {{-- <div class="col-md-4">
                             <label for="validationCustom04" class="form-label">Type of Person</label>
                             <select name="type_of_person" class="form-select" id="validationCustom04" required>
                                 <!-- Option for current value -->
@@ -25,32 +25,27 @@
                                 </option>
                                 
                             </select>
-                        </div>
+                        </div> --}}
                         
 
-                        <div class="col-md-4">
-                            <label for="validationCustom04" class="form-label">cnpj</label>
-                            <input type="number" name="cnpj" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{ $customer->cnpj }}" required>
+                        <div class="col-md-6">
+                            <label for="validationCustom04" class="form-label">Taxpayer Identification Number</label>
+                            <input type="number" name="taxpayer_identification_number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{ $customer->taxpayer_identification_number }}" required>
                         </div>
 
-                        <div class="col-md-4">
-                            <label for="validationCustom04" class="form-label">cpf</label>
-                            <input type="number" name="cpf" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{ $customer->cpf }}" required>
-                        </div>
-
-                        <div class="col-md-4">
-                            <label for="validationCustom04" class="form-label">address</label>
+                        <div class="col-md-6">
+                            <label for="validationCustom04" class="form-label">Address</label>
                             <input type="name" name="address" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{ $customer->address }}" required>
                         </div>
 
-                        <div class="col-md-4">
-                            <label for="validationCustom04" class="form-label">cep</label>
-                            <input type="number" name="cep" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{ $customer->cep }}" required>
+                        <div class="col-md-6">
+                            <label for="validationCustom04" class="form-label">Postal</label>
+                            <input type="number" name="postal" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{ $customer->postal }}" required>
                         </div>
 
-                        <div class="col-md-4">
-                            <label for="validationCustom04" class="form-label">telephone</label>
-                            <input type="number" name="telephone" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{ $customer->telephone }}" required>
+                        <div class="col-md-6">
+                            <label for="validationCustom04" class="form-label">Phone Number</label>
+                            <input type="number" name="phone_number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{ $customer->phone_number }}" required>
                         </div>
                                 
                         <div class="col-12">

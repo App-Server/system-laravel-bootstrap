@@ -21,4 +21,32 @@ class ServiceRegistration extends Controller
         session()->flash('success', 'Service Registration successfully!');
         return redirect()->route('service-registration.index');
     }
+
+    public function edit($id)
+    {
+        if (!$serviceregistrationtable = ServiceRegistrationModels::find($id))
+            return redirect()->route('service-registration.edit');
+        return view('service-registration.edit', compact('serviceregistrationtable'));
+    }
+
+    public function update(StoreUpdateServiceRegistration $request, $id)
+    {
+        // Encontre o post existente pelo ID
+        $serviceregistrationtable = ServiceRegistrationModels::find($id);
+        
+        // Verifique se o post existe
+        if (!$serviceregistrationtable) {
+            session()->flash('error', 'serviceregistrationtable not found!');
+            return redirect()->route('service-registration.index');
+        }
+        
+        // Valide os dados do formulário
+        $validatedData = $request->validated();
+        
+        // Atualize os atributos do post existente com os dados do formulário
+        $serviceregistrationtable->update($validatedData);
+
+        session()->flash('success', 'Atualizado com sucesso!');
+        return redirect()->route('service-registration.index', $serviceregistrationtable->id);
+    }
 }

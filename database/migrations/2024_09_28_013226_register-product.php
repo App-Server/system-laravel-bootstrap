@@ -13,14 +13,14 @@ class RegisterProduct extends Migration
      */
     public function up()
     {
-        Schema::create('product_registration_table', function (Blueprint $registerproduct) {
-            $registerproduct->id();
-            $registerproduct->string('product_name')->nullable();
-            $registerproduct->string('category')->nullable();
-            $registerproduct->string('subcategory')->nullable();
-            $registerproduct->string('description')->nullable();
-            $registerproduct->timestamps();
-        });
+        // Schema::create('product_registration_table', function (Blueprint $registerproduct) {
+        //     $registerproduct->id();
+        //     $registerproduct->string('product_name')->nullable();
+        //     $registerproduct->string('category')->nullable();
+        //     $registerproduct->string('subcategory')->nullable();
+        //     $registerproduct->string('description')->nullable();
+        //     $registerproduct->timestamps();
+        // });
     }
 
     /**

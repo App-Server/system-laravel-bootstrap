@@ -11,8 +11,8 @@ use App\Http\Controllers\ServiceOrder;
 use App\Http\Controllers\ServiceRegistration;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\Dashboard;
-use App\Http\Controllers\ActionApproveDisapprove;
 use App\Http\Controllers\Relationships\CommentController;
+use App\Http\Controllers\ServiceOrderRelaionships\ServiceOrderComment;
 
 Route::get('/', function () {
     return view('welcome');
@@ -25,7 +25,7 @@ Route::get('/dashboard/{id}/edit', [Dashboard::class, 'edit'])->name('dashboard.
 Route::get('/dashboard', [Dashboard::class, 'index'])->name('dashboard.index');
 Route::get('/dashboard/create', [Dashboard::class, 'create'])->name('dashboard.create');
 Route::post('/dashboard', [Dashboard::class, 'store'])->name('dashboard.store');
-Route::get('/details/{id}', [Dashboard::class, 'show'])->name('dashboard.details');
+Route::get('/dashboard/{id}', [Dashboard::class, 'show'])->name('dashboard.details');
 //--------------------------------------------------------------------------------------------------------
 Route::delete('/user/{id}', [UserController::class, 'destroy'])->name('user.destroy');
 Route::put('/user/{id}', [UserController::class, 'update'])->name('user.update');
@@ -33,7 +33,7 @@ Route::get('/user/{id}/edit', [UserController::class, 'edit'])->name('user.edit'
 Route::get('/user', [UserController::class, 'index'])->name('user.index');
 Route::get('/user/create', [UserController::class, 'create'])->name('user.create');
 Route::post('/user', [UserController::class, 'store'])->name('user.store');
-Route::get('/details/{id}', [UserController::class, 'show'])->name('user.details');
+Route::get('/user/{id}', [UserController::class, 'show'])->name('user.details');
 //--------------------------------------------------------------------------------------------------------
 Route::delete('/order/{id}', [Order::class, 'destroy'])->name('order.destroy');
 Route::put('/order/{id}', [Order::class, 'update'])->name('order.update');
@@ -49,7 +49,7 @@ Route::get('/register-product/{id}/edit', [RegisterProduct::class, 'edit'])->nam
 Route::get('/register-product', [RegisterProduct::class, 'index'])->name('register-product.index');
 Route::get('/register-product/create', [RegisterProduct::class, 'create'])->name('register-product.create');
 Route::post('/register-product', [RegisterProduct::class, 'store'])->name('register-product.store');
-Route::get('/details/{id}', [RegisterProduct::class, 'show'])->name('register-product.details');
+Route::get('/register-product/{id}', [RegisterProduct::class, 'show'])->name('register-product.details');
 //--------------------------------------------------------------------------------------------------------
 Route::delete('/customer/{id}', [Customer::class, 'destroy'])->name('customer.destroy');
 Route::put('/customer/{id}', [Customer::class, 'update'])->name('customer.update');
@@ -65,7 +65,7 @@ Route::get('/employees/{id}/edit', [Employees::class, 'edit'])->name('employees.
 Route::get('/employees', [Employees::class, 'index'])->name('employees.index');
 Route::get('/employees/create', [Employees::class, 'create'])->name('employees.create');
 Route::post('/employees', [Employees::class, 'store'])->name('employees.store');
-Route::get('/details/{id}', [Employees::class, 'show'])->name('employees.details');
+Route::get('/employees/{id}', [Employees::class, 'show'])->name('employees.details');
 //---------------------------------------------------------------------------------------------------------
 Route::delete('/stock-entry/{id}', [StockEntry::class, 'destroy'])->name('stock-entry.destroy');
 Route::put('/stock-entry/{id}', [StockEntry::class, 'update'])->name('stock-entry.update');
@@ -73,7 +73,7 @@ Route::get('/stock-entry/{id}/edit', [StockEntry::class, 'edit'])->name('stock-e
 Route::get('/stock-entry', [StockEntry::class, 'index'])->name('stock-entry.index');
 Route::get('/stock-entry/create', [StockEntry::class, 'create'])->name('stock-entry.create');
 Route::post('/stock-entry', [StockEntry::class, 'store'])->name('stock-entry.store');
-Route::get('/details/{id}', [StockEntry::class, 'show'])->name('stock-entry.details');
+Route::get('/stock-entry/{id}', [StockEntry::class, 'show'])->name('stock-entry.details');
 //---------------------------------------------------------------------------------------------------------
 Route::delete('/stock-output/{id}', [StockOutput::class, 'destroy'])->name('stock-output.destroy');
 Route::put('/stock-output/{id}', [StockOutput::class, 'update'])->name('stock-output.update');
@@ -81,7 +81,7 @@ Route::get('/stock-output/{id}/edit', [StockOutput::class, 'edit'])->name('stock
 Route::get('/stock-output', [StockOutput::class, 'index'])->name('stock-output.index');
 Route::get('/stock-output/create', [StockOutput::class, 'create'])->name('stock-output.create');
 Route::post('/stock-output', [StockOutput::class, 'store'])->name('stock-output.store');
-Route::get('/details/{id}', [StockOutput::class, 'show'])->name('stock-output.details');
+Route::get('/stock-output/{id}', [StockOutput::class, 'show'])->name('stock-output.details');
 //---------------------------------------------------------------------------------------------------------
 Route::delete('/service-order/{id}', [ServiceOrder::class, 'destroy'])->name('service-order.destroy');
 Route::put('/service-order/{id}', [ServiceOrder::class, 'update'])->name('service-order.update');
@@ -89,7 +89,7 @@ Route::get('/service-order/{id}/edit', [ServiceOrder::class, 'edit'])->name('ser
 Route::get('/service-order', [ServiceOrder::class, 'index'])->name('service-order.index');
 Route::get('/service-order/create', [ServiceOrder::class, 'create'])->name('service-order.create');
 Route::post('/service-order', [ServiceOrder::class, 'store'])->name('service-order.store');
-Route::get('/details/{id}', [ServiceOrder::class, 'show'])->name('service-order.details');
+Route::get('/service-order/{id}', [ServiceOrder::class, 'show'])->name('service-order.details');
 //---------------------------------------------------------------------------------------------------------
 Route::delete('/service-registration/{id}', [ServiceRegistration::class, 'destroy'])->name('service-registration.destroy');
 Route::put('/service-registration/{id}', [ServiceRegistration::class, 'update'])->name('service-registration.update');
@@ -97,9 +97,11 @@ Route::get('/service-registration/{id}/edit', [ServiceRegistration::class, 'edit
 Route::get('/service-registration', [ServiceRegistration::class, 'index'])->name('service-registration.index');
 Route::get('/service-registration/create', [ServiceRegistration::class, 'create'])->name('service-registration.create');
 Route::post('/service-registration', [ServiceRegistration::class, 'store'])->name('service-registration.store');
-Route::get('/details/{id}', [ServiceRegistration::class, 'show'])->name('service-registration.details');
+Route::get('/service-registration/{id}', [ServiceRegistration::class, 'show'])->name('service-registration.details');
 //---------------------------------------------------------------------------------------------------------
 Route::get('/order/{id}/comments', [CommentController::class, 'index'])->name('comments.index');
 Route::post('/order/{id}/comments', [CommentController::class, 'store'])->name('comments.store');
-
+//---------------------------------------------------------------------------------------------------------
+Route::get('/service-order/{id}/service-order-comments', [ServiceOrderComment::class, 'index'])->name('service-order-comments.index');
+Route::post('/service-order/{id}/service-order-comments', [ServiceOrderComment::class, 'store'])->name('service-order-comments.store');
 //---------------------------------------------------------------------------------------------------------

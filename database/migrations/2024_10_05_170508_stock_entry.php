@@ -13,14 +13,14 @@ class StockEntry extends Migration
      */
     public function up()
     {
-        Schema::create('stock_entry_table', function (Blueprint $stockentrytable) {
-            $stockentrytable->id();
-            $stockentrytable->string('product_name')->nullable();
-            $stockentrytable->string('quantity')->nullable();
-            $stockentrytable->string('product_cost')->nullable();
-            $stockentrytable->string('observations')->nullable();
-            $stockentrytable->timestamps();
-        });
+        // Schema::create('stock_entry_table', function (Blueprint $stockentrytable) {
+        //     $stockentrytable->id();
+        //     $stockentrytable->string('product_name')->nullable();
+        //     $stockentrytable->string('quantity')->nullable();
+        //     $stockentrytable->string('product_cost')->nullable();
+        //     $stockentrytable->string('observations')->nullable();
+        //     $stockentrytable->timestamps();
+        // });
     }
 
     /**

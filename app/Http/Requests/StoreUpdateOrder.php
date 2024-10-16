@@ -28,8 +28,6 @@ class StoreUpdateOrder extends FormRequest
             'product_name' => 'required|string|max:1000|min:3',
             'quantity' => 'required|string|max:100|min:1',
             'delivery_time' => 'required|string',
-            'priority' => 'required|string|max:15|min:3',
-            'observations' => 'required|string|max:255|min:3',
         ];
     }
 }

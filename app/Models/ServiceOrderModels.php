@@ -5,15 +5,24 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
+
 class ServiceOrderModels extends Model
 {
     use HasFactory;
 
-    protected $table = 'service_order_table';
+    protected $table = 'service_order';
 
     protected $fillable = [
-        'service_name',
-        'service_cost',
+        'customer',
+        'service',
+        'price',
+        'date',
+        'time',
         'observations',
     ];
+
+    public function comments()
+    {
+        return $this->hasMany(ServiceOrderCommentModel::class);
+    }    
 }
