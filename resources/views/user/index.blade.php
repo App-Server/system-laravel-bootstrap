@@ -2,8 +2,7 @@
     <div class="main-content ">
         <div class="container-fluid">
             <div class="titlebody"><h5>User</h5></div>
-        </div>
-        <!-- Button trigger modal -->
+            <!-- Button trigger modal -->
         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
             New User
         </button>
@@ -40,43 +39,40 @@
             </div>
         </div>
 
-        <br><br>
         <x-validation-alert />
 
-        <div class="container-fluid">
-            <br>
-            <div class="card" style="width: 100%;">
-                <div class="card-header">
-                    <div class="row g-3 needs-validation" > 
-                        <div class="col-md-5">
-                            <label for="validationCustom04" class="form-label"><i class="bi bi-person-circle"></i><strong>Username</strong></label>
-                        </div>
-                        <div class="col-md-5">
-                            <label for="validationCustom04" class="form-label"><i class="bi bi-envelope-at"></i><strong>Email</strong></label>
-                        </div>
-                        <div class="col-md-2">
-                            <label for="validationCustom04" class="form-label"><i class="bi bi-pencil-square"></i><strong>Update</strong></label>
-                        </div>
+        <div class="card" style="width: 100%;">
+            <div class="card-header">
+                <div class="row g-3 needs-validation" > 
+                    <div class="col-md-5">
+                        <label for="validationCustom04" class="form-label"><i class="bi bi-person-circle"></i><strong>Username</strong></label>
+                    </div>
+                    <div class="col-md-5">
+                        <label for="validationCustom04" class="form-label"><i class="bi bi-envelope-at"></i><strong>Email</strong></label>
+                    </div>
+                    <div class="col-md-2">
+                        <label for="validationCustom04" class="form-label"><i class="bi bi-pencil-square"></i><strong>Update</strong></label>
                     </div>
                 </div>
-                <ul class="list-group list-group-flush">
-                    @foreach ($users as $user)
-                        <li class="list-group-item">
-                            <div class="row g-3 needs-validation" >
-                                <div class="col-md-5">
-                                    <label for="validationCustom04" class="form-label"><i class="bi bi-person-circle"></i>{{ $user->name  }}</label>
-                                </div>
-                                <div class="col-md-5">
-                                    <label for="validationCustom04" class="form-label"><i class="bi bi-envelope-at"></i>{{ $user->email }}</label>
-                                </div>
-                                <div class="col-md-2">
-                                    <label for="validationCustom04" class="form-label"><i class="bi bi-pencil-square"></i>{{ $user->created_at }}</label>
-                                </div>
-                            </div>
-                        </li>
-                    @endforeach
-                </ul>
             </div>
+            <ul class="list-group list-group-flush">
+                @foreach ($users as $user)
+                    <li class="list-group-item">
+                        <div class="row g-3 needs-validation" >
+                            <div class="col-md-5">
+                                <label for="validationCustom04" class="form-label"><i class="bi bi-person-circle"></i>{{ $user->name  }}</label>
+                            </div>
+                            <div class="col-md-5">
+                                <label for="validationCustom04" class="form-label"><i class="bi bi-envelope-at"></i>{{ $user->email }}</label>
+                            </div>
+                            <div class="col-md-2">
+                                <label for="validationCustom04" class="form-label"><i class="bi bi-pencil-square"></i>{{ $user->created_at }}</label>
+                            </div>
+                        </div>
+                    </li>
+                @endforeach
+            </ul>
+        </div>
         </div>
     </div>
 </x-layout>

@@ -44,7 +44,7 @@
                                     <input type="number" name="product_cost" class="form-control" id="exampleInputDatetime1" aria-describedby="datetimeHelp">
                                 </div>
 
-                                <div class="col-12">
+                                <div class="modal-footer">
                                     <button class="btn btn-primary" type="submit">Submit form</button>
                                 </div>
                             </form>
@@ -52,55 +52,52 @@
                     </div>
                 </div>
             </div>
-            <br><br>
+            
             <x-validation-alert />
 
-            <div class="container-fluid">
-                <br>
-                <div class="card" style="width: 100%;">
-                    <div class="card-header">
-                        <div class="row g-3 needs-validation" > 
-                            <div class="col-md-5">
-                                <label for="validationCustom04" class="form-label"><i class="bi bi-box-seam"></i><strong>Product Name</strong></label>
-                            </div>
-                            <div class="col-md-2">
-                                <label for="validationCustom04" class="form-label"><i class="bi bi-cart3"></i><strong>Quantity</strong></label>
-                            </div>
-                            <div class="col-md-2">
-                                <label for="validationCustom04" class="form-label"><i class="bi bi-cash-coin"></i><strong>Cost</strong></label>
-                            </div>
-                            <div class="col-md-2">
-                                <label for="validationCustom04" class="form-label"><i class="bi bi-currency-dollar"></i><strong>Total</strong></label>
-                            </div>
-                            <div class="col-md-1">
-                                <label for="validationCustom04" class="form-label"><i class="bi bi-eye"></i><strong>Details</strong></label>
-                            </div>
+            <div class="card" style="width: 100%;">
+                <div class="card-header">
+                    <div class="row g-3 needs-validation" > 
+                        <div class="col-md-5">
+                            <label for="validationCustom04" class="form-label"><i class="bi bi-box-seam"></i><strong>Product Name</strong></label>
+                        </div>
+                        <div class="col-md-2">
+                            <label for="validationCustom04" class="form-label"><i class="bi bi-cart3"></i><strong>Quantity</strong></label>
+                        </div>
+                        <div class="col-md-2">
+                            <label for="validationCustom04" class="form-label"><i class="bi bi-cash-coin"></i><strong>Cost</strong></label>
+                        </div>
+                        <div class="col-md-2">
+                            <label for="validationCustom04" class="form-label"><i class="bi bi-currency-dollar"></i><strong>Total</strong></label>
+                        </div>
+                        <div class="col-md-1">
+                            <label for="validationCustom04" class="form-label"><i class="bi bi-eye"></i><strong>Details</strong></label>
                         </div>
                     </div>
-                    <ul class="list-group list-group-flush">
-                        @foreach ($stockentrytable as $stockentry)
-                            <li class="list-group-item">
-                                <div class="row g-3 needs-validation" >
-                                    <div class="col-md-5">
-                                        <label for="validationCustom04" class="form-label"><i class="bi bi-box-seam"></i>{{ $stockentry->product_name }}</label>
-                                    </div>
-                                    <div class="col-md-2">
-                                        <label for="validationCustom04" class="form-label"><i class="bi bi-cart3"></i>{{ $stockentry->quantity }}</label>
-                                    </div>
-                                    <div class="col-md-2">
-                                        <label for="validationCustom04" class="form-label"><i class="bi bi-cash-coin"></i>{{ $stockentry->product_cost }}</label>
-                                    </div>
-                                    <div class="col-md-2">
-                                        <label for="validationCustom04" class="form-label"><i class="bi bi-currency-dollar"></i>1.000,00</label>
-                                    </div>
-                                    <div class="col-md-1">
-                                        <label for="validationCustom04" class="form-label"><a href="#" ><i class="bi bi-arrow-right-circle"></i></a></label>
-                                    </div>
-                                </div>
-                            </li>
-                        @endforeach
-                    </ul>
                 </div>
+                <ul class="list-group list-group-flush">
+                    @foreach ($stockentrytable as $stockentry)
+                        <li class="list-group-item">
+                            <div class="row g-3 needs-validation" >
+                                <div class="col-md-5">
+                                    <label for="validationCustom04" class="form-label"><i class="bi bi-box-seam"></i>{{ $stockentry->product_name }}</label>
+                                </div>
+                                <div class="col-md-2">
+                                    <label for="validationCustom04" class="form-label"><i class="bi bi-cart3"></i>{{ $stockentry->quantity }}</label>
+                                </div>
+                                <div class="col-md-2">
+                                    <label for="validationCustom04" class="form-label"><i class="bi bi-cash-coin"></i>{{ $stockentry->product_cost }}</label>
+                                </div>
+                                <div class="col-md-2">
+                                    <label for="validationCustom04" class="form-label"><i class="bi bi-currency-dollar"></i>1.000,00</label>
+                                </div>
+                                <div class="col-md-1">
+                                    <label for="validationCustom04" class="form-label"><a href="#" ><i class="bi bi-arrow-right-circle"></i></a></label>
+                                </div>
+                            </div>
+                        </li>
+                    @endforeach
+                </ul>
             </div>
         </div>  
     </div>  

@@ -18,7 +18,7 @@
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
-                                    <form action="#" method="post">
+                                    <form action="{{ route('service-order-comments.store', $serviceorder->id) }}" method="post">
                                         @csrf
                                         <div class="mb-3">
                                             <label for="validationCustom04" class="form-label">status</label>
@@ -49,7 +49,7 @@
                         </div>
                     </label>
                 </div>
-                <div class="col-md-1">
+                {{-- <div class="col-md-1">
                     <label for="validationCustom04" class="form-label">
                         <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Messenger</button>
 
@@ -72,75 +72,73 @@
                             </form>
                         </div>  
                     </label>
-                </div>
+                </div> --}}
                    
             </div>
             
-        </div>
-        {{--  --}}
-        <br>
-        
-        <div class="container-fluid">
+            <x-validation-alert />
+            
             <div class="card" >
                 <div class="card-header">
-                  <div class="row">
+                    <div class="row">
                     <div class="col">
                         <ul class="list-group list-group-flush">
                             <div class="col-md-12">
-                                <label for="validationCustom04" class="form-label"><i class="bi bi-border-all"></i><strong>Customer:</strong>{{ $serviceorder->customer }}</label>
+                                <label for="validationCustom04" class="form-label"><i class="bi bi-person-circle"></i><strong>Customer:</strong>{{ $serviceorder->customer }}</label>
                             </div>
                             <div class="col-md-12">
-                                <label for="validationCustom04" class="form-label"><i class="bi bi-border-all"></i><strong>Service:</strong>{{ $serviceorder->service }}</label>
+                                <label for="validationCustom04" class="form-label"><i class="bi bi-briefcase"></i><strong>Service:</strong>{{ $serviceorder->service }}</label>
                             </div>
                             <div class="col-md-12">
-                                <label for="validationCustom04" class="form-label"><i class="bi bi-border-all"></i><strong>Date:</strong>{{ $serviceorder->date }}</label>
+                                <label for="validationCustom04" class="form-label"><i class="bi bi-calendar3"></i><strong>Date:</strong>{{ $serviceorder->date }}</label>
                             </div>
                             <div class="col-md-12">
-                                <label for="validationCustom04" class="form-label"><i class="bi bi-border-all"></i><strong>Time:</strong>{{ $serviceorder->time }}</label>
+                                <label for="validationCustom04" class="form-label"><i class="bi bi-alarm"></i><strong>Time:</strong>{{ $serviceorder->time }}</label>
                             </div>
                             <div class="col-md-12">
-                                <label for="validationCustom04" class="form-label"><i class="bi bi-border-all"></i><strong>Price $:</strong>{{ $serviceorder->price }}</label>
+                                <label for="validationCustom04" class="form-label"><i class="bi bi-cash-coin"></i><strong>Price $:</strong>{{ $serviceorder->price }}</label>
                             </div>
                             <div class="col-md-12">
-                                <label for="validationCustom04" class="form-label"><i class="bi bi-border-all"></i><strong>Observations:</strong>{{ $serviceorder->observations }}</label>
+                                <label for="validationCustom04" class="form-label"><i class="bi bi-chat-dots"></i></i><strong>Observations:</strong>{{ $serviceorder->observations }}</label>
                             </div>
                         </ul>
                     </div>
-                  </div>
+                    </div>
                 </div>
             </div>
-        <br><br>
-        <x-validation-alert />
-        <h5>Status History</h5>
-        <div class="card" style="width: 100%;">
-            <ul class="list-group list-group-flush">
-                @foreach ($service_order_comments as $comment)
-                    <li class="list-group-item">
-                        <div class="row g-3 needs-validation" >
-                            <div class="row">
-                                <div class="col">
+            
+            <br>
+            <h5>Status History</h5>
+            <div class="card" style="width: 100%;">
+                <ul class="list-group list-group-flush">
+                    @foreach ($service_order_comments as $comment)
+                        <li class="list-group-item">
+                            <div class="row g-3 needs-validation" >
+                                <div class="row">
                                     <div class="col">
-                                        <br>
-                                        <label for="validationCustomUsername" class="form-label"><i class="bi bi-border-all"></i><strong> status: </strong></label>
-                                        <label for="validationCustomUsername" class="form-label">{{ $comment->status }}</label>
+                                        <div class="col">
+                                            <br>
+                                            <label for="validationCustomUsername" class="form-label"><i class="bi bi-info-square-fill"></i><strong style="background-color: rgb(228, 204, 250); padding:10px; border-radius: 10px;"> status: </strong></label>
+                                            <label for="validationCustomUsername" class="form-label">{{ $comment->status }}</label>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="row">
-                                <div class="col">
-                                    <label for="validationCustomUsername" class="form-label"><i class="bi bi-border-all"></i><strong>status_update:</strong>{{ $comment->created_at }}</label>
+                                <div class="row">
+                                    <div class="col">
+                                        <label for="validationCustomUsername" class="form-label"><i class="bi bi-calendar3"></i><strong>status_update:</strong>{{ $comment->created_at }}</label>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="row">
-                                <div class="col">
-                                    <label for="validationCustomUsername" class="form-label"><i class="bi bi-border-all"></i><strong>body:</strong>{{ $comment->body }}</label>
+                                <div class="row">
+                                    <div class="col">
+                                        <label for="validationCustomUsername" class="form-label"><i class="bi bi-chat-dots"></i><strong>Messenger:</strong>{{ $comment->body }}</label>
+                                    </div>
                                 </div>
+                                
                             </div>
-                            
-                        </div>
-                    </li>
-                @endforeach
-            </ul>
+                        </li>
+                    @endforeach
+                </ul>
+            </div>
         </div>
     </div>
 </x-layout>

@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\ServiceOrderModels;
 use App\Models\ServiceOrderCommentModel;
+//use App\http\Requests\StoreOrderComments;
 
 class ServiceOrderComment extends Controller
 {
@@ -31,5 +32,17 @@ class ServiceOrderComment extends Controller
 
         return view('service-order.service-order-comments.index', compact('service_order_comments', 'serviceorder'));
     }
+
+    public function store(Request $request, $serviceorderId)
+    {
+        if (!$serviceorder = $this->serviceorder->find($serviceorderId)) {
+            return redirect()->back();
+        }
+
+        $serviceorder->comments()->create($request->all());
+        session()->flash('success', 'Comment created successfully!');
+        return redirect()->route('service-order-comments.index', $serviceorder->id);
+    }
+
 
 }

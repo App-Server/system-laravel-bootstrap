@@ -33,9 +33,9 @@
     position: fixed;
     height: 100%;
     overflow: auto;
-    border-right: 1px solid #535353; /* Linha à direita com 3px de largura e cor branca */
-    background-color: #141b24;
-
+    /* border-right: 1px solid #535353; */
+    /* background-color: #141b24; */
+    background-color: #050e34;
 }
 
 .sidebar-grid {
@@ -45,25 +45,28 @@
 
 .sidebar a {
     display: block;
-    padding: 8px;
+    padding: 10px;
     text-decoration: none;
     color: white;
+    
 }
 
 .sidebar a:hover:not(.active) {
-    background-color: #f5f4f4;
+    background-color: #ffffff;
 }
 
 .sidebar a.active {
     background-color: #ffffff;
-    font-weight: bold; 
-    color: #141b24;
+    /* font-weight: bold;  */
+    /* color: #141b24; */
+    color: #002663;
 }
 
 .main-content {
     margin-left: 123px;
     padding: 1px 16px;
     padding-top: 10px;
+
 }
 
 

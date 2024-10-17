@@ -13,13 +13,13 @@ class UserTable extends Migration
      */
     public function up()
     {
-        Schema::create('user_table', function (Blueprint $usertable) {
-            $usertable->id();
-            $usertable->string('name')->nullable();
-            $usertable->string('email')->nullable();
-            $usertable->string('password')->nullable();
-            $usertable->timestamps();
-        });
+        // Schema::create('user_table', function (Blueprint $usertable) {
+        //     $usertable->id();
+        //     $usertable->string('name')->nullable();
+        //     $usertable->string('email')->nullable();
+        //     $usertable->string('password')->nullable();
+        //     $usertable->timestamps();
+        // });
     }
 
     /**

@@ -59,43 +59,40 @@
                     </div>
                 </div>
             </div>
-            <br><br>
+            
             <x-validation-alert />
 
-            <div class="container-fluid">
-                <br>
-                <div class="card" style="width: 100%;">
-                    <div class="card-header">
-                        <div class="row g-3 needs-validation" > 
-                            <div class="col-md-6">
-                                <label for="validationCustom04" class="form-label"><i class="bi bi-box-seam"></i><strong>Product Name</strong></label>
-                            </div>
-                            <div class="col-md-4">
-                                <label for="validationCustom04" class="form-label"><i class="bi bi-cart3"></i><strong>Quantity</strong></label>
-                            </div>
-                            <div class="col-md-2">
-                                <label for="validationCustom04" class="form-label"><i class="bi bi-calendar3"></i><strong>Date Output</strong></label>
-                            </div>
+            <div class="card" style="width: 100%;">
+                <div class="card-header">
+                    <div class="row g-3 needs-validation" > 
+                        <div class="col-md-6">
+                            <label for="validationCustom04" class="form-label"><i class="bi bi-box-seam"></i><strong>Product Name</strong></label>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="validationCustom04" class="form-label"><i class="bi bi-cart3"></i><strong>Quantity</strong></label>
+                        </div>
+                        <div class="col-md-2">
+                            <label for="validationCustom04" class="form-label"><i class="bi bi-calendar3"></i><strong>Date Output</strong></label>
                         </div>
                     </div>
-                    <ul class="list-group list-group-flush">
-                        @foreach ($stockoutputtable as $stockoutput)
-                            <li class="list-group-item">
-                                <div class="row g-3 needs-validation" >
-                                    <div class="col-md-6">
-                                        <label for="validationCustom04" class="form-label"><i class="bi bi-box-seam"></i>{{ $stockoutput->product_name  }}</label>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <label for="validationCustom04" class="form-label"><i class="bi bi-cart3"></i>{{ $stockoutput->quantity }}</label>
-                                    </div>
-                                    <div class="col-md-2">
-                                        <label for="validationCustom04" class="form-label"><i class="bi bi-calendar3"></i>{{ $stockoutput->created_at }}</label>
-                                    </div>
-                                </div>
-                            </li>
-                        @endforeach
-                    </ul>
                 </div>
+                <ul class="list-group list-group-flush">
+                    @foreach ($stockoutputtable as $stockoutput)
+                        <li class="list-group-item">
+                            <div class="row g-3 needs-validation" >
+                                <div class="col-md-6">
+                                    <label for="validationCustom04" class="form-label"><i class="bi bi-box-seam"></i>{{ $stockoutput->product_name  }}</label>
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="validationCustom04" class="form-label"><i class="bi bi-cart3"></i>{{ $stockoutput->quantity }}</label>
+                                </div>
+                                <div class="col-md-2">
+                                    <label for="validationCustom04" class="form-label"><i class="bi bi-calendar3"></i>{{ $stockoutput->created_at }}</label>
+                                </div>
+                            </div>
+                        </li>
+                    @endforeach
+                </ul>
             </div>
             {{--  --}}
         </div>  

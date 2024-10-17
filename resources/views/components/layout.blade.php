@@ -43,7 +43,7 @@
       </a>
 
       <a href="{{ url('/stock-entry') }}" class="nav-link {{ Request::is('stock-entry') ? 'active' : '' }}"><i class="bi bi-cart3"></i>Stock Entry</a>
-      <a href="{{ url('/stock-output') }}" class="nav-link {{ Request::is('stock-output') ? 'active' : '' }}"><i class="bi bi-cart4"></i>Stock Output</a>
+      <a href="{{ url('/stock-output') }}" class="nav-link {{ Request::is('stock-output') ? 'active' : '' }}"><i class="bi bi-cart4"></i>Stock Output</a> 
       {{-- <a href="{{ url('/employees') }}" class="nav-link {{ Request::is('employees') ? 'active' : '' }}"><i class="bi bi-border-all"></i>Employees</a>  --}}
       <a href="{{ url('/user') }}" class="nav-link {{ Request::is('user') ? 'active' : '' }}"><i class="bi bi-file-person"></i>User</a>        
     </div>

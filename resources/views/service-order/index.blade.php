@@ -81,56 +81,55 @@
                     </div>
                 </div>
             </div>
-            <br><br>
+            
             <x-validation-alert />
 
-            <div class="container-fluid">
-                <br>
-                <div class="card" style="width: 100%;">
-                    <div class="card-header">
-                        <div class="row g-3 needs-validation" > 
-                            <div class="col-md-4">
-                                <label for="validationCustom04" class="form-label"><i class="bi bi-person-check"></i><strong>Customer</strong></label>
-                            </div>
-                            <div class="col-md-3">
-                                <label for="validationCustom04" class="form-label"><i class="bi bi-briefcase"></i><strong>Service</strong></label>
-                            </div>
-                            <div class="col-md-2">
-                                <label for="validationCustom04" class="form-label"><i class="bi bi-calendar3"></i><strong>Date</strong></label>
-                            </div>
-                            <div class="col-md-2">
-                                <label for="validationCustom04" class="form-label"><i class="bi bi-alarm"></i><strong>Time</strong></label>
-                            </div>
-                            <div class="col-md-1">
-                                <label for="validationCustom04" class="form-label"><i class="bi bi-eye"></i><strong>Info</strong></label>
-                            </div>
+            
+            <div class="card" style="width: 100%;">
+                <div class="card-header">
+                    <div class="row g-3 needs-validation" > 
+                        <div class="col-md-4">
+                            <label for="validationCustom04" class="form-label"><i class="bi bi-person-check"></i><strong>Customer</strong></label>
+                        </div>
+                        <div class="col-md-3">
+                            <label for="validationCustom04" class="form-label"><i class="bi bi-briefcase"></i><strong>Service</strong></label>
+                        </div>
+                        <div class="col-md-2">
+                            <label for="validationCustom04" class="form-label"><i class="bi bi-calendar3"></i><strong>Date</strong></label>
+                        </div>
+                        <div class="col-md-2">
+                            <label for="validationCustom04" class="form-label"><i class="bi bi-alarm"></i><strong>Time</strong></label>
+                        </div>
+                        <div class="col-md-1">
+                            <label for="validationCustom04" class="form-label"><i class="bi bi-eye"></i><strong>Info</strong></label>
                         </div>
                     </div>
-                    <ul class="list-group list-group-flush">
-                        @foreach ($serviceordertable as $serviceorder)
-                            <li class="list-group-item">
-                                <div class="row g-3 needs-validation" >                                    
-                                    <div class="col-md-4">
-                                        <label for="validationCustom04" class="form-label"><i class="bi bi-person-check"></i>{{ $serviceorder->customer  }}</label>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <label for="validationCustom04" class="form-label"><i class="bi bi-briefcase"></i>{{ $serviceorder->service }}</label>
-                                    </div>
-                                    <div class="col-md-2">
-                                        <label for="validationCustom04" class="form-label"><i class="bi bi-calendar3"></i>{{ $serviceorder->date }}</label>
-                                    </div>
-                                    <div class="col-md-2">
-                                        <label for="validationCustom04" class="form-label"><i class="bi bi-alarm"></i>{{ $serviceorder->time }}</label>
-                                    </div>
-                                    <div class="col-md-1">
-                                        <label for="validationCustomUsername" ><a href="{{ route('service-order-comments.index', $serviceorder->id) }}" class="btn btn-info">Info</a></label>                                        
-                                    </div>
-                                </div>
-                            </li>
-                        @endforeach
-                    </ul>
                 </div>
+                <ul class="list-group list-group-flush">
+                    @foreach ($serviceordertable as $serviceorder)
+                        <li class="list-group-item">
+                            <div class="row g-3 needs-validation" >                                    
+                                <div class="col-md-4">
+                                    <label for="validationCustom04" class="form-label"><i class="bi bi-person-check"></i>{{ $serviceorder->customer  }}</label>
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="validationCustom04" class="form-label"><i class="bi bi-briefcase"></i>{{ $serviceorder->service }}</label>
+                                </div>
+                                <div class="col-md-2">
+                                    <label for="validationCustom04" class="form-label"><i class="bi bi-calendar3"></i>{{ $serviceorder->date }}</label>
+                                </div>
+                                <div class="col-md-2">
+                                    <label for="validationCustom04" class="form-label"><i class="bi bi-alarm"></i>{{ $serviceorder->time }}</label>
+                                </div>
+                                <div class="col-md-1">
+                                    <label for="validationCustomUsername" ><a href="{{ route('service-order-comments.index', $serviceorder->id) }}" class="btn btn-info">Info</a></label>                                        
+                                </div>
+                            </div>
+                        </li>
+                    @endforeach
+                </ul>
             </div>
+        
         </div>  
     </div>  
 </x-layout>
