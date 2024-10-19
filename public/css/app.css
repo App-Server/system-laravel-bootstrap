@@ -106,8 +106,13 @@
 } */
 
 .cms {
-    margin-left: 17px;
+    margin-left: 20px;
     color: wheat;
+}
+
+.logo {
+    margin-left: 12px;
+    margin: 10px;
 }
 
 #timeToRender {

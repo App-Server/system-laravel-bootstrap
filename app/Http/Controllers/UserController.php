@@ -22,4 +22,23 @@ class UserController extends Controller
         session()->flash('success', 'User registered successfully');
         return redirect()->route('user.index'); 
     }
+
+    public function edit($id)
+    {
+        if (!$user = User::find($id))
+        return redirect()->route('user.index');
+        return view('user.edit', compact('user'));
+    }
+
+    public function update(StoreUpdateUser $request, $id)
+    {
+        if (!$user = User::find($id))
+        return redirect()->route('user.edit');
+        $data = $request->only('name', 'email');
+        if ($request->password)
+        $data['password'] = bcrypt($request->password);
+        $user->update($data);
+        session()->flash('success', 'Update User registered successfully!');
+        return redirect()->route('user.edit', $user->id);
+    }
 }

@@ -47,10 +47,13 @@
                     <div class="col-md-5">
                         <label for="validationCustom04" class="form-label"><i class="bi bi-person-circle"></i><strong>Username</strong></label>
                     </div>
-                    <div class="col-md-5">
+                    <div class="col-md-3">
                         <label for="validationCustom04" class="form-label"><i class="bi bi-envelope-at"></i><strong>Email</strong></label>
                     </div>
-                    <div class="col-md-2">
+                    <div class="col-md-3">
+                        <label for="validationCustom04" class="form-label"><i class="bi bi-pencil-square"></i><strong>Create</strong></label>
+                    </div>
+                    <div class="col-md-1">
                         <label for="validationCustom04" class="form-label"><i class="bi bi-pencil-square"></i><strong>Update</strong></label>
                     </div>
                 </div>
@@ -62,11 +65,14 @@
                             <div class="col-md-5">
                                 <label for="validationCustom04" class="form-label"><i class="bi bi-person-circle"></i>{{ $user->name  }}</label>
                             </div>
-                            <div class="col-md-5">
+                            <div class="col-md-3">
                                 <label for="validationCustom04" class="form-label"><i class="bi bi-envelope-at"></i>{{ $user->email }}</label>
                             </div>
-                            <div class="col-md-2">
+                            <div class="col-md-3">
                                 <label for="validationCustom04" class="form-label"><i class="bi bi-pencil-square"></i>{{ $user->created_at }}</label>
+                            </div>
+                            <div class="col-md-1">
+                                <a href="{{ route('user.edit', $user->id ) }}" class="btn btn-info">Edit</a>
                             </div>
                         </div>
                     </li>

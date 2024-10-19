@@ -1,7 +1,7 @@
-<x-layout title="User">
+<x-layout title="Edit Service Record">
     <div class="main-content ">
         <div class="container-fluid">
-            <div class="titlebody"><h5>User</h5></div>
+            <div class="titlebody"><h5>Edit Service Record</h5></div>
             <div class="card">
                 <div class="card-body">
                     <form class="row g-3 needs-validation" novalidate action="{{ route('service-registration.update', $serviceregistrationtable->id) }}" method="post">
