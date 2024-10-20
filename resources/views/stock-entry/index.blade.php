@@ -71,7 +71,7 @@
                             <label for="validationCustom04" class="form-label"><i class="bi bi-currency-dollar"></i><strong>Total</strong></label>
                         </div>
                         <div class="col-md-1">
-                            <label for="validationCustom04" class="form-label"><i class="bi bi-eye"></i><strong>Details</strong></label>
+                            <label for="validationCustom04" class="form-label"><i class="bi bi-folder-symlink"></i></label>
                         </div>
                     </div>
                 </div>
@@ -89,16 +89,18 @@
                                     <label for="validationCustom04" class="form-label"><i class="bi bi-cash-coin"></i>{{ $stockentry->product_cost }}</label>
                                 </div>
                                 <div class="col-md-2">
-                                    <label for="validationCustom04" class="form-label"><i class="bi bi-currency-dollar"></i>1.000,00</label>
+                                    <!-- Calculate total by multiplying quantity and product cost -->
+                                    <label for="validationCustom04" class="form-label"><i class="bi bi-currency-dollar"></i>{{ number_format($stockentry->quantity * $stockentry->product_cost, 2, ',', '.') }}</label>
                                 </div>
                                 <div class="col-md-1">
-                                    <label for="validationCustom04" class="form-label"><a href="#" ><i class="bi bi-arrow-right-circle"></i></a></label>
+                                    <a href="#" ><i class="bi bi-folder-symlink"></i></a>
                                 </div>
                             </div>
                         </li>
                     @endforeach
                 </ul>
             </div>
+            
         </div>  
     </div>  
 </x-layout>

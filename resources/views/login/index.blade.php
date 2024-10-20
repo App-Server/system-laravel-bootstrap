@@ -9,15 +9,15 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 </head>
-<body style="background-color: #000b40">
+<body style="background-color: black">
 
     <div class="container">
         <div class="login-layout">
             <div class="login-container d-flex justify-content-center" style="margin-top: 150px; ">
                 <div class="col-md-5" >                                    
-                    <div class="card shadow-lg " style="background-color: #000934; padding:60px">
+                    <div class="card shadow-lg " style="background-color: rgb(44, 44, 44); padding:40px">
                         <div class="logo-login d-flex justify-content-center">
-                            <img src="{{ asset('css/asset/img.png') }}" alt="Girl in a jacket" width="300" height="80">
+                            <img src="{{ asset('css/asset/imgs.png') }}" alt="Girl in a jacket" width="350" height="90">
                         </div>
                         @if ($errors->has('error'))
                         <div class="alert alert-danger" role="alert">

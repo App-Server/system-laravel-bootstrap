@@ -48,32 +48,7 @@
                             </div>
                         </div>
                     </label>
-                </div>
-                {{-- <div class="col-md-1">
-                    <label for="validationCustom04" class="form-label">
-                        <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Messenger</button>
-
-                        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-                        <div class="offcanvas-header">
-                            <h5 class="offcanvas-title" id="offcanvasRightLabel"><i class="bi bi-chat-dots"></i>Messenger</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                        </div>
-                        <div class="offcanvas-body">
-                            <form>
-                                <div class="mb-3">
-                                  <label for="exampleInputEmail1" class="form-label">Title</label>
-                                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                                </div>
-                                <div class="mb-3">
-                                  <label for="exampleInputPassword1" class="form-label">Messenger</label>
-                                  <textarea type="name" name="observations" class="form-control" id="comments" id="floatingTextarea2" style="height: 200px" ></textarea>
-                                </div>
-                                <button type="submit" class="btn btn-primary">Submit</button>
-                            </form>
-                        </div>  
-                    </label>
-                </div> --}}
-                   
+                </div>   
             </div>
             
             <x-validation-alert />
@@ -118,7 +93,7 @@
                                     <div class="col">
                                         <div class="col">
                                             <br>
-                                            <label for="validationCustomUsername" class="form-label"><i class="bi bi-info-square-fill"></i><strong style="background-color: rgb(228, 204, 250); padding:10px; border-radius: 10px;"> status: </strong></label>
+                                            <label for="validationCustomUsername" class="form-label"><i class="bi bi-info-square-fill"></i><strong> status: </strong></label>
                                             <label for="validationCustomUsername" class="form-label">{{ $comment->status }}</label>
                                         </div>
                                     </div>

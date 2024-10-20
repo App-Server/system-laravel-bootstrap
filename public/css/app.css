@@ -11,21 +11,13 @@
     font-size: 20px;
 }
 
-.theme-body {
-    background-color: rgb(255, 255, 255);
-}
-
 .navtop {
     background-color: #f1f1f1;
     height: 6vh;
     position: fixed;
-    /* Fixa a posição do elemento */
     top: 0;
-    /* Define a posição inicial a partir do topo */
     left: 0;
-    /* Define a posição inicial a partir da esquerda */
     width: 100%;
-    /* Define a largura do elemento como 100% da largura da tela */
 }
 
 .sidebar {
@@ -33,42 +25,35 @@
     position: fixed;
     height: 100%;
     overflow: auto;
-    /* border-right: 1px solid #535353; */
-    /* background-color: #141b24; */
-    background-color: #050e34;
+    background-color: black;
 }
 
 .sidebar-grid {
     margin-top: 10px;
-    
 }
 
 .sidebar a {
     display: block;
-    padding: 10px;
+    padding: 8px;
     text-decoration: none;
     color: white;
-    
 }
 
 .sidebar a:hover:not(.active) {
     background-color: #ffffff;
+    color: black;
 }
 
 .sidebar a.active {
     background-color: #ffffff;
-    /* font-weight: bold;  */
-    /* color: #141b24; */
-    color: #002663;
+    color: black;
 }
 
 .main-content {
     margin-left: 123px;
-    padding: 1px 16px;
+    padding: 1px 2px;
     padding-top: 10px;
-
 }
-
 
 @media (min-width: 1064px) {
     .navbar-response {
@@ -91,23 +76,6 @@
 
 .css-btn:active {
     border-color: #acc9ff;
-}
-
-/* .alert-modal {
-    position: fixed;
-    top: 20px;
-    
-    right: -400px;
-    z-index: 1050;
-    transition: right 0.5s ease;
-}
-.alert-modal.show {
-    right: 20px;
-} */
-
-.cms {
-    margin-left: 20px;
-    color: wheat;
 }
 
 .logo {

@@ -101,7 +101,7 @@
                             <label for="validationCustom04" class="form-label"><i class="bi bi-alarm"></i><strong>Time</strong></label>
                         </div>
                         <div class="col-md-1">
-                            <label for="validationCustom04" class="form-label"><i class="bi bi-eye"></i><strong>Info</strong></label>
+                            <label for="validationCustom04" class="form-label"><i class="bi bi-folder-symlink"></i></label>
                         </div>
                     </div>
                 </div>
@@ -122,7 +122,7 @@
                                     <label for="validationCustom04" class="form-label"><i class="bi bi-alarm"></i>{{ $serviceorder->time }}</label>
                                 </div>
                                 <div class="col-md-1">
-                                    <label for="validationCustomUsername" ><a href="{{ route('service-order-comments.index', $serviceorder->id) }}" class="btn btn-info">Info</a></label>                                        
+                                    <a href="{{ route('service-order-comments.index', $serviceorder->id) }}"><i class="bi bi-folder-symlink"></i></a>                                       
                                 </div>
                             </div>
                         </li>

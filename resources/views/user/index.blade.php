@@ -54,7 +54,7 @@
                         <label for="validationCustom04" class="form-label"><i class="bi bi-pencil-square"></i><strong>Create</strong></label>
                     </div>
                     <div class="col-md-1">
-                        <label for="validationCustom04" class="form-label"><i class="bi bi-pencil-square"></i><strong>Update</strong></label>
+                        <label for="validationCustom04" class="form-label"><i class="bi bi-pencil-square"></i></label>
                     </div>
                 </div>
             </div>
@@ -72,7 +72,7 @@
                                 <label for="validationCustom04" class="form-label"><i class="bi bi-pencil-square"></i>{{ $user->created_at }}</label>
                             </div>
                             <div class="col-md-1">
-                                <a href="{{ route('user.edit', $user->id ) }}" class="btn btn-info">Edit</a>
+                                <a href="{{ route('user.edit', $user->id ) }}"><i class="bi bi-pencil-square"></i></a>
                             </div>
                         </div>
                     </li>

@@ -6,13 +6,13 @@
                 <div class="col-md-12">
             <!-- Button trigger modal -->
                     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                        new customer
+                        New Customer
                     </button>
                     
                     <!-- Modal -->
                     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog modal-lg">
-                            <div class="modal-content">
+                            <div class="modal-content" >
                                 <div class="modal-header">
                                 <h1 class="modal-title fs-5" id="exampleModalLabel">New customer</h1>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -65,21 +65,20 @@
             
             <x-validation-alert />
 
-            
             <div class="card" style="width: 100%;">
                 <div class="card-header">
                     <div class="row g-3 needs-validation" > 
-                        <div class="col-md-5">
+                        <div class="col-md-4">
                             <label for="validationCustom04" class="form-label"><i class="bi bi-person-vcard"></i><strong>Customer</strong></label>
                         </div>
-                        <div class="col-md-3">
+                        <div class="col-md-2">
                             <label for="validationCustom04" class="form-label"><i class="bi bi-telephone"></i><strong>Phone Number</strong></label>
                         </div>
-                        <div class="col-md-3">
+                        <div class="col-md-5">
                             <label for="validationCustom04" class="form-label"><i class="bi bi-envelope-at"></i><strong>E-mail</strong></label>
                         </div>
                         <div class="col-md-1">
-                            <label for="validationCustom04" class="form-label"><i class="bi bi-eye"></i><strong>Info</strong></label>
+                            <label for="validationCustom04" class="form-label"><i class="bi bi-info-circle"></i><strong></strong></label>
                         </div>
                     </div>
                 </div>
@@ -87,17 +86,17 @@
                     @foreach ($customerTable as $customer)
                         <li class="list-group-item">
                             <div class="row g-3 needs-validation" >                                    
-                                <div class="col-md-5">
+                                <div class="col-md-4">
                                     <label for="validationCustom04" class="form-label"><i class="bi bi-person-vcard"></i>{{ $customer->customer }}</label>
                                 </div>
-                                <div class="col-md-3">
+                                <div class="col-md-2">
                                     <label for="validationCustom04" class="form-label"><i class="bi bi-telephone"></i>{{ $customer->phone_number }}</label>
                                 </div>
-                                <div class="col-md-3">
+                                <div class="col-md-5">
                                     <label for="validationCustom04" class="form-label"><i class="bi bi-envelope-at"></i>{{ $customer->email }}</label>
                                 </div>
                                 <div class="col-md-1">
-                                    <label for="validationCustom04" class="form-label"><a href="{{ route('customer.details', $customer->id) }}" class="btn btn-info">Info</a></label>
+                                    <a href="{{ route('customer.details', $customer->id) }}"><i class="bi bi-folder-symlink"></i></a>
                                 </div>
                             </div>
                         </li>

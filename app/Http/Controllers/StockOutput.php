@@ -6,13 +6,17 @@ use App\Http\Requests\StoreUpdateStockOutput;
 use App\Models\StockOutputModels;
 use Illuminate\Http\Request;
 use StockOutputTable;
+use App\Models\User;
+use App\Models\RegisterProductModels;
 
 class StockOutput extends Controller
 {
     public function index()
     {
         $stockoutputtable = StockOutputModels::all();
-        return view('stock-output.index', compact('stockoutputtable'));
+        $productregistration = RegisterProductModels::all();
+        $users = User::all();
+        return view('stock-output.index', compact('stockoutputtable', 'users', 'productregistration'));
     }
 
     public function store(StoreUpdateStockOutput $request)

@@ -16,18 +16,7 @@
                             <label for="validationCustom01" class="form-label">email</label>
                             <input type="name" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{ $customer->email }}" required>
                         </div>
-                        {{-- <div class="col-md-4">
-                            <label for="validationCustom04" class="form-label">Type of Person</label>
-                            <select name="type_of_person" class="form-select" id="validationCustom04" required>
-                                <!-- Option for current value -->
-                                <option selected value="{{ $customer->type_of_person }}">
-                                    {{ $customer->type_of_person ? $customer->type_of_person : 'Select Type' }}
-                                </option>
-                                
-                            </select>
-                        </div> --}}
                         
-
                         <div class="col-md-6">
                             <label for="validationCustom04" class="form-label">Taxpayer Identification Number</label>
                             <input type="number" name="taxpayer_identification_number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{ $customer->taxpayer_identification_number }}" required>

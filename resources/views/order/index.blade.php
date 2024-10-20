@@ -22,7 +22,7 @@
                             <div class="col-md-12">
                                 <label for="validationCustom01" class="form-label">person</label>
                                 <select type="name" name="person" class="form-select" id="validationCustom04" required>
-                                    <<option selected disabled value="">
+                                    <option selected disabled value="">
                                         {{ $users->isEmpty() ? 'No User Available' : 'Select a User' }}
                                     </option>
                                     <!-- Loop through the available products -->
@@ -77,7 +77,7 @@
                             </div>
                             
                             <div class="modal-footer">
-                                <button class="btn btn-primary" type="submit">Submit form</button>
+                                <button class="btn btn-primary" type="submit">New Order</button>
                             </div>
                         </form>
                     </div>
@@ -100,7 +100,7 @@
                             <label for="validationCustom04" class="form-label"><i class="bi bi-person"></i><strong>Person</strong></label>
                         </div>
                         <div class="col-md-1">
-                            <label for="validationCustom04" class="form-label"><i class="bi bi-person"></i><strong>Details</strong></label>
+                            <label for="validationCustom04" class="form-label"><i class="bi bi-folder-symlink"></i></label>
                         </div>
                     </div>
                 </div>
@@ -108,21 +108,20 @@
                     @foreach ($orderstable as $ordertable)
                         <li class="list-group-item">
                             <div class="row g-3 needs-validation" >
-                                <div class="row g-3 needs-validation" >                                    
-                                    <div class="col-md-6">
-                                        <label for="validationCustom04" class="form-label"><i class="bi bi-box-seam"></i>{{ $ordertable->product_name }}</label>
-                                    </div>
-                                    <div class="col-md-2">
-                                        <label for="validationCustom04" class="form-label"><i class="bi bi-cart3"></i>{{ $ordertable->quantity }}</label>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <label for="validationCustom04" class="form-label"><i class="bi bi-person"></i>{{ $ordertable->person }}</label>
-                                    </div>
-                                    <div class="col-md-1">
-                                        {{-- <a href="{{ route('order.details', $ordertable->id) }}" ><i class="bi bi-arrow-right-circle"></i></a> --}}
-                                        <label for="validationCustomUsername" ><a href="{{ route('comments.index', $ordertable->id) }}"class="btn btn-info">Info</a></label>
-                                    </div>
+                                                                   
+                                <div class="col-md-6">
+                                    <label for="validationCustom04" class="form-label"><i class="bi bi-box-seam"></i>{{ $ordertable->product_name }}</label>
                                 </div>
+                                <div class="col-md-2">
+                                    <label for="validationCustom04" class="form-label"><i class="bi bi-cart3"></i>{{ $ordertable->quantity }}</label>
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="validationCustom04" class="form-label"><i class="bi bi-person"></i>{{ $ordertable->person }}</label>
+                                </div>
+                                <div class="col-md-1">
+                                    <a href="{{ route('comments.index', $ordertable->id) }}"><i class="bi bi-folder-symlink"></i></a>
+                                </div>
+                                
                             </div>
                         </li>
                     @endforeach

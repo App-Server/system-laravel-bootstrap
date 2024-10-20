@@ -21,26 +21,35 @@
                             <form class="row g-3 needs-validation" novalidate action="{{ route('stock-output.store') }}" method="post">
                                 @csrf
                                 <div class="col-md-12">
-                                    <label for="validationCustom01" class="form-label">person</label>
+                                    <label for="validationCustom01" class="form-label">Person</label>
                                     <select type="name" name="person" class="form-select" id="validationCustom04" required>
-                                        <option selected disabled value=""></option>
-                                        <option>Timothy M. Fitzgerald</option>
-                                        <option>Thelma J. Murray</option>
-                                        <option>Thelma J. Murray</option>
-                                        <option>Manuel M. Wilson</option>
-                                        <option>Jerry T. Slate</option>
+                                        <option selected disabled value="">
+                                            {{ $users->isEmpty() ? 'No User Available' : 'Select a User' }}
+                                        </option>
+                                        <!-- Loop through the available products -->
+                                        @foreach($users as $user)
+                                            <option value="{{ $user->name }}">
+                                                {{ $user->name }}
+                                            </option>
+                                        @endforeach
                                     </select>
                                 </div>
                                 <div class="col-md-10">
-                                    <label for="validationCustom01" class="form-label">product_name</label>
+                                    <label for="validationCustom01" class="form-label">Product Name</label>
                                     <select type="name" name="product_name" class="form-select" id="validationCustom04" required>
-                                        <option selected disabled value=""></option>
-                                        <option>Tinta Acrílicar Master Profissional Branco Neve 20L - Coral</option>
-                                        <option>Pintura Impermeável Vedapren Parede Branco 18kg - Vedacit</option>
+                                        <option selected disabled value="">
+                                            {{ $productregistration->isEmpty() ? 'No Products Available' : 'Select a Product' }}
+                                        </option>
+                                        <!-- Loop through the available products -->
+                                        @foreach($productregistration as $products)
+                                            <option value="{{ $products->product_name }}">
+                                                {{ $products->product_name }}
+                                            </option>
+                                        @endforeach
                                     </select>
                                 </div>
                                 <div class="col-md-2">
-                                    <label for="validationCustom04" class="form-label">quantity</label>
+                                    <label for="validationCustom04" class="form-label">Quantity</label>
                                     <input type="number" name="quantity" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                                 </div>
 
@@ -52,7 +61,7 @@
                                     </div>
                                 </div>
                                 <div class="col-12">
-                                    <button class="btn btn-primary" type="submit">Submit form</button>
+                                    <button class="btn btn-primary" type="submit">Register</button>
                                 </div>
                             </form>
                         </div>
@@ -65,14 +74,23 @@
             <div class="card" style="width: 100%;">
                 <div class="card-header">
                     <div class="row g-3 needs-validation" > 
-                        <div class="col-md-6">
+                        <div class="col-md-5">
                             <label for="validationCustom04" class="form-label"><i class="bi bi-box-seam"></i><strong>Product Name</strong></label>
                         </div>
-                        <div class="col-md-4">
+                        <div class="col-md-2">
+                            <label for="validationCustom04" class="form-label"><i class="bi bi-person-check"></i><strong>Person</strong></label>
+                        </div>
+                        <div class="col-md-1">
                             <label for="validationCustom04" class="form-label"><i class="bi bi-cart3"></i><strong>Quantity</strong></label>
+                        </div>
+                        <div class="col-md-1">
+                            <label for="validationCustom04" class="form-label"><i class="bi bi-coin"></i><strong>Cost</strong></label>
                         </div>
                         <div class="col-md-2">
                             <label for="validationCustom04" class="form-label"><i class="bi bi-calendar3"></i><strong>Date Output</strong></label>
+                        </div>
+                        <div class="col-md-1">
+                            <label for="validationCustom04" class="form-label"><i class="bi bi-pencil-square"></i></label>
                         </div>
                     </div>
                 </div>
@@ -80,14 +98,23 @@
                     @foreach ($stockoutputtable as $stockoutput)
                         <li class="list-group-item">
                             <div class="row g-3 needs-validation" >
-                                <div class="col-md-6">
+                                <div class="col-md-5">
                                     <label for="validationCustom04" class="form-label"><i class="bi bi-box-seam"></i>{{ $stockoutput->product_name  }}</label>
                                 </div>
-                                <div class="col-md-4">
+                                <div class="col-md-2">
+                                    <label for="validationCustom04" class="form-label"><i class="bi bi-cart3"></i>{{ $stockoutput->person }}</label>
+                                </div>
+                                <div class="col-md-1">
                                     <label for="validationCustom04" class="form-label"><i class="bi bi-cart3"></i>{{ $stockoutput->quantity }}</label>
+                                </div>
+                                <div class="col-md-1">
+                                    <label for="validationCustom04" class="form-label"><i class="bi bi-cart3"></i>$ 1.000,00</label>
                                 </div>
                                 <div class="col-md-2">
                                     <label for="validationCustom04" class="form-label"><i class="bi bi-calendar3"></i>{{ $stockoutput->created_at }}</label>
+                                </div>
+                                <div class="col-md-1">
+                                    <label for="validationCustom04" class="form-label"><i class="bi bi-pencil-square"></i></label>
                                 </div>
                             </div>
                         </li>

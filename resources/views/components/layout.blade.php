@@ -11,14 +11,16 @@
 </head>
 <body>
 
-  <div class="sidebar">
+  <div class="sidebar ">
+
     <div class="sidebar-grid">
+
       <div class="logo">
-        <img src="{{ asset('css/asset/img.png') }}" alt="Girl in a jacket" width="230" height="60">
-      </div>        
+        <img src="{{ asset('css/asset/imgs.png') }}" alt="Girl in a jacket" width="230" height="60">
+      </div>     
+
       <a href="{{ url('/dashboard') }}" class="nav-link {{ Request::is('dashobard') ? 'active' : '' }}"><i class="bi bi-house-door"></i>Home</a>
-      {{-- <a href="{{ url('/customer/create') }}" class="nav-link {{ Request::is('customer/create') ? 'active' : '' }}"><i class="bi bi-person-check"></i>Create customer</a> --}}
-      
+
       <a href="{{ url('/customer') }}" class="nav-link 
         {{ Request::is('customer') ? 'active' : '' }} 
         {{ Request::is('customer/*') ? 'active' : '' }} 
@@ -31,6 +33,7 @@
         {{ Request::is('service-order/*') ? 'active' : '' }}">
         <i class="bi bi-file-richtext"></i>Service Order
       </a>
+
       <a href="{{ url('/service-registration') }}" class="nav-link 
         {{ Request::is('service-registration') ? 'active' : '' }}
         {{ Request::is('service-registration/*') ? 'active' : '' }}">
@@ -38,7 +41,6 @@
       </a>   
 
       <a href="{{ url('/register-product') }}" class="nav-link {{ Request::is('register-product') ? 'active' : '' }}"><i class="bi bi-box-seam"></i>Product Registration</a>
-      {{-- <a href="{{ url('/order/create') }}" class="nav-link {{ Request::is('order') ? 'active' : '' }}"><i class="bi bi-boxes"></i>Place Order</a> --}}
       
       <a href="{{ url('/order') }}" class="nav-link 
         {{ Request::is('order') ? 'active' : '' }}
@@ -48,22 +50,21 @@
       </a>
 
       <a href="{{ url('/stock-entry') }}" class="nav-link {{ Request::is('stock-entry') ? 'active' : '' }}"><i class="bi bi-cart3"></i>Stock Entry</a>
+
       <a href="{{ url('/stock-output') }}" class="nav-link {{ Request::is('stock-output') ? 'active' : '' }}"><i class="bi bi-cart4"></i>Stock Output</a> 
-      {{-- <a href="{{ url('/employees') }}" class="nav-link {{ Request::is('employees') ? 'active' : '' }}"><i class="bi bi-border-all"></i>Employees</a>  --}}
-      <a href="{{ url('/user') }}" class="nav-link {{ Request::is('user') ? 'active' : '' }}"><i class="bi bi-file-person"></i>User</a>        
+
+      <a href="{{ url('/user') }}" class="nav-link {{ Request::is('user') ? 'active' : '' }}"><i class="bi bi-file-person"></i>User</a> 
+
       <a href="{{ url('/login') }}" class="nav-link"><i class="bi bi-box-arrow-right"></i>Logout</a>
+
     </div>
   </div>
 
-
   <x-navigation />
 
-  <div class="main-content" >
+  <div class="main-content">
       {{ $slot }}
   </div>
-
-    
-  <br><br><br><br>
     
   <script src="{{ asset('js/app.js') }}"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>

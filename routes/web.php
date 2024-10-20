@@ -106,7 +106,8 @@ Route::middleware(['auth'])->group(function () {
     //---------------------------------------------------------------------------------------------------------
 });
 
-Route::get('/login', [LoginController::class, 'index'])->name('login.index');
+// Login route
+Route::get('/login', [LoginController::class, 'index'])->name('login');
 Route::post('/login/auth', [LoginController::class, 'auth'])->name('login.auth');
 
 

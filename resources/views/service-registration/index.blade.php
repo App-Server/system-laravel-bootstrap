@@ -54,7 +54,7 @@
                             <label for="validationCustom04" class="form-label"><i class="bi bi-calendar3"></i></i><strong>Update</strong></label>
                         </div>
                         <div class="col-md-1">
-                            <label for="validationCustom04" class="form-label"><i class="bi bi-pencil-square"></i><strong>Edit</strong></label>
+                            <label for="validationCustom04" class="form-label"><i class="bi bi-folder-symlink"></i></label>
                         </div>
                     </div>
                 </div>
@@ -75,7 +75,7 @@
                                 </div>
 
                                 <div class="col-md-1">
-                                    <a href="{{ route('service-registration.edit', $serviceregistration->id) }}" class="btn btn-info">Edit</a>
+                                    <a href="{{ route('service-registration.edit', $serviceregistration->id) }}"><i class="bi bi-pencil-square"></i></a>
                                 </div>
                             </div>
                         </li>

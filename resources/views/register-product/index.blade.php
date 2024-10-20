@@ -66,7 +66,7 @@
                                 <label for="validationCustom04" class="form-label"><i class="bi bi-box-seam"></i><strong>Product Name</strong></label>
                             </div>
                             <div class="col-md-1">
-                                <label for="validationCustom04" class="form-label"><i class="bi bi-pencil-square"></i><strong>Edit</strong></label>
+                                <label for="validationCustom04" class="form-label"><i class="bi bi-pencil-square"></i></label>
                             </div>
                         </div>
                     </div>
@@ -79,23 +79,14 @@
                                         <label for="validationCustomUsername" class="form-label"><i class="bi bi-box-seam"></i>{{ $registerProduct->product_name }}</label>
                                     </div>
                                     <div class="col-md-1">
-                                        <label for="validationCustomUsername" class="form-label"><a href="#" class="btn btn-info">Edit</a></label>
+                                        <a href="{{ route('register-product.edit', $registerProduct->id ) }}"><i class="bi bi-pencil-square"></i></a>
                                     </div>
-                                        
-                                    
                                 </div>
                             </li>
                         @endforeach
                     </ul>
                 </div>
             </div>
-    
-           
-
-            
-            
-            
-            {{--  --}}
         </div> 
     </div>   
 </x-layout>
