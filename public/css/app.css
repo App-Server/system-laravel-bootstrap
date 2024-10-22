@@ -11,6 +11,10 @@
     font-size: 20px;
 }
 
+body {
+    background-color: #f8f8f8;
+}
+
 .navtop {
     background-color: #f1f1f1;
     height: 6vh;
@@ -26,6 +30,7 @@
     height: 100%;
     overflow: auto;
     background-color: black;
+
 }
 
 .sidebar-grid {
@@ -40,12 +45,12 @@
 }
 
 .sidebar a:hover:not(.active) {
-    background-color: #ffffff;
+    background-color: #f8f8f8;
     color: black;
 }
 
 .sidebar a.active {
-    background-color: #ffffff;
+    background-color: #f8f8f8;
     color: black;
 }
 

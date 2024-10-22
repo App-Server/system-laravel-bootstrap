@@ -51,7 +51,7 @@
                         <label for="validationCustom04" class="form-label"><i class="bi bi-envelope-at"></i><strong>Email</strong></label>
                     </div>
                     <div class="col-md-3">
-                        <label for="validationCustom04" class="form-label"><i class="bi bi-pencil-square"></i><strong>Create</strong></label>
+                        <label for="validationCustom04" class="form-label"><i class="bi bi-calendar3"></i><strong>Create</strong></label>
                     </div>
                     <div class="col-md-1">
                         <label for="validationCustom04" class="form-label"><i class="bi bi-pencil-square"></i></label>
@@ -69,7 +69,7 @@
                                 <label for="validationCustom04" class="form-label"><i class="bi bi-envelope-at"></i>{{ $user->email }}</label>
                             </div>
                             <div class="col-md-3">
-                                <label for="validationCustom04" class="form-label"><i class="bi bi-pencil-square"></i>{{ $user->created_at }}</label>
+                                <label for="validationCustom04" class="form-label"><i class="bi bi-calendar3"></i>{{ $user->created_at }}</label>
                             </div>
                             <div class="col-md-1">
                                 <a href="{{ route('user.edit', $user->id ) }}"><i class="bi bi-pencil-square"></i></a>
@@ -79,6 +79,8 @@
                 @endforeach
             </ul>
         </div>
+        <div class="py-4">
+            {{ $users->links() }}
         </div>
     </div>
 </x-layout>

@@ -1,7 +1,7 @@
-<x-layout title="Dashboard">
+<x-layout title="Home">
     <div class="main-content " >
         <div class="container-fluid" >
-            <div class="titlebody"><h5>Dashboard</h5></div>
+            <div class="titlebody"><h5>Home</h5></div>
             @if (Auth::check())
                 <p>Hello 👋, {{ Auth::user()->name }}</p>
             @endif
@@ -9,7 +9,7 @@
                 <div class="col-sm-3 mb-3 mb-sm-0">
                     <div class="card ">
                         <div class="card-body">            
-                            <p class="card-text"><i class="bi bi-people"></i>Total customers</p>
+                            <p class="card-text"><i class="bi bi-people"></i>Total de Clientes</p>
                             <p class="card-text">{{ $customerCount }}</p>
                         </div>
                     </div>
@@ -17,7 +17,7 @@
                 <div class="col-sm-3 mb-3">
                     <div class="card">
                         <div class="card-body">
-                            <p class="card-text"><i class="bi bi-briefcase"></i>Total service order</p>
+                            <p class="card-text"><i class="bi bi-briefcase"></i>Total de Ordem de Serviços</p>
                             <p class="card-text">{{ $serviceOrderCount }}</p>
                         </div>
                     </div>
@@ -25,7 +25,7 @@
                 <div class="col-sm-3 mb-3">
                     <div class="card">
                         <div class="card-body">
-                            <p class="card-text"><i class="bi bi-boxes"></i>Total Order</p>
+                            <p class="card-text"><i class="bi bi-boxes"></i>Total de Pedidos</p>
                             <p class="card-text">{{ $order }}</p>
                         </div>
                     </div>
@@ -33,7 +33,7 @@
                 <div class="col-sm-3 mb-3">
                     <div class="card">
                         <div class="card-body">
-                            <p class="card-text"><i class="bi bi-file-person"></i>Total user</p>
+                            <p class="card-text"><i class="bi bi-file-person"></i>Total de Usuários</p>
                             <p class="card-text">{{ $usersCount }}</p>
                         </div>
                     </div>
@@ -42,7 +42,7 @@
         
             <div class="row">
                 <div class="col-mb-12">
-                    <h5>Customer History</h5>
+                    <h5>Historico de Clientes</h5>
                     <div class="card">
                         <div class="card-body">
                             <div id="chartContainer" style="height: 420px; width: 100%;"></div>

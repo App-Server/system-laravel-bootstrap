@@ -17,14 +17,14 @@
                 <div class="col-md-5" >                                    
                     <div class="card shadow-lg " style="background-color: rgb(44, 44, 44); padding:40px">
                         <div class="logo-login d-flex justify-content-center">
-                            <img src="{{ asset('css/asset/imgs.png') }}" alt="Girl in a jacket" width="350" height="90">
+                            <img src="{{ asset('css/asset/img.png') }}" alt="Girl in a jacket" width="350" height="90">
                         </div>
-                        @if ($errors->has('error'))
-                        <div class="alert alert-danger" role="alert">
-                            {{ $errors->first('error') }}
-                        </div>
-                         @endif
                         <div class="card-body">
+                            @if ($errors->has('error'))
+                            <div class="alert alert-danger" role="alert">
+                                {{ $errors->first('error') }}
+                            </div>
+                            @endif
                             <form action="{{ route('login.auth') }}" method="POST">
                                 @csrf
                                 <div class="mb-3">

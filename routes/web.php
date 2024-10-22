@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RegisterProduct;
 use App\Http\Controllers\Order;
 use App\Http\Controllers\Customer;
+use App\Http\Controllers\CustomerSearch;
 use App\Http\Controllers\Employees;
 use App\Http\Controllers\StockEntry;
 use App\Http\Controllers\StockOutput;
@@ -14,7 +15,7 @@ use App\Http\Controllers\Dashboard;
 use App\Http\Controllers\Relationships\CommentController;
 use App\Http\Controllers\ServiceOrderRelaionships\ServiceOrderComment;
 use App\Http\Controllers\LoginController;
-
+use App\Http\Controllers\ServiceOrderSearch;
 
 Route::middleware(['auth'])->group(function () {
     //--------------------------------------------------------------------------------------------------------
@@ -104,6 +105,14 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/service-order/{id}/service-order-comments', [ServiceOrderComment::class, 'index'])->name('service-order-comments.index');
     Route::post('/service-order/{id}/service-order-comments', [ServiceOrderComment::class, 'store'])->name('service-order-comments.store');
     //---------------------------------------------------------------------------------------------------------
+    Route::get('/setting', function () {
+        return view('setting.index');
+    });
+    //---------------------------------------------------------------------------------------------------------
+    Route::get('/customer-search', [CustomerSearch::class, 'index'])->name('customer-search.index');
+    Route::post('/customer-search', [CustomerSearch::class, 'search'])->name('customer-search.search');
+    //---------------------------------------------------------------------------------------------------------
+    Route::get('/service-order-search', [ServiceOrderSearch::class, 'index'])->name('service-order-search.index');
 });
 
 // Login route

@@ -13,7 +13,7 @@ class Order extends Controller
 {
     public function index()
     {
-        $orderstable = OrderModels::all();
+        $orderstable = OrderModels::paginate(10);
         $productregistration = RegisterProductModels::all();
         $users = User::all();
         return view('order.index', compact('orderstable', 'productregistration', 'users'));

@@ -16,7 +16,7 @@
     <div class="sidebar-grid">
 
       <div class="logo">
-        <img src="{{ asset('css/asset/imgs.png') }}" alt="Girl in a jacket" width="230" height="60">
+        <img src="{{ asset('css/asset/img.png') }}" alt="Girl in a jacket" width="230" height="60">
       </div>     
 
       <a href="{{ url('/dashboard') }}" class="nav-link {{ Request::is('dashobard') ? 'active' : '' }}"><i class="bi bi-house-door"></i>Home</a>
@@ -24,38 +24,38 @@
       <a href="{{ url('/customer') }}" class="nav-link 
         {{ Request::is('customer') ? 'active' : '' }} 
         {{ Request::is('customer/*') ? 'active' : '' }} 
+        {{ Request::is('customer-search') ? 'active' : '' }} 
         {{ Request::is('customer/*/edit') ? 'active' : '' }}">
-        <i class="bi bi-person-vcard"></i>Customer
+        <i class="bi bi-person-vcard"></i>Clientes
       </a>
 
       <a href="{{ url('/service-order') }}" class="nav-link 
         {{ Request::is('service-order') ? 'active' : '' }}
+         {{ Request::is('service-order-search') ? 'active' : '' }}
         {{ Request::is('service-order/*') ? 'active' : '' }}">
-        <i class="bi bi-file-richtext"></i>Service Order
+        <i class="bi bi-file-richtext"></i>Ordem de Serviço
       </a>
-
-      <a href="{{ url('/service-registration') }}" class="nav-link 
-        {{ Request::is('service-registration') ? 'active' : '' }}
-        {{ Request::is('service-registration/*') ? 'active' : '' }}">
-        <i class="bi bi-file-richtext-fill"></i>Service Registration
-      </a>   
-
-      <a href="{{ url('/register-product') }}" class="nav-link {{ Request::is('register-product') ? 'active' : '' }}"><i class="bi bi-box-seam"></i>Product Registration</a>
       
       <a href="{{ url('/order') }}" class="nav-link 
         {{ Request::is('order') ? 'active' : '' }}
         {{ Request::is('order/*') ? 'active' : '' }}
         {{ Request::is('order/*/edit') ? 'active' : '' }}"> 
-        <i class="bi bi-boxes"></i>Order
+        <i class="bi bi-boxes"></i>Pedidos
       </a>
 
-      <a href="{{ url('/stock-entry') }}" class="nav-link {{ Request::is('stock-entry') ? 'active' : '' }}"><i class="bi bi-cart3"></i>Stock Entry</a>
+      <a href="{{ url('/stock-entry') }}" class="nav-link {{ Request::is('stock-entry') ? 'active' : '' }}"><i class="bi bi-cart3"></i>Entrada de Estoque</a>
 
-      <a href="{{ url('/stock-output') }}" class="nav-link {{ Request::is('stock-output') ? 'active' : '' }}"><i class="bi bi-cart4"></i>Stock Output</a> 
+      <a href="{{ url('/stock-output') }}" class="nav-link {{ Request::is('stock-output') ? 'active' : '' }}"><i class="bi bi-cart4"></i>Saída de Estoque</a> 
 
-      <a href="{{ url('/user') }}" class="nav-link {{ Request::is('user') ? 'active' : '' }}"><i class="bi bi-file-person"></i>User</a> 
+      <a href="{{ url('/setting') }}" class="nav-link
+        {{ Request::is('setting') ? 'active' : '' }}
+        {{ Request::is('user') ? 'active' : '' }}
+        {{ Request::is('service-registration') ? 'active' : '' }}
+        {{ Request::is('register-production') ? 'active' : '' }}" >
+      <i class="bi bi-gear"></i>Configurações
+    </a>
 
-      <a href="{{ url('/login') }}" class="nav-link"><i class="bi bi-box-arrow-right"></i>Logout</a>
+    <a href="{{ url('/login') }}" class="nav-link"><i class="bi bi-box-arrow-right"></i>Sair</a>
 
     </div>
   </div>

@@ -11,7 +11,7 @@ class Customer extends Controller
 {
     public function index()
     {
-        $customerTable = CustomerModels::all();
+        $customerTable = CustomerModels::paginate(10);
         return view('customer.index', compact('customerTable'));
     }
 
