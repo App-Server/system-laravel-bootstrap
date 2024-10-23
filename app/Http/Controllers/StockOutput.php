@@ -26,4 +26,11 @@ class StockOutput extends Controller
         session()->flash('success', 'Stock Output registered successfully!');
         return redirect()->route('stock-output.index');
     }
+
+    public function show($id)
+    {
+        if (!$stockoutputtable = StockOutputModels::find($id))
+        return redirect()->route(('stock-output.index'));
+        return view('stock-output.details', compact('stockoutputtable'));
+    }
 }

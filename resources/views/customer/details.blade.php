@@ -8,7 +8,7 @@
                 </div>
 
                 <div class="col-md-1">
-                    <label for="validationCustom04" class="form-label"><a href="{{ route('customer.edit', $customer->id) }}" class="btn btn-outline-success"><i class="bi bi-pencil-square"></i> Editar</a></label>
+                    <label for="validationCustom04" class="form-label"><a href="{{ route('customer.edit', $customer->id) }}" ><i class="bi bi-pencil-square"></i></a></label>
                 </div>
             </div>
             <br>
@@ -47,13 +47,13 @@
                     </div>
                     <div class="row">
                         <div class="col">
-                            <label for="validationCustomUsername" class="form-label"><i class="bi bi-calendar3"></i><strong> Create: </strong>{{ $customer->created_at }}</label>
+                            <label for="validationCustomUsername" class="form-label"><i class="bi bi-calendar3"></i><strong> Create: </strong>{{ $customer->created_at->format('d/m/Y') }}</label>
                             <br>                                            
                         </div>
                     </div>
                     <div class="row">
                         <div class="col">
-                            <label for="validationCustomUsername" class="form-label"><i class="bi bi-calendar3"></i><strong> Update: </strong>{{ $customer->updated_at }}</label>
+                            <label for="validationCustomUsername" class="form-label"><i class="bi bi-calendar3"></i><strong> Update: </strong>{{ $customer->updated_at->format('d/m/Y') }}</label>
                             <br>                                            
                         </div>
                     </div>

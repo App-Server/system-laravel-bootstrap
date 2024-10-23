@@ -24,4 +24,12 @@ class StockEntry extends Controller
         session()->flash('success', 'Stock Entry registered successfully!');
         return redirect()->route('stock-entry.index');
     }
+
+    public function show($id)
+    {
+        if (!$stockentrytable = StockEntryModels::find($id))
+        return redirect()->route(('stock-entry.index'));
+        return view('stock-entry.details', compact('stockentrytable'));
+    }
+
 }

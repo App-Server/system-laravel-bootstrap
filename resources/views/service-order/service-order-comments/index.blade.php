@@ -92,7 +92,7 @@
                                 <label for="validationCustomUsername" class="form-label"><i class="bi bi-info-square-fill"></i><strong> status: </strong>{{ $comment->status }}</label>
                             </div>
                             <div class="col-md-12">
-                                <label for="validationCustomUsername" class="form-label"><i class="bi bi-calendar3"></i><strong>Status atualizado:</strong>{{ $comment->created_at }}</label>
+                                <label for="validationCustomUsername" class="form-label"><i class="bi bi-calendar3"></i><strong>Status atualizado:</strong>{{ $comment->created_at->format('d/m/Y') }}</label>
                             </div>
                             <div class="col-md-12">
                                 <label for="validationCustomUsername" class="form-label"><i class="bi bi-chat-dots"></i><strong>Messenger:</strong>{{ $comment->body }}</label>

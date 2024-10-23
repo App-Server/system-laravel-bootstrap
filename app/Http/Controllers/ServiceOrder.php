@@ -12,7 +12,7 @@ class ServiceOrder extends Controller
 {
     public function index()
     {
-        $serviceordertable = ServiceOrderModels::paginate(10);
+        $serviceordertable = ServiceOrderModels::paginate(50);
         $serviceregistrationtable = ServiceRegistrationModels::all();
         $customerTable = CustomerModels::all();
         return view('service-order.index', compact('serviceordertable', 'serviceregistrationtable', 'customerTable'));

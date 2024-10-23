@@ -44,15 +44,26 @@
         <i class="bi bi-boxes"></i>Pedidos
       </a>
 
-      <a href="{{ url('/stock-entry') }}" class="nav-link {{ Request::is('stock-entry') ? 'active' : '' }}"><i class="bi bi-cart3"></i>Entrada de Estoque</a>
+      <a href="{{ url('/stock-entry') }}" class="nav-link 
+        {{ Request::is('stock-entry/*') ? 'active' : '' }}
+        {{ Request::is('stock-entry') ? 'active' : '' }}">
+        <i class="bi bi-cart3"></i>Entrada de Estoque
+      </a>
 
-      <a href="{{ url('/stock-output') }}" class="nav-link {{ Request::is('stock-output') ? 'active' : '' }}"><i class="bi bi-cart4"></i>Saída de Estoque</a> 
+      <a href="{{ url('/stock-output') }}" class="nav-link 
+        {{ Request::is('stock-output/*') ? 'active' : '' }}
+        {{ Request::is('stock-output') ? 'active' : '' }}">
+        <i class="bi bi-cart4"></i>Saída de Estoque
+      </a> 
 
       <a href="{{ url('/setting') }}" class="nav-link
         {{ Request::is('setting') ? 'active' : '' }}
         {{ Request::is('user') ? 'active' : '' }}
         {{ Request::is('service-registration') ? 'active' : '' }}
-        {{ Request::is('register-production') ? 'active' : '' }}" >
+        {{ Request::is('user') ? 'active' : '' }}
+         {{ Request::is('register-product/*/edit') ? 'active' : '' }}
+        {{ Request::is('service-registration/*/edit') ? 'active' : '' }}
+        {{ Request::is('register-product') ? 'active' : '' }}" >
       <i class="bi bi-gear"></i>Configurações
     </a>
 

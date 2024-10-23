@@ -89,11 +89,10 @@
                                     <label for="validationCustom04" class="form-label"><i class="bi bi-cash-coin"></i>{{ $stockentry->product_cost }}</label>
                                 </div>
                                 <div class="col-md-2">
-                                    <!-- Calculate total by multiplying quantity and product cost -->
                                     <label for="validationCustom04" class="form-label"><i class="bi bi-currency-dollar"></i>{{ number_format($stockentry->quantity * $stockentry->product_cost, 2, ',', '.') }}</label>
                                 </div>
                                 <div class="col-md-1">
-                                    <a href="#" ><i class="bi bi-folder-symlink"></i></a>
+                                    <a href="{{ route('stock-entry.details', $stockentry->id) }}"><i class="bi bi-folder-symlink"></i></a>
                                 </div>
                             </div>
                         </li>

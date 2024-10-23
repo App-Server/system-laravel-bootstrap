@@ -1,10 +1,10 @@
 <x-layout title="Service Resgistration">
     <div class="main-content ">
         <div class="container-fluid">
-            <div class="titlebody"><h5>Service Registration<h5></div>
+            <div class="titlebody"><h5>Lista de Serviços<h5></div>
             
             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                Service Registration
+                Criar Serviço
             </button>
 
             <!-- Modal -->
@@ -12,7 +12,7 @@
                 <div class="modal-dialog modal-lg">
                     <div class="modal-content">
                         <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="exampleModalLabel">Service Registration</h1>
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Criar Novo Serviço</h1>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
@@ -20,7 +20,7 @@
                             <form class="row g-3 needs-validation" novalidate action="{{ route('service-registration.store') }}" method="post">
                                 @csrf
                                 <div class="col-md-12">
-                                <label for="validationCustom01" class="form-label">Service Name</label>
+                                <label for="validationCustom01" class="form-label">Nome do Serviço</label>
                                 <input type="name" name="service_name" class="form-control" id="validationCustom01" required>
                                 </div>               
                                 <div class="mb-3">
@@ -67,11 +67,11 @@
                                 </div>
                                 
                                 <div class="col-md-3">
-                                    <label for="validationCustom04" class="form-label"><i class="bi bi-calendar3"></i>{{ $serviceregistration->created_at }}</label>
+                                    <label for="validationCustom04" class="form-label"><i class="bi bi-calendar3"></i>{{ $serviceregistration->created_at->format('d/m/Y') }}</label>
                                 </div>
 
                                 <div class="col-md-3">
-                                    <label for="validationCustom04" class="form-label"><i class="bi bi-calendar3"></i>{{ $serviceregistration->updated_at }}</label>
+                                    <label for="validationCustom04" class="form-label"><i class="bi bi-calendar3"></i>{{ $serviceregistration->updated_at->format('d/m/Y') }}</label>
                                 </div>
 
                                 <div class="col-md-1">

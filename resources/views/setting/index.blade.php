@@ -27,12 +27,12 @@
                     <div class="col-sm-3 mb-3">
                         <div class="card">
                             <div class="card-body">
-                                <p class="card-text"><i class="bi bi-boxes"></i>Gerenciar serviços</p>
+                                <p class="card-text"><i class="bi bi-briefcase"></i>Gerenciar serviços</p>
                                 <div class="d-grid gap-2">
                                     <a href="{{ url('/service-registration') }}" class="btn btn-primary 
                                         {{ Request::is('service-registration') ? 'active' : '' }}
                                         {{ Request::is('service-registration/*') ? 'active' : '' }}">
-                                        <i class="bi bi-file-richtext-fill"></i>Lista de serviços
+                                        <i class="bi bi-briefcase"></i>Lista de serviços
                                     </a>
                                 </div>
                             </div>
@@ -41,9 +41,9 @@
                     <div class="col-sm-3 mb-3">
                         <div class="card">
                             <div class="card-body">
-                                <p class="card-text"><i class="bi bi-briefcase"></i>Gerenciar status de serviços</p>
+                                <p class="card-text"><i class="bi bi-x-octagon"></i>Gerenciar status de serviços (Em breve)</p>
                                 <div class="d-grid gap-2">
-                                    <a href="#" class="btn btn-primary"><i class="bi bi-box-seam"></i>Gerenciar status de serviços</a>
+                                    <a href="#" class="btn btn-secondary"><i class="bi bi-x-octagon"></i>Gerenciar status de serviços</a>
                                 </div>
                             </div>
                         </div>
@@ -51,9 +51,9 @@
                     <div class="col-sm-3 mb-3">
                         <div class="card">
                             <div class="card-body">
-                                <p class="card-text"><i class="bi bi-boxes"></i>Gerenciar status de pedido</p>
+                                <p class="card-text"><i class="bi bi-x-octagon"></i>Gerenciar status de pedido (Em breve)</p>
                                 <div class="d-grid gap-2">
-                                    <a href="#" class="btn btn-primary"><i class="bi bi-boxes"></i>Gerenciar status de pedido</a>
+                                    <a href="#" class="btn btn-secondary"><i class="bi bi-x-octagon"></i>Gerenciar status de pedido</a>
                                 </div>
                             </div>
                         </div>

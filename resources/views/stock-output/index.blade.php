@@ -102,10 +102,10 @@
                                     <label for="validationCustom04" class="form-label"><i class="bi bi-cart3"></i>{{ $stockoutput->quantity }}</label>
                                 </div>
                                 <div class="col-md-2">
-                                    <label for="validationCustom04" class="form-label"><i class="bi bi-calendar3"></i>{{ $stockoutput->created_at }}</label>
+                                    <label for="validationCustom04" class="form-label"><i class="bi bi-calendar3"></i>{{ $stockoutput->created_at->format('d/m/Y') }}</label>
                                 </div>
                                 <div class="col-md-1">
-                                    <label for="validationCustom04" class="form-label"><i class="bi bi-pencil-square"></i></label>
+                                    <a href="{{ route('stock-output.details', $stockoutput->id) }}"><i class="bi bi-folder-symlink"></i></a>
                                 </div>
                             </div>
                         </li>

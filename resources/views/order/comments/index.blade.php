@@ -87,7 +87,7 @@
                                 </div>
                                 <div class="row">
                                     <div class="col">
-                                        <label for="validationCustomUsername" class="form-label"><i class="bi bi-calendar3"></i><strong>Status atualizado:</strong>{{ $comment->created_at }}</label>
+                                        <label for="validationCustomUsername" class="form-label"><i class="bi bi-calendar3"></i><strong>Status atualizado:</strong>{{ $comment->created_at->format('d/m/Y') }}</label>
                                     </div>
                                 </div>
                                 <div class="row">
