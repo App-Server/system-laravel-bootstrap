@@ -39,6 +39,7 @@
       <a href="{{ url('/order') }}" class="nav-link 
         {{ Request::is('order') ? 'active' : '' }}
         {{ Request::is('order/*') ? 'active' : '' }}
+        {{ Request::is('order-search') ? 'active' : '' }}
         {{ Request::is('order/*/edit') ? 'active' : '' }}"> 
         <i class="bi bi-boxes"></i>Pedidos
       </a>

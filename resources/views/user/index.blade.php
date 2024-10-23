@@ -44,14 +44,11 @@
         <div class="card" style="width: 100%;">
             <div class="card-header">
                 <div class="row g-3 needs-validation" > 
-                    <div class="col-md-5">
+                    <div class="col-md-6">
                         <label for="validationCustom04" class="form-label"><i class="bi bi-person-circle"></i><strong>Username</strong></label>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-5">
                         <label for="validationCustom04" class="form-label"><i class="bi bi-envelope-at"></i><strong>Email</strong></label>
-                    </div>
-                    <div class="col-md-3">
-                        <label for="validationCustom04" class="form-label"><i class="bi bi-calendar3"></i><strong>Create</strong></label>
                     </div>
                     <div class="col-md-1">
                         <label for="validationCustom04" class="form-label"><i class="bi bi-pencil-square"></i></label>
@@ -62,14 +59,11 @@
                 @foreach ($users as $user)
                     <li class="list-group-item">
                         <div class="row g-3 needs-validation" >
-                            <div class="col-md-5">
+                            <div class="col-md-6">
                                 <label for="validationCustom04" class="form-label"><i class="bi bi-person-circle"></i>{{ $user->name  }}</label>
                             </div>
-                            <div class="col-md-3">
+                            <div class="col-md-5">
                                 <label for="validationCustom04" class="form-label"><i class="bi bi-envelope-at"></i>{{ $user->email }}</label>
-                            </div>
-                            <div class="col-md-3">
-                                <label for="validationCustom04" class="form-label"><i class="bi bi-calendar3"></i>{{ $user->created_at }}</label>
                             </div>
                             <div class="col-md-1">
                                 <a href="{{ route('user.edit', $user->id ) }}"><i class="bi bi-pencil-square"></i></a>

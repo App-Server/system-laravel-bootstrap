@@ -2,7 +2,7 @@
     <nav class="navbar navbar-dark bg-dark fixed-top">
         <div class="container-fluid">
             <div class="logo">
-                <img src="{{ asset('css/asset/imgs.png') }}" alt="Girl in a jacket" width="150" height="30">
+                <img src="{{ asset('css/asset/img.png') }}" alt="Girl in a jacket" width="150" height="30">
             </div>
           <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -10,7 +10,7 @@
           <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
             <div class="offcanvas-header">
                 <div class="logo">
-                    <img src="{{ asset('css/asset/imgs.png') }}" alt="Girl in a jacket" width="150" height="30">
+                    <img src="{{ asset('css/asset/img.png') }}" alt="Girl in a jacket" width="150" height="30">
                 </div>
               <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>

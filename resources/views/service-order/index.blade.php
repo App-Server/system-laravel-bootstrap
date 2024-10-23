@@ -90,17 +90,11 @@
             <div class="card" style="width: 100%;">
                 <div class="card-header">
                     <div class="row g-3 needs-validation" > 
-                        <div class="col-md-4">
+                        <div class="col-md-6">
                             <label for="validationCustom04" class="form-label"><i class="bi bi-person-check"></i><strong>Cliente</strong></label>
                         </div>
-                        <div class="col-md-3">
+                        <div class="col-md-5">
                             <label for="validationCustom04" class="form-label"><i class="bi bi-briefcase"></i><strong>Ordem de serviço</strong></label>
-                        </div>
-                        <div class="col-md-2">
-                            <label for="validationCustom04" class="form-label"><i class="bi bi-calendar3"></i><strong>Data da execução</strong></label>
-                        </div>
-                        <div class="col-md-2">
-                            <label for="validationCustom04" class="form-label"><i class="bi bi-alarm"></i><strong>Hora da execução</strong></label>
                         </div>
                         <div class="col-md-1">
                             <label for="validationCustom04" class="form-label"><i class="bi bi-folder-symlink"></i></label>
@@ -111,17 +105,11 @@
                     @foreach ($serviceordertable as $serviceorder)
                         <li class="list-group-item">
                             <div class="row g-3 needs-validation" >                                    
-                                <div class="col-md-4">
+                                <div class="col-md-6">
                                     <label for="validationCustom04" class="form-label"><i class="bi bi-person-check"></i>{{ $serviceorder->customer  }}</label>
                                 </div>
-                                <div class="col-md-3">
+                                <div class="col-md-5">
                                     <label for="validationCustom04" class="form-label"><i class="bi bi-briefcase"></i>{{ $serviceorder->service }}</label>
-                                </div>
-                                <div class="col-md-2">
-                                    <label for="validationCustom04" class="form-label"><i class="bi bi-calendar3"></i>{{ $serviceorder->date }}</label>
-                                </div>
-                                <div class="col-md-2">
-                                    <label for="validationCustom04" class="form-label"><i class="bi bi-alarm"></i>{{ $serviceorder->time }}</label>
                                 </div>
                                 <div class="col-md-1">
                                     <a href="{{ route('service-order-comments.index', $serviceorder->id) }}"><i class="bi bi-folder-symlink"></i></a>                                       

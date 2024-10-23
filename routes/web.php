@@ -15,6 +15,7 @@ use App\Http\Controllers\Dashboard;
 use App\Http\Controllers\Relationships\CommentController;
 use App\Http\Controllers\ServiceOrderRelaionships\ServiceOrderComment;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\OrderSearch;
 use App\Http\Controllers\ServiceOrderSearch;
 
 Route::middleware(['auth'])->group(function () {
@@ -113,12 +114,15 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/customer-search', [CustomerSearch::class, 'search'])->name('customer-search.search');
     //---------------------------------------------------------------------------------------------------------
     Route::get('/service-order-search', [ServiceOrderSearch::class, 'index'])->name('service-order-search.index');
+    Route::post('/service-order-search', [ServiceOrderSearch::class, 'search'])->name('service-order-search.search');
+    //---------------------------------------------------------------------------------------------------------
+    Route::get('/order-search', [OrderSearch::class, 'index'])->name('order-search.index');
+    Route::post('/order-search', [OrderSearch::class, 'search'])->name('order-search.search');
 });
 
 // Login route
 Route::get('/login', [LoginController::class, 'index'])->name('login');
 Route::post('/login/auth', [LoginController::class, 'auth'])->name('login.auth');
-
 
 Route::get('/', function () {
     return view('login.index');

@@ -3,13 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\ServiceOrderModels;
+use App\Models\OrderModels;
 
-class ServiceOrderSearch extends Controller
+class OrderSearch extends Controller
 {
     public function index()
     {
-        return view('service-order-search.index');
+        return view('order-search.index');
     }
 
     public function search(Request $request)
@@ -25,9 +25,9 @@ class ServiceOrderSearch extends Controller
         $endDate = $request->input('end_date');
 
         // Query the service orders within the date range
-        $serviceOrders = ServiceOrderModels::whereBetween('created_at', [$startDate, $endDate])->get();
+        $serviceOrders = OrderModels::whereBetween('created_at', [$startDate, $endDate])->get();
 
         // Return the search result to the view
-        return view('service-order-search.index', ['serviceOrders' => $serviceOrders]);
+        return view('order-search.index', ['serviceOrders' => $serviceOrders]);
     }
 }
