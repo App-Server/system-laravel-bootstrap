@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\ServiceOrderModels;
+use Carbon\Carbon;
 
 class ServiceOrderSearch extends Controller
 {
@@ -25,7 +26,12 @@ class ServiceOrderSearch extends Controller
         $endDate = $request->input('end_date');
 
         // Query the service orders within the date range
-        $serviceOrders = ServiceOrderModels::whereBetween('created_at', [$startDate, $endDate])->get();
+        $serviceOrders = ServiceOrderModels::whereBetween('date', [$startDate, $endDate])->get();
+
+        // Ensure 'date' is parsed as Carbon before sending to view
+        foreach ($serviceOrders as $order) {
+            $order->date = Carbon::parse($order->date);
+        }
 
         // Return the search result to the view
         return view('service-order-search.index', ['serviceOrders' => $serviceOrders]);

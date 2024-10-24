@@ -28,11 +28,14 @@
                             <div class="col-md-4">
                                 <label for="validationCustom04" class="form-label"><i class="bi bi-person-check"></i><strong>Cliente</strong></label>
                             </div>
-                            <div class="col-md-4">
+                            <div class="col-md-3">
                                 <label for="validationCustom04" class="form-label"><i class="bi bi-briefcase"></i><strong>Ordem de serviço</strong></label>
                             </div>
-                            <div class="col-md-3">
+                            <div class="col-md-2">
                                 <label for="validationCustom04" class="form-label"><i class="bi bi-calendar3"></i><strong>Criado</strong></label>
+                            </div>
+                            <div class="col-md-2">
+                                <label for="validationCustom04" class="form-label"><i class="bi bi-calendar3"></i><strong style="background-color: rgb(72, 255, 0); border-radius: 20px; padding: 5px;">Dia da execução</strong></label>
                             </div>
                             <div class="col-md-1">
                                 <label for="validationCustom04" class="form-label"><i class="bi bi-folder-symlink"></i></label>
@@ -48,11 +51,14 @@
                                             <div class="col-md-4">
                                                 <label for="validationCustom04" class="form-label"><i class="bi bi-person-check"></i>{{ $order->customer }}</label>
                                             </div>
-                                            <div class="col-md-4">
+                                            <div class="col-md-3">
                                                 <label for="validationCustom04" class="form-label"><i class="bi bi-briefcase"></i>{{ $order->service }}</label>
                                             </div>
-                                            <div class="col-md-3">
+                                            <div class="col-md-2">
                                                 <label for="validationCustom04" class="form-label"><i class="bi bi-calendar3"></i>{{ $order->created_at->format('d/m/Y') }}</label>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <label for="validationCustom04" class="form-label"><i class="bi bi-calendar3"></i>{{ \Carbon\Carbon::parse($order->date)->format('d/m/Y') }}</label>
                                             </div>
                                             <div class="col-md-1">
                                                 <a href="{{ route('service-order-comments.index', $order->id) }}"><i class="bi bi-folder-symlink"></i></a>                                       

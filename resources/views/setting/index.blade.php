@@ -2,7 +2,7 @@
     <div class="main-content ">
         <div class="container-fluid">
             <div class="titlebody">
-                <h5>Configurações</h5>
+                <h5><i class="bi bi-gear"></i>Configurações</h5>
                 <div class="row">
                     <div class="col-sm-3 mb-3 mb-sm-0">
                         <div class="card ">
@@ -41,19 +41,9 @@
                     <div class="col-sm-3 mb-3">
                         <div class="card">
                             <div class="card-body">
-                                <p class="card-text"><i class="bi bi-x-octagon"></i>Gerenciar status de serviços (Em breve)</p>
+                                <p class="card-text"><i class="bi bi-x-octagon"></i>API (Em breve)</p>
                                 <div class="d-grid gap-2">
-                                    <a href="#" class="btn btn-secondary"><i class="bi bi-x-octagon"></i>Gerenciar status de serviços</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-3 mb-3">
-                        <div class="card">
-                            <div class="card-body">
-                                <p class="card-text"><i class="bi bi-x-octagon"></i>Gerenciar status de pedido (Em breve)</p>
-                                <div class="d-grid gap-2">
-                                    <a href="#" class="btn btn-secondary"><i class="bi bi-x-octagon"></i>Gerenciar status de pedido</a>
+                                    <a href="#" class="btn btn-secondary"><i class="bi bi-x-octagon"></i>API</a>
                                 </div>
                             </div>
                         </div>

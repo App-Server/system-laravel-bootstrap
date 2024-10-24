@@ -17,4 +17,14 @@ class RegisterProductModels extends Model
         'subcategory',
         'description',
     ];
+
+    public function stockEntries()
+    {
+        return $this->hasMany(StockEntryModels::class, 'id');
+    }
+
+    public function stockOutputs()
+    {
+        return $this->hasMany(StockOutputModels::class, 'id');
+    }
 }

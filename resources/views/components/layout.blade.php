@@ -56,12 +56,14 @@
         <i class="bi bi-cart4"></i>Saída de Estoque
       </a> 
 
+      <a href="{{ url('/inventory') }}" class="nav-link {{ Request::is('inventory') ? 'active' : '' }}"><i class="bi bi-box-fill"></i>Inventário</a>
+
       <a href="{{ url('/setting') }}" class="nav-link
         {{ Request::is('setting') ? 'active' : '' }}
         {{ Request::is('user') ? 'active' : '' }}
         {{ Request::is('service-registration') ? 'active' : '' }}
         {{ Request::is('user') ? 'active' : '' }}
-         {{ Request::is('register-product/*/edit') ? 'active' : '' }}
+        {{ Request::is('register-product/*/edit') ? 'active' : '' }}
         {{ Request::is('service-registration/*/edit') ? 'active' : '' }}
         {{ Request::is('register-product') ? 'active' : '' }}" >
       <i class="bi bi-gear"></i>Configurações

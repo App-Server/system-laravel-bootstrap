@@ -65,7 +65,7 @@
                                 <label for="validationCustom04" class="form-label"><i class="bi bi-briefcase"></i><strong>Ordem de Serviço:</strong>{{ $serviceorder->service }}</label>
                             </div>
                             <div class="col-md-4">
-                                <label for="validationCustom04" class="form-label"><i class="bi bi-calendar3"></i><strong>Data da execução:</strong>{{ $serviceorder->date }}</label>
+                                <label for="validationCustom04" class="form-label"><i class="bi bi-calendar3"></i><strong style="background-color: rgb(72, 255, 0); border-radius: 20px; padding: 5px;">Data da execução:</strong>{{ \Carbon\Carbon::parse($serviceorder->date)->format('d/m/Y') }}</label>
                             </div>
                             <div class="col-md-4">
                                 <label for="validationCustom04" class="form-label"><i class="bi bi-alarm"></i><strong>Hora da execução:</strong>{{ $serviceorder->time }}</label>

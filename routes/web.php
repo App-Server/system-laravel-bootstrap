@@ -12,6 +12,7 @@ use App\Http\Controllers\ServiceOrder;
 use App\Http\Controllers\ServiceRegistration;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\Dashboard;
+use App\Http\Controllers\InventoryController;
 use App\Http\Controllers\Relationships\CommentController;
 use App\Http\Controllers\ServiceOrderRelaionships\ServiceOrderComment;
 use App\Http\Controllers\LoginController;
@@ -106,9 +107,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/service-order/{id}/service-order-comments', [ServiceOrderComment::class, 'index'])->name('service-order-comments.index');
     Route::post('/service-order/{id}/service-order-comments', [ServiceOrderComment::class, 'store'])->name('service-order-comments.store');
     //---------------------------------------------------------------------------------------------------------
-    Route::get('/setting', function () {
-        return view('setting.index');
-    });
+    Route::get('/setting', function () {return view('setting.index');});
     //---------------------------------------------------------------------------------------------------------
     Route::get('/customer-search', [CustomerSearch::class, 'index'])->name('customer-search.index');
     Route::post('/customer-search', [CustomerSearch::class, 'search'])->name('customer-search.search');
@@ -118,12 +117,12 @@ Route::middleware(['auth'])->group(function () {
     //---------------------------------------------------------------------------------------------------------
     Route::get('/order-search', [OrderSearch::class, 'index'])->name('order-search.index');
     Route::post('/order-search', [OrderSearch::class, 'search'])->name('order-search.search');
+    //---------------------------------------------------------------------------------------------------------
+    Route::get('/inventory', [InventoryController::class, 'index'])->name('inventory.index');
 });
 
 // Login route
 Route::get('/login', [LoginController::class, 'index'])->name('login');
 Route::post('/login/auth', [LoginController::class, 'auth'])->name('login.auth');
 
-Route::get('/', function () {
-    return view('login.index');
-});
+Route::get('/', function () {return view('login.index');});

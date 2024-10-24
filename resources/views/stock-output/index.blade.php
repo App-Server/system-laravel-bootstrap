@@ -21,7 +21,7 @@
                             <form class="row g-3 needs-validation" novalidate action="{{ route('stock-output.store') }}" method="post">
                                 @csrf
                                 <div class="col-md-12">
-                                    <label for="validationCustom01" class="form-label">Quem sai pegar a mercadoria? </label>
+                                    <label for="validationCustom01" class="form-label">Quem vai pegar a mercadoria? </label>
                                     <select type="name" name="person" class="form-select" id="validationCustom04" required>
                                         <option selected disabled value="">
                                             {{ $users->isEmpty() ? 'No User Available' : 'Selecionar usuário' }}
@@ -84,7 +84,7 @@
                             <label for="validationCustom04" class="form-label"><i class="bi bi-calendar3"></i><strong>Data da saída</strong></label>
                         </div>
                         <div class="col-md-1">
-                            <label for="validationCustom04" class="form-label"><i class="bi bi-pencil-square"></i></label>
+                            <label for="validationCustom04" class="form-label"><i class="bi bi-folder-symlink"></i></label>
                         </div>
                     </div>
                 </div>
