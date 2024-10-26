@@ -13,7 +13,7 @@ class StockEntry extends Migration
      */
     public function up()
     {
-        // Schema::create('stock_entry_table', function (Blueprint $stockentrytable) {
+        // Schema::create('stock_entry', function (Blueprint $stockentrytable) {
         //     $stockentrytable->id();
         //     $stockentrytable->string('product_name')->nullable();
         //     $stockentrytable->string('quantity')->nullable();

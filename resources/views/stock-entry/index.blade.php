@@ -17,7 +17,6 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            
                             <form class="row g-3 needs-validation" novalidate action="{{ route('stock-entry.store') }}" method="post">
                                 @csrf
                                 <div class="col-md-12">
@@ -58,7 +57,10 @@
             <div class="card" style="width: 100%;">
                 <div class="card-header">
                     <div class="row g-3 needs-validation" > 
-                        <div class="col-md-5">
+                        <div class="col-md-1">
+                            <label for="validationCustom04" class="form-label"><i class="bi bi-box-seam"></i><strong>SKU</strong></label>
+                        </div>
+                        <div class="col-md-4">
                             <label for="validationCustom04" class="form-label"><i class="bi bi-box-seam"></i><strong>Produto</strong></label>
                         </div>
                         <div class="col-md-2">
@@ -68,7 +70,7 @@
                             <label for="validationCustom04" class="form-label"><i class="bi bi-cash-coin"></i><strong>Custo UN da compra</strong></label>
                         </div>
                         <div class="col-md-2">
-                            <label for="validationCustom04" class="form-label"><i class="bi bi-currency-dollar"></i><strong>Custo total</strong></label>
+                            <label for="validationCustom04" class="form-label"><strong>R$ Custo total</strong></label>
                         </div>
                         <div class="col-md-1">
                             <label for="validationCustom04" class="form-label"><i class="bi bi-folder-symlink"></i></label>
@@ -79,7 +81,10 @@
                     @foreach ($stockentrytable as $stockentry)
                         <li class="list-group-item">
                             <div class="row g-3 needs-validation" >
-                                <div class="col-md-5">
+                                <div class="col-md-1">
+                                    <label for="validationCustom04" class="form-label"><i class="bi bi-box-seam"></i>{{ $stockentry->sku }}</label>
+                                </div>
+                                <div class="col-md-4">
                                     <label for="validationCustom04" class="form-label"><i class="bi bi-box-seam"></i>{{ $stockentry->product_name }}</label>
                                 </div>
                                 <div class="col-md-2">
@@ -89,7 +94,7 @@
                                     <label for="validationCustom04" class="form-label"><i class="bi bi-cash-coin"></i>{{ $stockentry->product_cost }}</label>
                                 </div>
                                 <div class="col-md-2">
-                                    <label for="validationCustom04" class="form-label"><i class="bi bi-currency-dollar"></i>{{ number_format($stockentry->quantity * $stockentry->product_cost, 2, ',', '.') }}</label>
+                                    <label for="validationCustom04" class="form-label">R${{ number_format($stockentry->quantity * $stockentry->product_cost, 2, ',', '.') }}</label>
                                 </div>
                                 <div class="col-md-1">
                                     <a href="{{ route('stock-entry.details', $stockentry->id) }}"><i class="bi bi-folder-symlink"></i></a>

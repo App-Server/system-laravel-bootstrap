@@ -36,11 +36,11 @@
         <i class="bi bi-file-richtext"></i>Ordem de Serviço
       </a>
       
-      <a href="{{ url('/order') }}" class="nav-link 
-        {{ Request::is('order') ? 'active' : '' }}
-        {{ Request::is('order/*') ? 'active' : '' }}
-        {{ Request::is('order-search') ? 'active' : '' }}
-        {{ Request::is('order/*/edit') ? 'active' : '' }}"> 
+      <a href="{{ url('/product_request') }}" class="nav-link 
+        {{ Request::is('product_request') ? 'active' : '' }}
+        {{ Request::is('product_request/*') ? 'active' : '' }}
+        {{ Request::is('product_request-search') ? 'active' : '' }}
+        {{ Request::is('product_request/*/edit') ? 'active' : '' }}"> 
         <i class="bi bi-boxes"></i>Pedidos
       </a>
 

@@ -19,7 +19,10 @@
                     </div>
                     <div class="col">
                         <label for="validationCustomUsername" class="form-label"><i class="bi bi-calendar3"></i><strong>Data da compra:</strong>{{ $stockentrytable->created_at->format('d/m/Y') }}</label>                                    
-                    </div>                         
+                    </div>   
+                    <div class="col-md-1">
+                        <label for="validationCustom04" class="form-label"><a href="{{ route('stock-entry.edit', $stockentrytable->id) }}" ><i class="bi bi-pencil-square"></i></a></label>
+                    </div>                      
                 </div>
             </div>
         </div>

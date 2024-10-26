@@ -9,7 +9,7 @@ class StockOutputModels extends Model
 {
     use HasFactory;
 
-    protected $table = 'stock_output_table';
+    protected $table = 'stock_output';
 
     protected $fillable = [
         'person',
@@ -17,4 +17,9 @@ class StockOutputModels extends Model
         'quantity',
         'observations',
     ];
+
+    public function product()
+    {
+        return $this->belongsTo(RegisterProductModels::class, 'sku', 'sku');
+    }
 }

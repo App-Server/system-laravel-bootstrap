@@ -71,7 +71,10 @@
             <div class="card" style="width: 100%;">
                 <div class="card-header">
                     <div class="row g-3 needs-validation" > 
-                        <div class="col-md-5">
+                        <div class="col-md-1">
+                            <label for="validationCustom04" class="form-label"><i class="bi bi-box-seam"></i><strong>SKU</strong></label>
+                        </div>
+                        <div class="col-md-4">
                             <label for="validationCustom04" class="form-label"><i class="bi bi-box-seam"></i><strong>Produto</strong></label>
                         </div>
                         <div class="col-md-3">
@@ -92,7 +95,10 @@
                     @foreach ($stockoutputtable as $stockoutput)
                         <li class="list-group-item">
                             <div class="row g-3 needs-validation" >
-                                <div class="col-md-5">
+                                <div class="col-md-1">
+                                    <label for="validationCustom04" class="form-label"><i class="bi bi-box-seam"></i>{{ $stockoutput->sku  }}</label>
+                                </div>
+                                <div class="col-md-4">
                                     <label for="validationCustom04" class="form-label"><i class="bi bi-box-seam"></i>{{ $stockoutput->product_name  }}</label>
                                 </div>
                                 <div class="col-md-3">

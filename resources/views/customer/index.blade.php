@@ -4,12 +4,11 @@
             <div class="titlebody"><h5>Clientes</h5></div>
             <div class="row g-3 needs-validation" >
                 <div class="col-md-11">
-            <!-- Button trigger modal -->
+    
                     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
                         Clientes
                     </button>
                     
-                    <!-- Modal -->
                     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog modal-lg">
                             <div class="modal-content" >

@@ -18,7 +18,7 @@
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
-                                    <form class="row g-3 needs-validation" novalidate action="{{ route('order.store') }}" method="post">
+                                    <form class="row g-3 needs-validation" novalidate action="{{ route('product_request.store') }}" method="post">
                                         @csrf
                                         <div class="col-md-12">
                                             <label for="validationCustom01" class="form-label">Usuário</label>
@@ -84,7 +84,7 @@
                     </div>
                 </div>
                 <div class="col-md-1">
-                    <a href="{{ url('/order-search') }}" class="btn btn-info">Pesquisa</a>
+                    <a href="{{ url('/product_request-search') }}" class="btn btn-info">Pesquisa</a>
                 </div>
             </div>
             

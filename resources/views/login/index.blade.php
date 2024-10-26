@@ -28,12 +28,12 @@
                             <form action="{{ route('login.auth') }}" method="POST">
                                 @csrf
                                 <div class="mb-3">
-                                <label for="exampleInputEmail1" class="form-label" style="color: white"><i class="bi bi-envelope-at"></i>Email address</label>
+                                <label for="exampleInputEmail1" class="form-label" style="color: white"><i class="bi bi-envelope-at"></i>Email</label>
                                 <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="email" required>
                                 </div>
                                 <div class="mb-3">
-                                <label for="exampleInputPassword1" class="form-label" style="color: white"><i class="bi bi-key"></i>Password</label>
-                                <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="password" required>
+                                <label for="exampleInputPassword1" class="form-label" style="color: white"><i class="bi bi-key"></i>Senha</label>
+                                <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Senha" required>
                                 </div><br>
                                 <div class="d-grid gap-2">
                                     <button type="submit" class="btn btn-primary">Enter</button>

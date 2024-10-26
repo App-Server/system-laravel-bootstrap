@@ -16,13 +16,13 @@ class Order extends Controller
         $orderstable = OrderModels::paginate(50);
         $productregistration = RegisterProductModels::all();
         $users = User::all();
-        return view('order.index', compact('orderstable', 'productregistration', 'users'));
+        return view('product_request.index', compact('orderstable', 'productregistration', 'users'));
     }
 
     public function create()
     {
         $productregistration = RegisterProductModels::all();
-        return view('order.create', compact('productregistration'));
+        return view('product_request.create', compact('productregistration'));
     }
 
     public function store(StoreUpdateOrder $request)
@@ -30,7 +30,7 @@ class Order extends Controller
         $data = $request->all();
         $ordertable = OrderModels::create($data);
         session()->flash('success', 'Order registered successfully!');
-        return redirect()->route('order.index');
+        return redirect()->route('product_request.index');
     }
 
     // public function show($id)
@@ -45,14 +45,14 @@ class Order extends Controller
     {
         // Find the order by ID, redirect back if not found
         if (!$ordertable = OrderModels::find($id)) {
-            return redirect()->route('order.index');
+            return redirect()->route('product_request.index');
         }
 
         // Get the latest comment for the order
         $ordercomments = Comment::latest()->first();
 
         // Pass the necessary data to the view
-        return view('order.details', compact('ordertable', 'ordercomments'));
+        return view('product_request.details', compact('ordertable', 'ordercomments'));
     }
 
 }

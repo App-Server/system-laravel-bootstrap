@@ -37,13 +37,13 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/user', [UserController::class, 'store'])->name('user.store');
     Route::get('/user/{id}', [UserController::class, 'show'])->name('user.details');
     //--------------------------------------------------------------------------------------------------------
-    Route::delete('/order/{id}', [Order::class, 'destroy'])->name('order.destroy');
-    Route::put('/order/{id}', [Order::class, 'update'])->name('order.update');
-    Route::get('/order/{id}/edit', [Order::class, 'edit'])->name('order.edit');
-    Route::get('/order', [Order::class, 'index'])->name('order.index');
-    Route::get('/order/create', [Order::class, 'create'])->name('order.create');
-    Route::post('/order', [Order::class, 'store'])->name('order.store');
-    Route::get('/order/{id}', [Order::class, 'show'])->name('order.details');
+    Route::delete('/product_request/{id}', [Order::class, 'destroy'])->name('product_request.destroy');
+    Route::put('/product_request/{id}', [Order::class, 'update'])->name('product_request.update');
+    Route::get('/product_request/{id}/edit', [Order::class, 'edit'])->name('product_request.edit');
+    Route::get('/product_request', [Order::class, 'index'])->name('product_request.index');
+    Route::get('/product_request/create', [Order::class, 'create'])->name('product_request.create');
+    Route::post('/product_request', [Order::class, 'store'])->name('product_request.store');
+    Route::get('/product_request/{id}', [Order::class, 'show'])->name('product_request.details');
     //---------------------------------------------------------------------------------------------------------
     Route::delete('/register-product/{id}', [RegisterProduct::class, 'destroy'])->name('register-product.destroy');
     Route::put('/register-product/{id}', [RegisterProduct::class, 'update'])->name('register-product.update');
