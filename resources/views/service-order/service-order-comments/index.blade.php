@@ -76,6 +76,7 @@
                             <div class="col-md-12">
                                 <label for="validationCustom04" class="form-label"><i class="bi bi-chat-dots"></i></i><strong>Observação:</strong>{{ $serviceorder->observations }}</label>
                             </div>
+                            <h5>Total Comments: {{ $comments_count }}</h5>
                         </ul>
                     </div>
                     </div>

@@ -30,7 +30,9 @@ class ServiceOrderComment extends Controller
         // Retrieve comments related to this serviceorder
         $service_order_comments = $serviceorder->comments()->get();
 
-        return view('service-order.service-order-comments.index', compact('service_order_comments', 'serviceorder'));
+        $comments_count = $serviceorder->comments()->count();
+
+        return view('service-order.service-order-comments.index', compact('service_order_comments', 'serviceorder', 'comments_count'));
     }
 
     public function store(Request $request, $serviceorderId)
