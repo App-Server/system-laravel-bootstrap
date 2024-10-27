@@ -3,23 +3,25 @@
         <div class="container-fluid">
             <div class="titlebody">
                 <h5>Pesquisa de ordem de serviço</h5>
-                <div class="col-md-12">
-                    <form class="d-flex" action="{{ route('service-order-search.search') }}" method="POST">
-                        @csrf
-                        <div class="row g-3 needs-validation">
-                            <div class="col-md-5">
-                                <label for="start_date">Data inicial</label>
-                                <input type="date" class="form-control" id="start_date" name="start_date" required>
+                <div class="row g-3 needs-validation" > 
+                    <div class="col-md-11">
+                        <form class="d-flex" action="{{ route('service-order-search.search') }}" method="POST">
+                            @csrf
+                            <div class="row g-3 needs-validation">
+                                <div class="col-md-5">
+                                    <label for="start_date">Data inicial</label>
+                                    <input type="date" class="form-control" id="start_date" name="start_date" required>
+                                </div>
+                                <div class="col-md-5">
+                                    <label for="end_date">Data final</label>
+                                    <input type="date" class="form-control" id="end_date" name="end_date" required>
+                                </div>
+                                <div class="col-md-2" style="margin-top: 40px;">
+                                    <button class="btn btn-success" type="submit">Pesquisa</button>
+                                </div>
                             </div>
-                            <div class="col-md-5">
-                                <label for="end_date">Data final</label>
-                                <input type="date" class="form-control" id="end_date" name="end_date" required>
-                            </div>
-                            <div class="col-md-2" style="margin-top: 40px;">
-                                <button class="btn btn-success" type="submit">Pesquisa</button>
-                            </div>
-                        </div>
-                    </form>
+                        </form>
+                    </div>
                 </div>
                 <hr>
                 <div class="card" style="width: 100%;">

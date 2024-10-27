@@ -25,7 +25,6 @@ class StoreUpdateRegisterProduct extends FormRequest
     {
         $rules = [
             'product_name' => 'required|string|max:1000|min:3',
-            'sku' => 'required',
             'description' => 'required|string|max:8000|min:3',
         ];
         return $rules;

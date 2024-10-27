@@ -17,16 +17,6 @@
                     <div class="col-sm-3 mb-3">
                         <div class="card">
                             <div class="card-body">
-                                <p class="card-text"><i class="bi bi-x-octagon"></i>Gerenciar produto</p>
-                                <div class="d-grid gap-2">
-                                    <a href="{{ url('/register-product') }}" class="btn btn-secondary {{ Request::is('register-product') ? 'active' : '' }}"><i class="bi bi-x-octagon"></i>Lista de produto</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-3 mb-3">
-                        <div class="card">
-                            <div class="card-body">
                                 <p class="card-text"><i class="bi bi-briefcase"></i>Gerenciar serviços</p>
                                 <div class="d-grid gap-2">
                                     <a href="{{ url('/service-registration') }}" class="btn btn-primary 

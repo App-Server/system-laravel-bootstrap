@@ -16,7 +16,9 @@ class RegisterProduct extends Controller
 
     public function show($id)
     {
-        return view('register-product.details');
+        if (!$registerProducts = RegisterProductModels::find($id))
+        return redirect()->route(('register-product.index'));
+        return view('register-product.details', compact('registerProducts'));
     }
 
     public function store(StoreUpdateRegisterProduct $request)

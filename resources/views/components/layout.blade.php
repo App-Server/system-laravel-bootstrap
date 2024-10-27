@@ -41,10 +41,17 @@
         {{ Request::is('product_request/*') ? 'active' : '' }}
         {{ Request::is('product_request-search') ? 'active' : '' }}
         {{ Request::is('product_request/*/edit') ? 'active' : '' }}"> 
-        <i class="bi bi-boxes"></i>Pedidos
+        <i class="bi bi-cart3"></i>Pedidos
       </a>
 
-      <a href="{{ url('/stock-entry') }}" class="nav-link 
+      <a href="{{ url('/register-product') }}" class="nav-link
+        {{ Request::is('register-product/*/edit') ? 'active' : '' }}
+        {{ Request::is('register-product/*') ? 'active' : '' }}
+        {{ Request::is('register-product') ? 'active' : '' }}">
+        <i class="bi bi-box-seam"></i>Almoxarifado
+      </a>
+
+      {{-- <a href="{{ url('/stock-entry') }}" class="nav-link 
         {{ Request::is('stock-entry/*') ? 'active' : '' }}
         {{ Request::is('stock-entry') ? 'active' : '' }}">
         <i class="bi bi-cart3"></i>Entrada de Estoque
@@ -54,18 +61,14 @@
         {{ Request::is('stock-output/*') ? 'active' : '' }}
         {{ Request::is('stock-output') ? 'active' : '' }}">
         <i class="bi bi-cart4"></i>Saída de Estoque
-      </a> 
-
-      <a href="{{ url('/inventory') }}" class="nav-link {{ Request::is('inventory') ? 'active' : '' }}"><i class="bi bi-box-fill"></i>Inventário</a>
+      </a>  --}}
 
       <a href="{{ url('/setting') }}" class="nav-link
         {{ Request::is('setting') ? 'active' : '' }}
         {{ Request::is('user') ? 'active' : '' }}
         {{ Request::is('service-registration') ? 'active' : '' }}
         {{ Request::is('user') ? 'active' : '' }}
-        {{ Request::is('register-product/*/edit') ? 'active' : '' }}
-        {{ Request::is('service-registration/*/edit') ? 'active' : '' }}
-        {{ Request::is('register-product') ? 'active' : '' }}" >
+        {{ Request::is('service-registration/*/edit') ? 'active' : '' }} ">
       <i class="bi bi-gear"></i>Configurações
     </a>
 

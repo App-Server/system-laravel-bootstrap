@@ -84,7 +84,7 @@
                     </div>
                 </div>
                 <div class="col-md-1">
-                    <a href="{{ url('/product_request-search') }}" class="btn btn-info">Pesquisa</a>
+                    <a href="{{ url('/product_request_search') }}" class="btn btn-info">Pesquisa</a>
                 </div>
             </div>
             

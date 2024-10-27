@@ -1,7 +1,7 @@
 <x-layout title="Cadastro de produto">
     <div class="main-content ">
         <div class="container-fluid">
-            <div class="titlebody"><h5><i class="bi bi-box-seam"></i>Cadastro de produto<h5></div>
+            <div class="titlebody"><h5>Cadastro de produto<h5></div>
                 <div class="row g-3 needs-validation" >
                     <div class="col-md-12">
                         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
@@ -23,13 +23,9 @@
                                             <div class="col-md-12">
                                                 <label for="validationCustom01" class="form-label"><i class="bi bi-box-seam"></i>Nome do produto</label>
                                                 <input type="name" name="product_name" class="form-control" id="validationCustom01" required>
-                                            </div> 
-                                            <div class="col-md-12">
-                                                <label for="validationCustom01" class="form-label"><i class="bi bi-box-seam"></i>SKU</label>
-                                                <input type="number" name="sku" class="form-control" id="validationCustom01" required>
-                                            </div>                  
+                                            </div>                
                                             <div class="mb-3">
-                                                <label for="floatingTextarea2"><i class="bi bi-card-text"></i>Description</label>
+                                                <label for="floatingTextarea2"><i class="bi bi-card-text"></i>Descrição</label>
                                                 <textarea type="name" name="description" class="form-control" id="comments" id="floatingTextarea2" style="height: 150px" required></textarea>
                                             </div>
                                             <div class="col-12">
@@ -49,13 +45,13 @@
                     <div class="card-header">
                         <div class="row g-3 needs-validation" > 
                             <div class="col-md-1">
-                                <label for="validationCustom04" class="form-label"><i class="bi bi-pencil-square"></i><strong>SKU</strong></label>
+                                <label for="validationCustom04" class="form-label"><strong>Id</strong></label>
                             </div>
                             <div class="col-md-10">
                                 <label for="validationCustom04" class="form-label"><i class="bi bi-box-seam"></i><strong>Produto</strong></label>
                             </div>
                             <div class="col-md-1">
-                                <label for="validationCustom04" class="form-label"><i class="bi bi-pencil-square"></i></label>
+                                <label for="validationCustom04" class="form-label"><i class="bi bi-folder-symlink"></i></label>
                             </div>
                         </div>
                     </div>
@@ -64,13 +60,13 @@
                             <li class="list-group-item">
                                 <div class="row g-3 needs-validation" >
                                     <div class="col-md-1">
-                                        <label for="validationCustom04" class="form-label">{{ $registerProduct->sku }}</label>
+                                        <label for="validationCustom04" class="form-label">{{ $registerProduct->id }}</label>
                                     </div>
                                     <div class="col-md-10">
                                         <label for="validationCustomUsername" class="form-label">{{ $registerProduct->product_name }}</label>
                                     </div>
                                     <div class="col-md-1">
-                                        <a href="{{ route('register-product.edit', $registerProduct->id ) }}"><i class="bi bi-pencil-square"></i></a>
+                                        <a href="{{ route('register-product.details', $registerProduct->id) }}"><i class="bi bi-folder-symlink"></i></a>
                                     </div>
                                 </div>
                             </li>
