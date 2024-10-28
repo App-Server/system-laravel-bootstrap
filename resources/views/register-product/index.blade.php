@@ -48,10 +48,10 @@
                                 <label for="validationCustom04" class="form-label"><strong>Id</strong></label>
                             </div>
                             <div class="col-md-10">
-                                <label for="validationCustom04" class="form-label"><i class="bi bi-box-seam"></i><strong>Produto</strong></label>
+                                <label for="validationCustom04" class="form-label"><strong>Produto</strong></label>
                             </div>
                             <div class="col-md-1">
-                                <label for="validationCustom04" class="form-label"><i class="bi bi-folder-symlink"></i></label>
+                                <label for="validationCustom04" class="form-label"><strong>Detalhes</strong></label>
                             </div>
                         </div>
                     </div>
@@ -66,7 +66,7 @@
                                         <label for="validationCustomUsername" class="form-label">{{ $registerProduct->product_name }}</label>
                                     </div>
                                     <div class="col-md-1">
-                                        <a href="{{ route('register-product.details', $registerProduct->id) }}"><i class="bi bi-folder-symlink"></i></a>
+                                        <a href="{{ route('register-product.details', $registerProduct->id) }}" class="btn btn-info">Detalhes</a>
                                     </div>
                                 </div>
                             </li>

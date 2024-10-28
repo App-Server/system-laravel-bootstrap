@@ -45,10 +45,10 @@
             <div class="card-header">
                 <div class="row g-3 needs-validation" > 
                     <div class="col-md-6">
-                        <label for="validationCustom04" class="form-label"><i class="bi bi-person-circle"></i><strong>Username</strong></label>
+                        <label for="validationCustom04" class="form-label"><strong>Username</strong></label>
                     </div>
                     <div class="col-md-5">
-                        <label for="validationCustom04" class="form-label"><i class="bi bi-envelope-at"></i><strong>Email</strong></label>
+                        <label for="validationCustom04" class="form-label"><strong>Email</strong></label>
                     </div>
                     <div class="col-md-1">
                         <label for="validationCustom04" class="form-label"><i class="bi bi-pencil-square"></i></label>
@@ -60,13 +60,13 @@
                     <li class="list-group-item">
                         <div class="row g-3 needs-validation" >
                             <div class="col-md-6">
-                                <label for="validationCustom04" class="form-label"><i class="bi bi-person-circle"></i>{{ $user->name  }}</label>
+                                <label for="validationCustom04" class="form-label">{{ $user->name  }}</label>
                             </div>
                             <div class="col-md-5">
-                                <label for="validationCustom04" class="form-label"><i class="bi bi-envelope-at"></i>{{ $user->email }}</label>
+                                <label for="validationCustom04" class="form-label">{{ $user->email }}</label>
                             </div>
                             <div class="col-md-1">
-                                <a href="{{ route('user.edit', $user->id ) }}"><i class="bi bi-pencil-square"></i></a>
+                                <a href="{{ route('user.edit', $user->id ) }}" class="btn btn-success">Editar</a>
                             </div>
                         </div>
                     </li>

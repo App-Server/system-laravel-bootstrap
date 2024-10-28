@@ -63,7 +63,7 @@
                                                 <label for="validationCustom04" class="form-label"><i class="bi bi-calendar3"></i>{{ \Carbon\Carbon::parse($order->date)->format('d/m/Y') }}</label>
                                             </div>
                                             <div class="col-md-1">
-                                                <a href="{{ route('service-order-comments.index', $order->id) }}"><i class="bi bi-folder-symlink"></i></a>                                       
+                                                <a href="{{ route('service-order-comments.index', $order->id) }}" class="btn btn-info">Detalhes</a>                                       
                                             </div>
                                         </div>
                                     </li>

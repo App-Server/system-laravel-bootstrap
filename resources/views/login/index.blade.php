@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Login</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    {{-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"> --}}
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 </head>
 <body style="background-color: black">
@@ -28,11 +28,11 @@
                             <form action="{{ route('login.auth') }}" method="POST">
                                 @csrf
                                 <div class="mb-3">
-                                <label for="exampleInputEmail1" class="form-label" style="color: white"><i class="bi bi-envelope-at"></i>Email</label>
+                                <label for="exampleInputEmail1" class="form-label" style="color: white">Email</label>
                                 <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="email" required>
                                 </div>
                                 <div class="mb-3">
-                                <label for="exampleInputPassword1" class="form-label" style="color: white"><i class="bi bi-key"></i>Senha</label>
+                                <label for="exampleInputPassword1" class="form-label" style="color: white">Senha</label>
                                 <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Senha" required>
                                 </div><br>
                                 <div class="d-grid gap-2">

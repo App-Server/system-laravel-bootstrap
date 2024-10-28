@@ -21,7 +21,7 @@
                                     <form action="{{ route('service-order-comments.store', $serviceorder->id) }}" method="post">
                                         @csrf
                                         <div class="mb-3">
-                                            <label for="validationCustom04" class="form-label"><i class="bi bi-info-circle"></i>Escolha o status</label>
+                                            <label for="validationCustom04" class="form-label">Escolha o status</label>
                                             <select type="name" name="status" class="form-select" id="validationCustom04" required>
                                                 <option selected disabled value=""></option>
                                                 <option>🏁 iniciado</option>
@@ -36,7 +36,7 @@
                                             </select>
                                         </div>
                                         <div class="mb-3">
-                                            <label for="floatingTextarea2"><i class="bi bi-card-text"></i>Observações</label>
+                                            <label for="floatingTextarea2">Observações</label>
                                             <textarea type="name" name="body" class="form-control" id="comments" id="floatingTextarea2" style="height: 100px" ></textarea>
                                         </div>
                                         <div class="modal-footer">
@@ -59,22 +59,22 @@
                     <div class="col">
                         <ul class="list-group list-group-flush">
                             <div class="col-md-8">
-                                <label for="validationCustom04" class="form-label"><i class="bi bi-person-circle"></i><strong>Cliente:</strong>{{ $serviceorder->customer }}</label>
+                                <label for="validationCustom04" class="form-label"><strong>Cliente:</strong>{{ $serviceorder->customer }}</label>
                             </div>
                             <div class="col-md-4">
-                                <label for="validationCustom04" class="form-label"><i class="bi bi-briefcase"></i><strong>Ordem de Serviço:</strong>{{ $serviceorder->service }}</label>
+                                <label for="validationCustom04" class="form-label"><strong>Ordem de Serviço:</strong>{{ $serviceorder->service }}</label>
                             </div>
                             <div class="col-md-4">
-                                <label for="validationCustom04" class="form-label"><i class="bi bi-calendar3"></i><strong style="background-color: rgb(72, 255, 0); border-radius: 20px; padding: 5px;">Data da execução:</strong>{{ \Carbon\Carbon::parse($serviceorder->date)->format('d/m/Y') }}</label>
+                                <label for="validationCustom04" class="form-label"><strong style="background-color: rgb(72, 255, 0); border-radius: 20px; padding: 5px;">Data da execução:</strong>{{ \Carbon\Carbon::parse($serviceorder->date)->format('d/m/Y') }}</label>
                             </div>
                             <div class="col-md-4">
-                                <label for="validationCustom04" class="form-label"><i class="bi bi-alarm"></i><strong>Hora da execução:</strong>{{ $serviceorder->time }}</label>
+                                <label for="validationCustom04" class="form-label"><strong>Hora da execução:</strong>{{ $serviceorder->time }}</label>
                             </div>
                             <div class="col-md-4">
-                                <label for="validationCustom04" class="form-label"><i class="bi bi-cash-coin"></i><strong>Preço do serviço R$:</strong>{{ $serviceorder->price }}</label>
+                                <label for="validationCustom04" class="form-label"><strong>Preço do serviço R$:</strong>{{ $serviceorder->price }}</label>
                             </div>
                             <div class="col-md-12">
-                                <label for="validationCustom04" class="form-label"><i class="bi bi-chat-dots"></i></i><strong>Observação:</strong>{{ $serviceorder->observations }}</label>
+                                <label for="validationCustom04" class="form-label"><strong>Observação:</strong>{{ $serviceorder->observations }}</label>
                             </div>
                             <h5>Total Comments: {{ $comments_count }}</h5>
                         </ul>
@@ -90,13 +90,13 @@
                     @foreach ($service_order_comments as $comment)
                         <li class="list-group-item">
                             <div class="col-md-12">
-                                <label for="validationCustomUsername" class="form-label"><i class="bi bi-info-square-fill"></i><strong> status: </strong>{{ $comment->status }}</label>
+                                <label for="validationCustomUsername" class="form-label"><strong> status: </strong>{{ $comment->status }}</label>
                             </div>
                             <div class="col-md-12">
-                                <label for="validationCustomUsername" class="form-label"><i class="bi bi-calendar3"></i><strong>Status atualizado:</strong>{{ $comment->created_at->format('d/m/Y') }}</label>
+                                <label for="validationCustomUsername" class="form-label"><strong>Status atualizado:</strong>{{ $comment->created_at->format('d/m/Y') }}</label>
                             </div>
                             <div class="col-md-12">
-                                <label for="validationCustomUsername" class="form-label"><i class="bi bi-chat-dots"></i><strong>Messenger:</strong>{{ $comment->body }}</label>
+                                <label for="validationCustomUsername" class="form-label"><strong>Messenger:</strong>{{ $comment->body }}</label>
                             </div>
                         </li>
                     @endforeach

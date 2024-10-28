@@ -55,7 +55,7 @@
                                                 <label for="validationCustom04" class="form-label"><i class="bi bi-calendar3"></i>{{ $order->created_at->format('d/m/Y') }}</label>
                                             </div>
                                             <div class="col-md-1">
-                                                <a href="{{ route('comments.index', $order->id) }}"><i class="bi bi-folder-symlink"></i></a>
+                                                <a href="{{ route('comments.index', $order->id) }}" class="btn btn-info">Detalhes</a>
                                             </div>
                                         </div>
                                     </li>

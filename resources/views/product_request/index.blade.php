@@ -94,16 +94,16 @@
                 <div class="card-header">
                     <div class="row g-3 needs-validation" > 
                         <div class="col-md-6">
-                            <label for="validationCustom04" class="form-label"><i class="bi bi-box-seam"></i><strong>Produto</strong></label>
+                            <label for="validationCustom04" class="form-label"><strong>Produto</strong></label>
                         </div>
                         <div class="col-md-2">
-                            <label for="validationCustom04" class="form-label"><i class="bi bi-cart3"></i><strong>Quantidade</strong></label>
+                            <label for="validationCustom04" class="form-label"><strong>Quantidade</strong></label>
                         </div>
                         <div class="col-md-3">
-                            <label for="validationCustom04" class="form-label"><i class="bi bi-person"></i><strong>Usuário</strong></label>
+                            <label for="validationCustom04" class="form-label"><strong>Usuário</strong></label>
                         </div>
                         <div class="col-md-1">
-                            <label for="validationCustom04" class="form-label"><i class="bi bi-folder-symlink"></i></label>
+                            <label for="validationCustom04" class="form-label"><strong>Detalhes</strong></label>
                         </div>
                     </div>
                 </div>
@@ -112,16 +112,16 @@
                         <li class="list-group-item">
                             <div class="row g-3 needs-validation" >                    
                                 <div class="col-md-6">
-                                    <label for="validationCustom04" class="form-label"><i class="bi bi-box-seam"></i>{{ $ordertable->product_name }}</label>
+                                    <label for="validationCustom04" class="form-label">{{ $ordertable->product_name }}</label>
                                 </div>
                                 <div class="col-md-2">
-                                    <label for="validationCustom04" class="form-label"><i class="bi bi-cart3"></i>{{ $ordertable->quantity }}</label>
+                                    <label for="validationCustom04" class="form-label">{{ $ordertable->quantity }}</label>
                                 </div>
                                 <div class="col-md-3">
-                                    <label for="validationCustom04" class="form-label"><i class="bi bi-person"></i>{{ $ordertable->person }}</label>
+                                    <label for="validationCustom04" class="form-label">{{ $ordertable->person }}</label>
                                 </div>
                                 <div class="col-md-1">
-                                    <a href="{{ route('comments.index', $ordertable->id) }}"><i class="bi bi-folder-symlink"></i></a>
+                                    <a href="{{ route('comments.index', $ordertable->id) }}" class="btn btn-info">Detalhes</a>
                                 </div>
                             </div>
                         </li>

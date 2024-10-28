@@ -9,7 +9,7 @@
                 <div class="col-sm-3 mb-3 mb-sm-0">
                     <div class="card ">
                         <div class="card-body">            
-                            <p class="card-text"><i class="bi bi-people"></i>Total de Clientes</p>
+                            <p class="card-text">Total de Clientes</p>
                             <p class="card-text">{{ $customerCount }}</p>
                         </div>
                     </div>
@@ -17,7 +17,7 @@
                 <div class="col-sm-3 mb-3">
                     <div class="card">
                         <div class="card-body">
-                            <p class="card-text"><i class="bi bi-briefcase"></i>Total de Ordem de Serviços</p>
+                            <p class="card-text">Total de Ordem de Serviços</p>
                             <p class="card-text">{{ $serviceOrderCount }}</p>
                         </div>
                     </div>
@@ -25,7 +25,7 @@
                 <div class="col-sm-3 mb-3">
                     <div class="card">
                         <div class="card-body">
-                            <p class="card-text"><i class="bi bi-boxes"></i>Total de Pedidos</p>
+                            <p class="card-text">Total de Pedidos</p>
                             <p class="card-text">{{ $order }}</p>
                         </div>
                     </div>
@@ -33,7 +33,7 @@
                 <div class="col-sm-3 mb-3">
                     <div class="card">
                         <div class="card-body">
-                            <p class="card-text"><i class="bi bi-file-person"></i>Total de Usuários</p>
+                            <p class="card-text">Total de Usuários</p>
                             <p class="card-text">{{ $usersCount }}</p>
                         </div>
                     </div>

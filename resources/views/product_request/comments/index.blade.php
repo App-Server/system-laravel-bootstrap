@@ -29,7 +29,7 @@
                                     </select>
                                 </div>
                                 <div class="mb-3">
-                                    <label for="floatingTextarea2"><i class="bi bi-card-text"></i>Observações</label>
+                                    <label for="floatingTextarea2">Observações</label>
                                     <textarea type="name" name="body" class="form-control" id="comments" id="floatingTextarea2" style="height: 100px" ></textarea>
                                 </div>
                                 <button type="submit" class="btn btn-primary">Atualizar</button>
@@ -47,22 +47,22 @@
                     <div class="col">
                         <ul class="list-group list-group-flush">
                             <div class="col-md-12">
-                                <label for="validationCustom04" class="form-label"><i class="bi bi-box-seam"></i><strong>Produto:</strong>{{ $order->product_name }}</label>
+                                <label for="validationCustom04" class="form-label"><strong>Produto:</strong>{{ $order->product_name }}</label>
                             </div>
                             <div class="col-md-12">
-                                <label for="validationCustom04" class="form-label"><i class="bi bi-cart3"></i><strong>Quantidade:</strong>{{ $order->quantity }}</label>
+                                <label for="validationCustom04" class="form-label"><strong>Quantidade:</strong>{{ $order->quantity }}</label>
                             </div>
                             <div class="col-md-12">
-                                <label for="validationCustom04" class="form-label"><i class="bi bi-person"></i><strong>Usuário:</strong>{{ $order->person }}</label>
+                                <label for="validationCustom04" class="form-label"><strong>Usuário:</strong>{{ $order->person }}</label>
                             </div>
                             <div class="col-md-12">
-                                <label for="validationCustom04" class="form-label"><i class="bi bi-calendar2-week"></i><strong>Data da retirada:</strong>{{ $order->delivery_time }}</label>
+                                <label for="validationCustom04" class="form-label"><strong>Data da retirada:</strong>{{ $order->delivery_time }}</label>
                             </div>
                             <div class="col-md-12">
-                                <label for="validationCustom04" class="form-label"><i class="bi bi-exclamation-triangle-fill"></i><strong>Prioridade:</strong>{{ $order->priority }}</label>
+                                <label for="validationCustom04" class="form-label"><strong>Prioridade:</strong>{{ $order->priority }}</label>
                             </div>
                             <div class="col-md-12">
-                                <label for="validationCustom04" class="form-label"><i class="bi bi-chat-dots"></i><strong>observações:</strong>{{ $order->observations }}</label>
+                                <label for="validationCustom04" class="form-label"><strong>observações:</strong>{{ $order->observations }}</label>
                             </div>
                         </ul>
                     </div>
@@ -81,18 +81,18 @@
                                     <div class="col">
                                         <div class="col">
                                             <br>
-                                            <label for="validationCustomUsername" class="form-label"><i class="bi bi-info-square-fill"></i><strong> Status: </strong>{{ $comment->status }}</label>
+                                            <label for="validationCustomUsername" class="form-label"><strong> Status: </strong>{{ $comment->status }}</label>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col">
-                                        <label for="validationCustomUsername" class="form-label"><i class="bi bi-calendar3"></i><strong>Status atualizado:</strong>{{ $comment->created_at->format('d/m/Y') }}</label>
+                                        <label for="validationCustomUsername" class="form-label"><strong>Status atualizado:</strong>{{ $comment->created_at->format('d/m/Y') }}</label>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col">
-                                        <label for="validationCustomUsername" class="form-label"><i class="bi bi-chat-dots"></i><strong>Mensagem:</strong>{{ $comment->body }}</label>
+                                        <label for="validationCustomUsername" class="form-label"><strong>Mensagem:</strong>{{ $comment->body }}</label>
                                     </div>
                                 </div>
                                 

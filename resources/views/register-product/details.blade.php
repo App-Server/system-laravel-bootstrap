@@ -136,7 +136,7 @@
                         <label for="validationCustomUsername" class="form-label"><i class="bi bi-chat-left-text"></i><strong>Descrição:</strong>{{ $registerProducts->description }}</label>                                            
                     </div>
                     <div class="col-md-1">
-                        <a href="{{ route('register-product.edit', $registerProducts->id ) }}"><i class="bi bi-pencil-square"></i></a>
+                        <a href="{{ route('register-product.edit', $registerProducts->id ) }}" class="btn btn-success">Editar</a>
                     </div>
                 </div>
             </div>            

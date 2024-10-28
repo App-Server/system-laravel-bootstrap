@@ -45,13 +45,13 @@
                 <div class="card-header">
                     <div class="row g-3 needs-validation" > 
                         <div class="col-md-5">
-                            <label for="validationCustom04" class="form-label"><i class="bi bi-file-earmark-text"></i><strong>Service Name</strong></label>
+                            <label for="validationCustom04" class="form-label"><strong>Service Name</strong></label>
                         </div>
                         <div class="col-md-3">
-                            <label for="validationCustom04" class="form-label"><i class="bi bi-calendar3"></i><strong>Criado</strong></label>
+                            <label for="validationCustom04" class="form-label"><strong>Criado</strong></label>
                         </div>
                         <div class="col-md-3">
-                            <label for="validationCustom04" class="form-label"><i class="bi bi-calendar3"></i></i><strong>Update</strong></label>
+                            <label for="validationCustom04" class="form-label"><strong>Update</strong></label>
                         </div>
                         <div class="col-md-1">
                             <label for="validationCustom04" class="form-label"><i class="bi bi-folder-symlink"></i></label>
@@ -63,27 +63,25 @@
                         <li class="list-group-item">
                             <div class="row g-3 needs-validation" >                                    
                                 <div class="col-md-5">
-                                    <label for="validationCustom04" class="form-label"><i class="bi bi-file-earmark-text"></i>{{ $serviceregistration->service_name  }}</label>
+                                    <label for="validationCustom04" class="form-label">{{ $serviceregistration->service_name  }}</label>
                                 </div>
                                 
                                 <div class="col-md-3">
-                                    <label for="validationCustom04" class="form-label"><i class="bi bi-calendar3"></i>{{ $serviceregistration->created_at->format('d/m/Y') }}</label>
+                                    <label for="validationCustom04" class="form-label">{{ $serviceregistration->created_at->format('d/m/Y') }}</label>
                                 </div>
 
                                 <div class="col-md-3">
-                                    <label for="validationCustom04" class="form-label"><i class="bi bi-calendar3"></i>{{ $serviceregistration->updated_at->format('d/m/Y') }}</label>
+                                    <label for="validationCustom04" class="form-label">{{ $serviceregistration->updated_at->format('d/m/Y') }}</label>
                                 </div>
 
                                 <div class="col-md-1">
-                                    <a href="{{ route('service-registration.edit', $serviceregistration->id) }}"><i class="bi bi-pencil-square"></i></a>
+                                    <a href="{{ route('service-registration.edit', $serviceregistration->id) }}" class="btn btn-success">Editar</a>
                                 </div>
                             </div>
                         </li>
                     @endforeach
                 </ul>
             </div>
-            
-            {{--  --}}
         </div> 
     </div>   
 </x-layout>

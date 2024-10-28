@@ -91,13 +91,13 @@
                 <div class="card-header">
                     <div class="row g-3 needs-validation" > 
                         <div class="col-md-6">
-                            <label for="validationCustom04" class="form-label"><i class="bi bi-person-check"></i><strong>Cliente</strong></label>
+                            <label for="validationCustom04" class="form-label"><strong>Cliente</strong></label>
                         </div>
                         <div class="col-md-5">
-                            <label for="validationCustom04" class="form-label"><i class="bi bi-briefcase"></i><strong>Ordem de serviço</strong></label>
+                            <label for="validationCustom04" class="form-label"><strong>Ordem de serviço</strong></label>
                         </div>
                         <div class="col-md-1">
-                            <label for="validationCustom04" class="form-label"><i class="bi bi-folder-symlink"></i></label>
+                            <label for="validationCustom04" class="form-label"><strong>Detalhes</strong></label>
                         </div>
                     </div>
                 </div>
@@ -106,13 +106,13 @@
                         <li class="list-group-item">
                             <div class="row g-3 needs-validation" >                                    
                                 <div class="col-md-6">
-                                    <label for="validationCustom04" class="form-label"><i class="bi bi-person-check"></i>{{ $serviceorder->customer  }}</label>
+                                    <label for="validationCustom04" class="form-label">{{ $serviceorder->customer  }}</label>
                                 </div>
                                 <div class="col-md-5">
-                                    <label for="validationCustom04" class="form-label"><i class="bi bi-briefcase"></i>{{ $serviceorder->service }}</label>
+                                    <label for="validationCustom04" class="form-label">{{ $serviceorder->service }}</label>
                                 </div>
                                 <div class="col-md-1">
-                                    <a href="{{ route('service-order-comments.index', $serviceorder->id) }}"><i class="bi bi-folder-symlink"></i></a>                                       
+                                    <a href="{{ route('service-order-comments.index', $serviceorder->id) }}" class="btn btn-info">Detalhes</a>                                       
                                 </div>
                             </div>
                         </li>

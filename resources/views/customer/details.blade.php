@@ -8,58 +8,58 @@
                 </div>
 
                 <div class="col-md-1">
-                    <label for="validationCustom04" class="form-label"><a href="{{ route('customer.edit', $customer->id) }}" ><i class="bi bi-pencil-square"></i></a></label>
+                    <label for="validationCustom04" class="form-label"><a href="{{ route('customer.edit', $customer->id) }}" class="btn btn-success">Editar</a></label>
                 </div>
             </div>
             <br>
             <div class="card">
-                <h5 class="card-header"><i class="bi bi-person"></i>{{ $customer->customer }}</h5>
+                <h5 class="card-header">{{ $customer->customer }}</h5>
                 <div class="card-body">
                     <div class="row">
                         <div class="col">
-                            <label for="validationCustomUsername" class="form-label"><i class="bi bi-building"></i><strong>Endereço:</strong>{{ $customer->address }}</label>
+                            <label for="validationCustomUsername" class="form-label"><strong>Endereço:</strong>{{ $customer->address }}</label>
                             <br>                                            
                         </div>
                     </div>
                     <div class="row">
                         <div class="col">
-                            <label for="validationCustomUsername" class="form-label"><i class="bi bi-mailbox-flag"></i><strong>Caixa postal:</strong>{{ $customer->postal }}</label>
+                            <label for="validationCustomUsername" class="form-label"><strong>Caixa postal:</strong>{{ $customer->postal }}</label>
                             <br>                                            
                         </div>
                     </div>
                     <div class="row">
                         <div class="col">
-                            <label for="validationCustomUsername" class="form-label"><i class="bi bi-123"></i><strong>CPF ou CNPJ:</strong>{{ $customer->taxpayer_identification_number }}</label>
+                            <label for="validationCustomUsername" class="form-label"><strong>CPF ou CNPJ:</strong>{{ $customer->taxpayer_identification_number }}</label>
                             <br>                                            
                         </div>
                     </div>
                     <div class="row">
                         <div class="col">
-                            <label for="validationCustomUsername" class="form-label"><i class="bi bi-envelope-at"></i><strong>Email:</strong>{{ $customer->email }}</label>
+                            <label for="validationCustomUsername" class="form-label"><strong>Email:</strong>{{ $customer->email }}</label>
                             <br>                                            
                         </div>
                     </div>
                     <div class="row">
                         <div class="col">
-                            <label for="validationCustomUsername" class="form-label"><i class="bi bi-whatsapp"></i><strong>Whatsapp:</strong>{{ $customer->phone_number }}</label>
+                            <label for="validationCustomUsername" class="form-label"><strong>Whatsapp:</strong>{{ $customer->phone_number }}</label>
                             <br>                                            
                         </div>
                     </div>
                     <div class="row">
                         <div class="col">
-                            <label for="validationCustomUsername" class="form-label"><i class="bi bi-calendar3"></i><strong> Create: </strong>{{ $customer->created_at->format('d/m/Y') }}</label>
+                            <label for="validationCustomUsername" class="form-label"><strong> Create: </strong>{{ $customer->created_at->format('d/m/Y') }}</label>
                             <br>                                            
                         </div>
                     </div>
                     <div class="row">
                         <div class="col">
-                            <label for="validationCustomUsername" class="form-label"><i class="bi bi-calendar3"></i><strong> Update: </strong>{{ $customer->updated_at->format('d/m/Y') }}</label>
+                            <label for="validationCustomUsername" class="form-label"><strong> Update: </strong>{{ $customer->updated_at->format('d/m/Y') }}</label>
                             <br>                                            
                         </div>
                     </div>
                     <div class="row">
                         <div class="col">
-                            <a href="{{ route('customer.index') }}" class="btn btn-info "><i class="bi bi-arrow-left-circle"></i>Volta</a>
+                            <a href="{{ route('customer.index') }}" class="btn btn-info ">Volta</a>
                         </div>
                     </div>
                     
