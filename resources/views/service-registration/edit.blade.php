@@ -18,7 +18,7 @@
                             </div>
                         </div>
                         <div class="col-12">
-                        <button class="btn btn-primary" type="submit">Update</button>
+                        <button class="btn btn-dark" type="submit">Update</button>
                         </div>
                     </form>
                 </div>

@@ -17,7 +17,7 @@
                                     <input type="date" class="form-control" id="end_date" name="end_date" required>
                                 </div>
                                 <div class="col-md-2" style="margin-top: 40px;">
-                                    <button class="btn btn-success" type="submit">Pesquisa</button>
+                                    <button class="btn btn-secondary" type="submit">Pesquisa</button>
                                 </div>
                             </div>
                         </form>
@@ -37,7 +37,7 @@
                                 <label for="validationCustom04" class="form-label"><i class="bi bi-calendar3"></i><strong>Criado</strong></label>
                             </div>
                             <div class="col-md-2">
-                                <label for="validationCustom04" class="form-label"><i class="bi bi-calendar3"></i><strong style="background-color: rgb(72, 255, 0); border-radius: 20px; padding: 5px;">Dia da execução</strong></label>
+                                <label for="validationCustom04" class="form-label"><i class="bi bi-calendar3"></i><strong>Dia da execução</strong></label>
                             </div>
                             <div class="col-md-1">
                                 <label for="validationCustom04" class="form-label"><i class="bi bi-folder-symlink"></i></label>
@@ -63,7 +63,7 @@
                                                 <label for="validationCustom04" class="form-label"><i class="bi bi-calendar3"></i>{{ \Carbon\Carbon::parse($order->date)->format('d/m/Y') }}</label>
                                             </div>
                                             <div class="col-md-1">
-                                                <a href="{{ route('service-order-comments.index', $order->id) }}" class="btn btn-info">Detalhes</a>                                       
+                                                <a href="{{ route('service-order-comments.index', $order->id) }}" class="btn btn-secondary">Detalhes</a>                                       
                                             </div>
                                         </div>
                                     </li>

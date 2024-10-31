@@ -16,13 +16,13 @@ class Order extends Controller
         $orderstable = OrderModels::paginate(50);
         $productregistration = RegisterProductModels::all();
         $users = User::all();
-        return view('product_request.index', compact('orderstable', 'productregistration', 'users'));
+        return view('order.index', compact('orderstable', 'productregistration', 'users'));
     }
 
     public function create()
     {
         $productregistration = RegisterProductModels::all();
-        return view('product_request.create', compact('productregistration'));
+        return view('order.create', compact('productregistration'));
     }
 
     public function store(StoreUpdateOrder $request)
@@ -30,29 +30,21 @@ class Order extends Controller
         $data = $request->all();
         $ordertable = OrderModels::create($data);
         session()->flash('success', 'Order registered successfully!');
-        return redirect()->route('product_request.index');
+        return redirect()->route('order.index');
     }
-
-    // public function show($id)
-    // {
-    //     if (!$ordertable = OrderModels::find($id));
-    //     $ordercomments = Comment::latest()->first();
-    //     return redirect()->route('order.index');
-    //     return view('order.details', compact('ordertable', 'ordercomments'));
-    // }
 
     public function show($id)
     {
         // Find the order by ID, redirect back if not found
         if (!$ordertable = OrderModels::find($id)) {
-            return redirect()->route('product_request.index');
+            return redirect()->route('order.index');
         }
 
         // Get the latest comment for the order
         $ordercomments = Comment::latest()->first();
 
         // Pass the necessary data to the view
-        return view('product_request.details', compact('ordertable', 'ordercomments'));
+        return view('order.details', compact('ordertable', 'ordercomments'));
     }
 
 }

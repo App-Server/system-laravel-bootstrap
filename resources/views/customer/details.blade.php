@@ -8,7 +8,7 @@
                 </div>
 
                 <div class="col-md-1">
-                    <label for="validationCustom04" class="form-label"><a href="{{ route('customer.edit', $customer->id) }}" class="btn btn-success">Editar</a></label>
+                    <label for="validationCustom04" class="form-label"><a href="{{ route('customer.edit', $customer->id) }}" class="btn btn-secondary">Editar</a></label>
                 </div>
             </div>
             <br>
@@ -59,7 +59,7 @@
                     </div>
                     <div class="row">
                         <div class="col">
-                            <a href="{{ route('customer.index') }}" class="btn btn-info ">Volta</a>
+                            <a href="{{ route('customer.index') }}" class="btn btn-dark">Volta</a>
                         </div>
                     </div>
                     

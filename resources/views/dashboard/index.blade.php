@@ -3,7 +3,7 @@
         <div class="container-fluid" >
             <div class="titlebody"><h5>Home</h5></div>
             @if (Auth::check())
-                <p>Hello 👋, {{ Auth::user()->name }}</p>
+                <p>Olá 👋, {{ Auth::user()->name }}</p>
             @endif
             <div class="row">
                 <div class="col-sm-3 mb-3 mb-sm-0">
@@ -17,7 +17,7 @@
                 <div class="col-sm-3 mb-3">
                     <div class="card">
                         <div class="card-body">
-                            <p class="card-text">Total de Ordem de Serviços</p>
+                            <p class="card-text">Total de Serviços</p>
                             <p class="card-text">{{ $serviceOrderCount }}</p>
                         </div>
                     </div>

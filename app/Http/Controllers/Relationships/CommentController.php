@@ -30,7 +30,7 @@ class CommentController extends Controller
         // Retrieve comments related to this order
         $comments = $order->comments()->get();
 
-        return view('product_request.comments.index', compact('comments', 'order'));
+        return view('order.comments.index', compact('comments', 'order'));
     }
 
     public function store(StoreOrderComments $request, $orderId)

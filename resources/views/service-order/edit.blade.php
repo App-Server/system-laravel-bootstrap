@@ -61,7 +61,7 @@
                         </div>
                     </div>
                     <div class="col-12">
-                        <button class="btn btn-primary" type="submit">Update Service</button>
+                        <button class="btn btn-dark" type="submit">Update Service</button>
                     </div>
                 </form>
             </div>

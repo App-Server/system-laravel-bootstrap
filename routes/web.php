@@ -6,8 +6,6 @@ use App\Http\Controllers\Order;
 use App\Http\Controllers\Customer;
 use App\Http\Controllers\CustomerSearch;
 use App\Http\Controllers\Employees;
-use App\Http\Controllers\StockEntry;
-use App\Http\Controllers\StockOutput;
 use App\Http\Controllers\ServiceOrder;
 use App\Http\Controllers\ServiceRegistration;
 use App\Http\Controllers\UserController;
@@ -18,16 +16,14 @@ use App\Http\Controllers\ServiceOrderRelaionships\ServiceOrderComment;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\OrderSearch;
 use App\Http\Controllers\ServiceOrderSearch;
+use App\Http\Controllers\RelationshipsStockEntry\StockEntry;
+use App\Http\Controllers\RelationshipsStockOutput\StockOutput;
+use App\Http\Controllers\Controller\Relationships;
+use App\Http\Controllers\CustomerList;
 
 Route::middleware(['auth'])->group(function () {
     //--------------------------------------------------------------------------------------------------------
-    Route::delete('/dashboard/{id}', [Dashboard::class, 'destroy'])->name('dashboard.destroy');
-    Route::put('/dashboard/{id}', [Dashboard::class, 'update'])->name('dashboard.update');
-    Route::get('/dashboard/{id}/edit', [Dashboard::class, 'edit'])->name('dashboard.edit');
     Route::get('/dashboard', [Dashboard::class, 'index'])->name('dashboard.index');
-    Route::get('/dashboard/create', [Dashboard::class, 'create'])->name('dashboard.create');
-    Route::post('/dashboard', [Dashboard::class, 'store'])->name('dashboard.store');
-    Route::get('/dashboard/{id}', [Dashboard::class, 'show'])->name('dashboard.details');
     //--------------------------------------------------------------------------------------------------------
     Route::delete('/user/{id}', [UserController::class, 'destroy'])->name('user.destroy');
     Route::put('/user/{id}', [UserController::class, 'update'])->name('user.update');
@@ -37,13 +33,13 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/user', [UserController::class, 'store'])->name('user.store');
     Route::get('/user/{id}', [UserController::class, 'show'])->name('user.details');
     //--------------------------------------------------------------------------------------------------------
-    Route::delete('/product_request/{id}', [Order::class, 'destroy'])->name('product_request.destroy');
-    Route::put('/product_request/{id}', [Order::class, 'update'])->name('product_request.update');
-    Route::get('/product_request/{id}/edit', [Order::class, 'edit'])->name('product_request.edit');
-    Route::get('/product_request', [Order::class, 'index'])->name('product_request.index');
-    Route::get('/product_request/create', [Order::class, 'create'])->name('product_request.create');
-    Route::post('/product_request', [Order::class, 'store'])->name('product_request.store');
-    Route::get('/product_request/{id}', [Order::class, 'show'])->name('product_request.details');
+    Route::delete('/order/{id}', [Order::class, 'destroy'])->name('order.destroy');
+    Route::put('/order/{id}', [Order::class, 'update'])->name('order.update');
+    Route::get('/order/{id}/edit', [Order::class, 'edit'])->name('order.edit');
+    Route::get('/order', [Order::class, 'index'])->name('order.index');
+    Route::get('/order/create', [Order::class, 'create'])->name('order.create');
+    Route::post('/order', [Order::class, 'store'])->name('order.store');
+    Route::get('/order/{id}', [Order::class, 'show'])->name('order.details');
     //---------------------------------------------------------------------------------------------------------
     Route::delete('/register-product/{id}', [RegisterProduct::class, 'destroy'])->name('register-product.destroy');
     Route::put('/register-product/{id}', [RegisterProduct::class, 'update'])->name('register-product.update');
@@ -68,22 +64,6 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/employees/create', [Employees::class, 'create'])->name('employees.create');
     Route::post('/employees', [Employees::class, 'store'])->name('employees.store');
     Route::get('/employees/{id}', [Employees::class, 'show'])->name('employees.details');
-    //---------------------------------------------------------------------------------------------------------
-    Route::delete('/stock-entry/{id}', [StockEntry::class, 'destroy'])->name('stock-entry.destroy');
-    Route::put('/stock-entry/{id}', [StockEntry::class, 'update'])->name('stock-entry.update');
-    Route::get('/stock-entry/{id}/edit', [StockEntry::class, 'edit'])->name('stock-entry.edit');
-    Route::get('/stock-entry', [StockEntry::class, 'index'])->name('stock-entry.index');
-    Route::get('/stock-entry/create', [StockEntry::class, 'create'])->name('stock-entry.create');
-    Route::post('/stock-entry', [StockEntry::class, 'store'])->name('stock-entry.store');
-    Route::get('/stock-entry/{id}', [StockEntry::class, 'show'])->name('stock-entry.details');
-    //---------------------------------------------------------------------------------------------------------
-    Route::delete('/stock-output/{id}', [StockOutput::class, 'destroy'])->name('stock-output.destroy');
-    Route::put('/stock-output/{id}', [StockOutput::class, 'update'])->name('stock-output.update');
-    Route::get('/stock-output/{id}/edit', [StockOutput::class, 'edit'])->name('stock-output.edit');
-    Route::get('/stock-output', [StockOutput::class, 'index'])->name('stock-output.index');
-    Route::get('/stock-output/create', [StockOutput::class, 'create'])->name('stock-output.create');
-    Route::post('/stock-output', [StockOutput::class, 'store'])->name('stock-output.store');
-    Route::get('/stock-output/{id}', [StockOutput::class, 'show'])->name('stock-output.details');
     //---------------------------------------------------------------------------------------------------------
     Route::delete('/service-order/{id}', [ServiceOrder::class, 'destroy'])->name('service-order.destroy');
     Route::put('/service-order/{id}', [ServiceOrder::class, 'update'])->name('service-order.update');
@@ -119,10 +99,21 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/order-search', [OrderSearch::class, 'search'])->name('order-search.search');
     //---------------------------------------------------------------------------------------------------------
     Route::get('/inventory', [InventoryController::class, 'index'])->name('inventory.index');
+    //---------------------------------------------------------------------------------------------------------
+    Route::get('/stock-entry', [StockEntry::class, 'index'])->name('stock-entry.index');
+    // Route::post('/service-order/{id}/service-order-comments', [ServiceOrderComment::class, 'store'])->name('service-order-comments.store');
+    //---------------------------------------------------------------------------------------------------------
+    Route::get('/stock-output', [StockOutput::class, 'index'])->name('stock-output.index');
+    //---------------------------------------------------------------------------------------------------------
+    Route::get('/order-search', [OrderSearch::class, 'index'])->name('order-search.index');
+    //---------------------------------------------------------------------------------------------------------
+    Route::get('/customer-list', [CustomerList::class, 'index'])->name('customer-list.index');
 });
 
 // Login route
 Route::get('/login', [LoginController::class, 'index'])->name('login');
 Route::post('/login/auth', [LoginController::class, 'auth'])->name('login.auth');
 
-Route::get('/', function () {return view('login.index');});
+Route::get('/', function () {
+    return view('login.index');
+});

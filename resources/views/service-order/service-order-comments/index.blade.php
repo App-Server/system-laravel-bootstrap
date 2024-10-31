@@ -5,7 +5,7 @@
             <div class="row g-3 needs-validation" >
                 <div class="col-md-11">
                     <label for="validationCustom04" class="form-label">
-                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">
                             Status do serviço
                         </button>
                         
@@ -40,7 +40,7 @@
                                             <textarea type="name" name="body" class="form-control" id="comments" id="floatingTextarea2" style="height: 100px" ></textarea>
                                         </div>
                                         <div class="modal-footer">
-                                            <button type="submit" class="btn btn-primary">Registrar</button>
+                                            <button type="submit" class="btn btn-dark">Registrar</button>
                                         </div>
                                     </form> 
                                 </div>
@@ -65,7 +65,7 @@
                                 <label for="validationCustom04" class="form-label"><strong>Ordem de Serviço:</strong>{{ $serviceorder->service }}</label>
                             </div>
                             <div class="col-md-4">
-                                <label for="validationCustom04" class="form-label"><strong style="background-color: rgb(72, 255, 0); border-radius: 20px; padding: 5px;">Data da execução:</strong>{{ \Carbon\Carbon::parse($serviceorder->date)->format('d/m/Y') }}</label>
+                                <label for="validationCustom04" class="form-label"><strong>Data da execução:</strong>{{ \Carbon\Carbon::parse($serviceorder->date)->format('d/m/Y') }}</label>
                             </div>
                             <div class="col-md-4">
                                 <label for="validationCustom04" class="form-label"><strong>Hora da execução:</strong>{{ $serviceorder->time }}</label>
