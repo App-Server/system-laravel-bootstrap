@@ -5,7 +5,7 @@
             <div class="row g-3 needs-validation" >
                 <div class="col-md-11">
                     <label for="validationCustom04" class="form-label">
-                        <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal">
                             Status do serviço
                         </button>
                         
@@ -40,7 +40,7 @@
                                             <textarea type="name" name="body" class="form-control" id="comments" id="floatingTextarea2" style="height: 100px" ></textarea>
                                         </div>
                                         <div class="modal-footer">
-                                            <button type="submit" class="btn btn-dark">Registrar</button>
+                                            <button type="submit" class="btn btn-secondary">Registrar</button>
                                         </div>
                                     </form> 
                                 </div>
@@ -53,8 +53,8 @@
             
             <x-validation-alert />
             
-            <div class="card" >
-                <div class="card-header">
+            <div class="shadow-sm p-3 mb-3 bg-body-tertiary rounded" >
+                <div class="card-body">
                     <div class="row">
                     <div class="col">
                         <ul class="list-group list-group-flush">
@@ -83,7 +83,6 @@
                 </div>
             </div>
             
-            <br>
             <h5>Historico</h5>
             <div class="card" style="width: 100%;">
                 <ul class="list-group list-group-flush">

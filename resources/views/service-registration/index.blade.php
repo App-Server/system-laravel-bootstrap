@@ -3,7 +3,7 @@
         <div class="container-fluid">
             <div class="titlebody"><h5>Lista de Serviços<h5></div>
             
-            <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal">
                 Criar Serviço
             </button>
 

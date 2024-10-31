@@ -6,7 +6,7 @@
                 <h5>Atualizar pedido</h5>
             </div>
             
-            <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal">
                 Atualizar status
             </button>
             
@@ -32,7 +32,7 @@
                                     <label for="floatingTextarea2">Observações</label>
                                     <textarea type="name" name="body" class="form-control" id="comments" id="floatingTextarea2" style="height: 100px" ></textarea>
                                 </div>
-                                <button type="submit" class="btn btn-dark">Atualizar</button>
+                                <button type="submit" class="btn btn-secondary">Atualizar</button>
                             </form> 
                         </div>         
                     </div>

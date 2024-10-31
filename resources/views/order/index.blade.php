@@ -5,7 +5,7 @@
             <div class="row g-3 needs-validation" >
                 <div class="col-md-11">            
                         <!-- Button trigger modal -->
-                        <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal">
                             Novo pedido
                         </button>
                         
@@ -75,7 +75,7 @@
                                         </div>
                                         
                                         <div class="modal-footer">
-                                            <button class="btn btn-dark" type="submit">Criar pedido</button>
+                                            <button class="btn btn-secondary" type="submit">Criar pedido</button>
                                         </div>
                                     </form>
                                 </div>
@@ -84,7 +84,7 @@
                     </div>
                 </div>
                 <div class="col-md-1">
-                    <a href="{{ url('/order-search') }}" class="btn btn-secondary">Pesquisa</a>
+                    <a href="{{ url('/order-search') }}" style="color: black">Pesquisa</a>
                 </div>
             </div>
             

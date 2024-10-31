@@ -20,6 +20,7 @@ use App\Http\Controllers\RelationshipsStockEntry\StockEntry;
 use App\Http\Controllers\RelationshipsStockOutput\StockOutput;
 use App\Http\Controllers\Controller\Relationships;
 use App\Http\Controllers\CustomerList;
+use App\Http\Controllers\WorkOrderList;
 
 Route::middleware(['auth'])->group(function () {
     //--------------------------------------------------------------------------------------------------------
@@ -108,6 +109,8 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/order-search', [OrderSearch::class, 'index'])->name('order-search.index');
     //---------------------------------------------------------------------------------------------------------
     Route::get('/customer-list', [CustomerList::class, 'index'])->name('customer-list.index');
+    //---------------------------------------------------------------------------------------------------------
+    Route::get('/work-order-list', [WorkOrderList::class, 'index'])->name('work-order-list.index');
 });
 
 // Login route

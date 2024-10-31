@@ -3,7 +3,7 @@
         <div class="container-fluid">
             <div class="titlebody"><h5>Usuário</h5></div>
             <!-- Button trigger modal -->
-        <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal">
             Novo usuário
         </button>
         

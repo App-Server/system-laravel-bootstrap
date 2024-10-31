@@ -1,16 +1,16 @@
 <x-layout title="Clientes">
     <div class="main-content ">
         <div class="container-fluid">
-            <div class="titlebody"><h5>Clientes</h5></div>
-            
-            <x-validation-alert />
+            <div class="titlebody">
+                <h5>Área de gestão para cliente</h5>
+            </div>
 
             <div class="row">
                 <div class="col-sm-3 mb-3 mb-sm-0">
                     <div class="card ">
                         <div class="card-body">            
                             <p class="card-text">Cadastro de novos clientes</p>
-                            <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal">
                                 Cadastrar
                             </button>
                             
@@ -56,7 +56,7 @@
                                                     
                                                 <div class="modal-footer">
                                                     <div class="col-12">
-                                                        <button class="btn btn-dark" type="submit">Cadastrar</button>
+                                                        <button class="btn btn-secondary" type="submit">Cadastrar</button>
                                                     </div>
                                                 </div>
                                             </form>
@@ -71,7 +71,7 @@
                     <div class="card">
                         <div class="card-body">
                             <p class="card-text">Pesquisa de clientes por CPF ou CNPJ</p>
-                            <a href="{{ url('/customer-search') }}" class="btn btn-dark">Pesquisa</a>
+                            <a href="{{ url('/customer-search') }}" class="btn btn-secondary">Pesquisa</a>
                         </div>
                     </div>
                 </div>
@@ -79,11 +79,14 @@
                     <div class="card">
                         <div class="card-body">
                             <p class="card-text">Lista de todos os clientes</p>
-                            <a href="{{ url('/customer-list') }}" class="btn btn-dark">Lista</a>
+                            <a href="{{ url('/customer-list') }}" class="btn btn-secondary">Acessar</a>
                         </div>
                     </div>
                 </div>
             </div>
+
+            <x-validation-alert />
+
         </div>  
     </div>  
 </x-layout>

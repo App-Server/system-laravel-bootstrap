@@ -4,7 +4,7 @@
             <div class="titlebody"><h5>Cadastro de produto<h5></div>
                 <div class="row g-3 needs-validation" >
                     <div class="col-md-12">
-                        <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal">
                             Cadastra produto
                         </button>
 
