@@ -24,13 +24,11 @@
                                 <input type="name" name="service_name" class="form-control" id="validationCustom01" required>
                                 </div>               
                                 <div class="mb-3">
-                                    <div class="form-floating">
-                                        <textarea type="name" name="description" class="form-control" id="comments" id="floatingTextarea2" style="height: 150px" ></textarea>
-                                        <label for="floatingTextarea2"><i class="bi bi-card-text"></i>Description</label>
-                                    </div>
+                                    <label for="floatingTextarea2">Descrição</label>
+                                    <textarea type="name" name="description" class="form-control" id="floatingTextarea2" style="height: 150px" ></textarea>
                                 </div>
                                 <div class="col-12">
-                                <button class="btn btn-dark" type="submit">Register</button>
+                                <button class="btn btn-secondary" type="submit">Register</button>
                                 </div>
                             </form>
                         </div>

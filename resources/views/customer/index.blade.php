@@ -26,7 +26,7 @@
                                                 @csrf
                                                 <div class="col-md-12">
                                                     <label for="validationCustom01" class="form-label">Nome completo</label>
-                                                    <input type="name" name="customer" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" require>
+                                                    <input type="name" name="name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" require>
                                                 </div>
         
                                                 <div class="col-md-12">

@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class StockOutputModels extends Model
+class StockOutputComment extends Model
 {
     use HasFactory;
 
@@ -18,8 +18,8 @@ class StockOutputModels extends Model
         'observations',
     ];
 
-    public function product()
+    public function productregistration()
     {
-        return $this->belongsTo(RegisterProductModels::class, 'sku', 'sku');
+        return $this->belongsTo(RegisterProductModels::class, 'product_registration_models_id');
     }
 }

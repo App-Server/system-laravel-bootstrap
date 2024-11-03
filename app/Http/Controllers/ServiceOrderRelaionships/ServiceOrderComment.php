@@ -46,5 +46,4 @@ class ServiceOrderComment extends Controller
         return redirect()->route('service-order-comments.index', $serviceorder->id);
     }
 
-
 }

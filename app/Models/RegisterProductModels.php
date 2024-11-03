@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\StockEntryComment;
 
 class RegisterProductModels extends Model
 {
@@ -13,17 +14,17 @@ class RegisterProductModels extends Model
 
     protected $fillable = [
         'product_name',
-        'sku',
         'description',
     ];
 
-    public function stockEntries()
+    public function comments()
     {
-        return $this->hasMany(StockEntryModels::class, 'sku');
+        return $this->hasMany(StockEntryComment::class, 'product_registration_models_id');
     }
 
-    public function stockOutputs()
+    public function output()
     {
-        return $this->hasMany(StockOutputModels::class, 'sku');
+        return $this->hasMany(StockEntryComment::class, 'product_registration_id');
     }
+
 }

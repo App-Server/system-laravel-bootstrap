@@ -43,7 +43,7 @@
                                                     <select type="name" name="customer" class="form-select" id="validationCustom04" required>
                                                         
                                                         <option selected disabled value="">
-                                                            {{ $customerTable->isEmpty() ? 'No Products Available' : 'Selecione o cliente' }}
+                                                            {{ $customerTable->isEmpty() ? 'No Customer Available' : 'Selecione o cliente' }}
                                                         </option>
                                                         <!-- Loop through the available products -->
                                                         @foreach($customerTable as $customers)

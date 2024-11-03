@@ -39,51 +39,34 @@
                     </div>
                 </div>
             </div>
-        
-            <div class="row">
-                <div class="col-mb-12">
-                    <h5>Historico de Clientes</h5>
-                    <div class="card">
-                        <div class="card-body">
-                            <div id="chartContainer" style="height: 420px; width: 100%;"></div>
-                            <span id="timeToRender"></span>
-                            <script src="https://cdn.canvasjs.com/canvasjs.min.js"></script>
-                        </div>
-                    </div>
-                </div>
-                
+            <div class="card">
+                <canvas id="myChart" height="500px" ></canvas>
             </div>
-            <br>
-        
         </div>
         <br>
-        <script>
-          window.onload = function () {
-            var dataPoints = [];
-
-            @foreach($dailyCustomerHistory as $data)
-                dataPoints.push({ x: new Date("{{ $data->date }}"), y: {{ $data->count }} });
-            @endforeach
-
-            var chart = new CanvasJS.Chart("chartContainer", {
-                animationEnabled: true,
-                theme: "light2",
-                axisX: {
-                    valueFormatString: "DD MMM"
-                },
-                axisY: {
-                   
-                    includeZero: false
-                },
-                data: [{
-                    type: "line",
-                    xValueFormatString: "DD MMM",
-                    yValueFormatString: "#,##0 Customers",
-                    dataPoints: dataPoints
-                }]
-            });
-            chart.render();
+        
+    </div> 
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        const ctx = document.getElementById('myChart');
+      
+        new Chart(ctx, {
+          type: 'bar',
+          data: {
+            labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+            datasets: [{
+              label: '# of Votes',
+              data: [0, 0, 0, 0, 0, 0],
+              borderWidth: 1
+            }]
+          },
+          options: {
+            scales: {
+              y: {
+                beginAtZero: true
+              }
             }
-        </script>
-    </div>    
+          }
+        });
+    </script>   
 </x-layout>
