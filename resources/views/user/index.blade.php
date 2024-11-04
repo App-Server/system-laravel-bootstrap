@@ -31,7 +31,7 @@
                               <input type="password" name="password" class="form-control" id="exampleInputPassword1" required>
                             </div>
                             <div class="modal-footer">
-                                <button type="submit" class="btn btn-dark">Register</button>
+                                <button type="submit" class="btn btn-secondary">Register</button>
                             </div>
                         </form>
                     </div>

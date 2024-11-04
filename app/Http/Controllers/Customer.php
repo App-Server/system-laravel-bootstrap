@@ -25,7 +25,7 @@ class Customer extends Controller
         $data = $request->all();
         $customerTable = CustomerModels::create($data);
         session()->flash('success', 'Customer registered successfully!');
-        return redirect()->route('customer.index');
+        return redirect()->route('customer.create');
     }
 
     public function show($id)

@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\StockEntryComment;
+use App\Models\StockOutputComment;
 
 class RegisterProductModels extends Model
 {
@@ -24,7 +25,7 @@ class RegisterProductModels extends Model
 
     public function output()
     {
-        return $this->hasMany(StockEntryComment::class, 'product_registration_id');
+        return $this->hasMany(StockOutputComment::class, 'product_registration_id');
     }
 
 }

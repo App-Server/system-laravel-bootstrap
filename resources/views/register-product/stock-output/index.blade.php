@@ -18,24 +18,24 @@
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
-                                    <forma ction="{{ route('stock-output.store', $productoutput->id) }}" method="post">
+                                    <form action="{{ route('stock-output.store', $productoutput->id) }}" method="post">
                                         @csrf
                                         <div class="mb-3">
-                                            <label for="exampleInputPassword1" class="form-label">Quem esta retirando a mercadoria?</label>
-                                            <select type="name" name="person" class="form-select" id="validationCustom04" required>
-                                                <option selected disabled value=""></option>
+                                            <label for="personSelect" class="form-label">Quem está retirando a mercadoria?</label>
+                                            <select name="person" class="form-select" id="personSelect" required>
+                                                <option selected disabled value="">Selecione</option>
                                                 <option>Alex</option>
                                                 <option>Marcia</option>
                                             </select>
                                         </div>
                                         <div class="mb-3">
-                                            <label for="exampleInputEmail1" class="form-label">Quantidade</label>
-                                            <input type="number" name="quantity" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+                                            <label for="quantityInput" class="form-label">Quantidade</label>
+                                            <input type="number" name="quantity" class="form-control" id="quantityInput" min="1" required>
                                         </div>
                                         <div class="mb-3">
-                                            <label for="exampleInputPassword1" class="form-label">Motivo da saída</label>
-                                            <select type="name"  name="reason_of_exit" class="form-select" id="validationCustom04" required>
-                                                <option selected disabled value=""></option>
+                                            <label for="reasonSelect" class="form-label">Motivo da saída</label>
+                                            <select name="reason_of_exit" class="form-select" id="reasonSelect" required>
+                                                <option selected disabled value="">Selecione</option>
                                                 <option>Uso interno</option>
                                                 <option>Troca de produto</option>
                                             </select>
@@ -43,7 +43,7 @@
                                         <div class="modal-footer">
                                             <button type="submit" class="btn btn-secondary">Confirmar saída</button>
                                         </div>
-                                    </form>
+                                    </form>                                    
                                 </div>
                             </div>
                         </div>

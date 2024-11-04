@@ -39,34 +39,17 @@
                     </div>
                 </div>
             </div>
-            <div class="card">
-                <canvas id="myChart" height="500px" ></canvas>
+            <div class="shadow-sm p-3 mb-5 bg-body-tertiary rounded">
+                <h5>Seja Bem vindo ao sistema</h5>
+                <li>Manual de uso</li>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque magni accusantium sequi voluptatibus autem quae ratione quos ducimus nostrum natus commodi iste perferendis, error quod doloribus eos nam nemo. Possimus?
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                </p>
             </div>
         </div>
         <br>
         
     </div> 
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script>
-        const ctx = document.getElementById('myChart');
-      
-        new Chart(ctx, {
-          type: 'bar',
-          data: {
-            labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-            datasets: [{
-              label: '# of Votes',
-              data: [0, 0, 0, 0, 0, 0],
-              borderWidth: 1
-            }]
-          },
-          options: {
-            scales: {
-              y: {
-                beginAtZero: true
-              }
-            }
-          }
-        });
-    </script>   
+
 </x-layout>
