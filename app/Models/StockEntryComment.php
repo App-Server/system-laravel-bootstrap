@@ -9,16 +9,16 @@ class StockEntryComment extends Model
 {
     use HasFactory;
 
-    protected $table = 'stock_entry_comment';
+    // protected $table = 'stock_entry_comment';
 
-    protected $fillable = [
-        'quantity',
-        'purchase_cost',
-        'reason_for_purchase',
-    ];
+    // protected $fillable = [
+    //     'quantity',
+    //     'purchase_cost',
+    //     'reason_for_purchase',
+    // ];
 
-    public function productregistration()
-    {
-        return $this->belongsTo(RegisterProductModels::class, 'product_registration_models_id');
-    }
+    // public function productregistration()
+    // {
+    //     return $this->belongsTo(RegisterProductModels::class, 'product_registration_models_id');
+    // }
 }

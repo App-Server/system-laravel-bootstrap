@@ -9,17 +9,17 @@ class StockOutputComment extends Model
 {
     use HasFactory;
 
-    protected $table = 'stock_output';
+    // protected $table = 'stock_output';
 
-    protected $fillable = [
-        'person',
-        'product_name',
-        'quantity',
-        'observations',
-    ];
+    // protected $fillable = [
+    //     'person',
+    //     'product_name',
+    //     'quantity',
+    //     'observations',
+    // ];
 
-    public function productregistration()
-    {
-        return $this->belongsTo(RegisterProductModels::class, 'product_registration_models_id');
-    }
+    // public function productregistration()
+    // {
+    //     return $this->belongsTo(RegisterProductModels::class, 'product_registration_models_id');
+    // }
 }

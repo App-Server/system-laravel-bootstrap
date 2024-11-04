@@ -20,12 +20,9 @@ class RegisterProductModels extends Model
 
     public function comments()
     {
-        return $this->hasMany(StockEntryComment::class, 'product_registration_models_id');
+        return $this->hasMany(ProductStockModel::class, 'product_registration_model_id');
     }
 
-    public function output()
-    {
-        return $this->hasMany(StockOutputComment::class, 'product_registration_id');
-    }
+    
 
 }

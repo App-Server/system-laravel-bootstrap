@@ -5,7 +5,7 @@ namespace App\Http\Controllers\RelationshipsStockEntry;
 use App\Http\Controllers\Controller;
 use App\Models\RegisterProductModels;
 use Illuminate\Http\Request;
-use App\Models\StockEntryComment;
+use App\Models\ProductStockModel;
 use App\http\Requests\StoreStockEntryComment;
 
 class StockEntry extends Controller
@@ -14,7 +14,7 @@ class StockEntry extends Controller
     protected $productregistration;
 
     // Inject both Comment and OrderModels
-    public function __construct(StockEntryComment $comment, RegisterProductModels $productregistration)
+    public function __construct(ProductStockModel $comment, RegisterProductModels $productregistration)
     {
         $this->comment = $comment;
         $this->productregistration = $productregistration;  
@@ -31,17 +31,23 @@ class StockEntry extends Controller
         $comments = $productregistration->comments()->get();
 
         // Calculate the total quantity
-        $totalQuantity = $comments->sum('quantity');
+        $totalQuantity = $comments->sum('quantity_entry');
+        $totalQuantityOutput = $comments->sum('quantity_output');
+        $stockBalance = $comments->sum('quantity_output');
+        $totalStockBalance = $comments->reduce(function ($carry, $comment) {
+            return $carry + $comment->quantity_entry - $comment->quantity_output;
+        }, 0);
+        
 
         // Calculate the total cost
         $totalCost = $comments->reduce(function ($carry, $comment) {
-            return $carry + ($comment->quantity * $comment->purchase_cost);
+            return $carry + ($comment->quantity_entry * $comment->purchase_cost_entry);
         }, 0);
 
         // Calculate the average cost per item
         $averageCost = $totalQuantity > 0 ? $totalCost / $totalQuantity : 0;
 
-        return view('register-product.stock-entry.index', compact('comments', 'productregistration', 'totalQuantity', 'totalCost', 'averageCost'));
+        return view('register-product.stock-entry.index', compact('comments', 'productregistration', 'totalQuantity', 'totalCost', 'averageCost', 'totalStockBalance', 'totalQuantityOutput'));
     }
 
     public function store(Request $request, $productregistrationId)

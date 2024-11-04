@@ -22,19 +22,20 @@
                                         @csrf
                                         <div class="mb-3">
                                             <label for="personSelect" class="form-label">Quem está retirando a mercadoria?</label>
-                                            <select name="person" class="form-select" id="personSelect" required>
+                                            <select name="person_output" class="form-select" id="personSelect" required>
                                                 <option selected disabled value="">Selecione</option>
                                                 <option>Alex</option>
                                                 <option>Marcia</option>
+                                                <option>Roberto</option>
                                             </select>
                                         </div>
                                         <div class="mb-3">
                                             <label for="quantityInput" class="form-label">Quantidade</label>
-                                            <input type="number" name="quantity" class="form-control" id="quantityInput" min="1" required>
+                                            <input type="number" name="quantity_output" class="form-control" id="quantityInput" min="1" required>
                                         </div>
                                         <div class="mb-3">
                                             <label for="reasonSelect" class="form-label">Motivo da saída</label>
-                                            <select name="reason_of_exit" class="form-select" id="reasonSelect" required>
+                                            <select name="reason_of_exit_output" class="form-select" id="reasonSelect" required>
                                                 <option selected disabled value="">Selecione</option>
                                                 <option>Uso interno</option>
                                                 <option>Troca de produto</option>
@@ -51,7 +52,10 @@
                 </div>
             </div>
             <x-validation-alert />
-            <h5>Historico de saída de estoque</h5>
+            <div class="col-md-12">
+                <label for="validationCustomUsername" class="form-label"><strong>Produto:</strong> {{ $productoutput->product_name }}</label>
+            </div>
+            <h5>Historico de movimentação</h5>
             <div class="card" style="width: 100%;">
                 <div class="card-header">
                     <div class="row g-3 needs-validation" > 
@@ -77,13 +81,13 @@
                                     <label for="validationCustomUsername" class="form-label">{{ $commentoutput->created_at->format('d/m/Y') }}</label>
                                 </div>  
                                 <div class="col-md-3">
-                                    <label for="validationCustomUsername" class="form-label">{{ $commentoutput->reason_of_exit }}</label>
+                                    <label for="validationCustomUsername" class="form-label">{{ $commentoutput->reason_of_exit_output }}</label>
                                 </div>
                                 <div class="col-md-4">
-                                    <label for="validationCustomUsername" class="form-label">{{ $commentoutput->person }}</label>
+                                    <label for="validationCustomUsername" class="form-label">{{ $commentoutput->person_output }}</label>
                                 </div>                                
                                 <div class="col-md-2">
-                                    <label for="validationCustomUsername" class="form-label">{{ $commentoutput->quantity }}</label>
+                                    <label for="validationCustomUsername" class="form-label">{{ $commentoutput->quantity_output }}</label>
                                 </div>
                                 
                             </div>

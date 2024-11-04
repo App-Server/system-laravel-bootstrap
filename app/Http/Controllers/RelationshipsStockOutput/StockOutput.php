@@ -4,7 +4,7 @@ namespace App\Http\Controllers\RelationshipsStockOutput;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\StockOutputComment;
+use App\Models\ProductStockModel;
 use App\Models\RegisterProductModels;
 
 class StockOutput extends Controller
@@ -13,7 +13,7 @@ class StockOutput extends Controller
     protected $productoutput;
 
     // Inject both Comment and OrderModels
-    public function __construct(StockOutputComment $commentsoutput, RegisterProductModels $productoutput)
+    public function __construct(ProductStockModel $commentsoutput, RegisterProductModels $productoutput)
     {
         $this->commentsoutput = $commentsoutput;
         $this->productoutput = $productoutput;  
