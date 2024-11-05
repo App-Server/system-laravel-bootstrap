@@ -1,7 +1,7 @@
 <x-layout title="Ordem de Serviço">
     <div class="main-content ">
         <div class="container-fluid">
-            <div class="titlebody"><h5>Ordem de Serviço</h5></div>
+            <div class="titlebody"><h5>Painel de serviços</h5></div>
             <div class="row">
                 <div class="col-sm-3 mb-3 mb-sm-0">
                     <div class="card ">
@@ -47,8 +47,8 @@
                                                         </option>
                                                         <!-- Loop through the available products -->
                                                         @foreach($customerTable as $customers)
-                                                            <option value="{{ $customers->customer }}">
-                                                                {{ $customers->customer }}
+                                                            <option value="{{ $customers->name }}">
+                                                                {{ $customers->name }}
                                                             </option>
                                                         @endforeach
                                                         
@@ -97,6 +97,14 @@
                         <div class="card-body">
                             <p class="card-text">Lista de todas as ordem de serviços</p>
                             <a href="{{ url('/work-order-list') }}" class="btn btn-secondary">Acessar</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3 mb-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <p class="card-text">Criar, editar e gerenciar serviços</p>
+                            <a href="{{ url('/service-registration') }}" class="btn btn-secondary">Gerenciar</a>
                         </div>
                     </div>
                 </div>

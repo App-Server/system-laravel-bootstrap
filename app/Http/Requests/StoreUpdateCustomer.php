@@ -24,7 +24,7 @@ class StoreUpdateCustomer extends FormRequest
     public function rules()
     {
         return [
-            'customer' => 'required',
+            'name' => 'required',
             'email' => 'required',
             'taxpayer_identification_number' => 'required',
             'address' => 'required',

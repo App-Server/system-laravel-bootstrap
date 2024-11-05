@@ -12,7 +12,7 @@ class CustomerModels extends Model
     protected $table = 'customer';
 
     protected $fillable = [
-        'customer',
+        'name',
         'email',
         'taxpayer_identification_number',
         'address' ,

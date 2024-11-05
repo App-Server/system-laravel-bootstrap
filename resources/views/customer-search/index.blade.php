@@ -6,7 +6,7 @@
                 <form class="d-flex" action="{{ route('customer-search.search') }}" method="POST">
                     @csrf
                     <input class="form-control me-2" name="taxpayer_identification_number" type="search" placeholder="CPF ou CNPJ" aria-label="Search">
-                    <button class="btn btn-dark" type="submit">Pesquisa</button>
+                    <button class="btn btn-secondary" type="submit">Pesquisa</button>
                 </form>
             </div>
             <hr>

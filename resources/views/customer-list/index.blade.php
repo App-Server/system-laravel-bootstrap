@@ -9,7 +9,7 @@
                             <div class="card-body">
                                 <div class="row">
                                     <div class="col-md-12">
-                                        <label for="validationCustom04" class="form-label">{{ $customer->customer }}</label>
+                                        <label for="validationCustom04" class="form-label">{{ $customer->name }}</label>
                                     </div>
                                     <div class="col-md-1 text-end">
                                         <a href="{{ route('customer.details', $customer->id) }}" style="color: black">
