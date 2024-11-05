@@ -88,7 +88,7 @@
                     </div>
                 </div>
             </div>                    
-            <h5>Historico de movimentação</h5>
+            {{-- <h5>Historico de movimentação</h5>
             <div class="card" style="width: 100%;">
                 <div class="card-header">
                     <div class="row g-3 needs-validation" > 
@@ -138,7 +138,7 @@
                         </li>
                     @endforeach
                 </ul>
-            </div>
+            </div> --}}
         </div>
     </div>
 </x-layout>

@@ -59,22 +59,22 @@
                     <div class="col">
                         <ul class="list-group list-group-flush">
                             <div class="col-md-8">
-                                <label for="validationCustom04" class="form-label"><strong>Cliente:</strong>{{ $serviceorder->customer }}</label>
+                                <label for="validationCustom04" class="form-label"><strong>Cliente:</strong> {{ $serviceorder->customer }}</label>
                             </div>
                             <div class="col-md-4">
-                                <label for="validationCustom04" class="form-label"><strong>Ordem de Serviço:</strong>{{ $serviceorder->service }}</label>
+                                <label for="validationCustom04" class="form-label"><strong>Ordem de Serviço:</strong> {{ $serviceorder->service }}</label>
                             </div>
                             <div class="col-md-4">
-                                <label for="validationCustom04" class="form-label"><strong>Data da execução:</strong>{{ \Carbon\Carbon::parse($serviceorder->date)->format('d/m/Y') }}</label>
+                                <label for="validationCustom04" class="form-label"><strong>Data da execução:</strong> {{ \Carbon\Carbon::parse($serviceorder->date)->format('d/m/Y') }}</label>
                             </div>
                             <div class="col-md-4">
-                                <label for="validationCustom04" class="form-label"><strong>Hora da execução:</strong>{{ $serviceorder->time }}</label>
+                                <label for="validationCustom04" class="form-label"><strong>Hora da execução:</strong> {{ $serviceorder->time }}</label>
                             </div>
                             <div class="col-md-4">
-                                <label for="validationCustom04" class="form-label"><strong>Preço do serviço R$:</strong>{{ $serviceorder->price }}</label>
+                                <label for="validationCustom04" class="form-label"><strong>Preço do serviço R$:</strong> {{ $serviceorder->price }}</label>
                             </div>
                             <div class="col-md-12">
-                                <label for="validationCustom04" class="form-label"><strong>Observação:</strong>{{ $serviceorder->observations }}</label>
+                                <label for="validationCustom04" class="form-label"><strong>Observação:</strong> {{ $serviceorder->observations }}</label>
                             </div>
                             <h5>Total Comments: {{ $comments_count }}</h5>
                         </ul>
@@ -92,10 +92,10 @@
                                 <label for="validationCustomUsername" class="form-label"><strong> status: </strong>{{ $comment->status }}</label>
                             </div>
                             <div class="col-md-12">
-                                <label for="validationCustomUsername" class="form-label"><strong>Status atualizado:</strong>{{ $comment->created_at->format('d/m/Y') }}</label>
+                                <label for="validationCustomUsername" class="form-label"><strong>Status atualizado:</strong> {{ $comment->created_at->format('d/m/Y') }}</label>
                             </div>
                             <div class="col-md-12">
-                                <label for="validationCustomUsername" class="form-label"><strong>Messenger:</strong>{{ $comment->body }}</label>
+                                <label for="validationCustomUsername" class="form-label"><strong>Messenger:</strong> {{ $comment->body }}</label>
                             </div>
                         </li>
                     @endforeach

@@ -13,59 +13,37 @@
             </div>
             <br>
             <div class="card">
-                <h5 class="card-header">{{ $customer->customer }}</h5>
+                <h5 class="card-header">{{ $customer->name }}</h5>
                 <div class="card-body">
-                    <div class="row">
-                        <div class="col">
-                            <label for="validationCustomUsername" class="form-label"><strong>Endereço:</strong>{{ $customer->address }}</label>
-                            <br>                                            
+                    <div class="row" >
+                        <div class="col-md-12">
+                            <p><strong>Endereço:</strong> {{ $customer->address }}</p>                                          
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="col">
-                            <label for="validationCustomUsername" class="form-label"><strong>Caixa postal:</strong>{{ $customer->postal }}</label>
-                            <br>                                            
+                        <div class="col-md-12">
+                            <p><strong>Caixa postal:</strong> {{ $customer->postal }}</p>                                          
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="col">
-                            <label for="validationCustomUsername" class="form-label"><strong>CPF ou CNPJ:</strong>{{ $customer->taxpayer_identification_number }}</label>
-                            <br>                                            
+                        <div class="col-md-12">
+                            <p><strong>CPF ou CNPJ:</strong> {{ $customer->taxpayer_identification_number }}</p>                                         
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="col">
-                            <label for="validationCustomUsername" class="form-label"><strong>Email:</strong>{{ $customer->email }}</label>
-                            <br>                                            
+                        <div class="col-md-12">
+                            <p><strong>Email:</strong> {{ $customer->email }}</p>                                           
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="col">
-                            <label for="validationCustomUsername" class="form-label"><strong>Whatsapp:</strong>{{ $customer->phone_number }}</label>
-                            <br>                                            
+                        <div class="col-md-12">
+                            <p><strong>Whatsapp:</strong> {{ $customer->phone_number }}</p>                                        
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="col">
-                            <label for="validationCustomUsername" class="form-label"><strong> Create: </strong>{{ $customer->created_at->format('d/m/Y') }}</label>
-                            <br>                                            
+                        <div class="col-md-12">
+                            <p><strong> Create: </strong> {{ $customer->created_at->format('d/m/Y') }}</p>                                           
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="col">
-                            <label for="validationCustomUsername" class="form-label"><strong> Update: </strong>{{ $customer->updated_at->format('d/m/Y') }}</label>
-                            <br>                                            
+                        <div class="col-md-12">
+                            <p><strong> Update: </strong> {{ $customer->updated_at->format('d/m/Y') }}</p>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="col">
-                            <a href="{{ route('customer.index') }}" class="btn btn-dark">Volta</a>
+                        <div class="col-md-12">
+                            <a href="{{ route('customer.index') }}" class="btn btn-secondary">Volta</a>
                         </div>
                     </div>
                     
                 </div>
             </div>
-            {{--  --}}
         </div>  
     </div>
 </x-layout>

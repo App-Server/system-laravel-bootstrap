@@ -7,6 +7,7 @@
     <title>Login</title>
     <link href="{{ asset('bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    <link rel="manifest" href="/manifest.json">
     <style>
         body{
             background-image: url('css/asset/fundo.png');
@@ -54,5 +55,12 @@
     </div>
     
     <script src="{{ asset('bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+          navigator.serviceWorker.register('/service-worker.js')
+            .then(() => console.log('Service Worker registrado com sucesso!'))
+            .catch((error) => console.log('Falha ao registrar o Service Worker:', error));
+        }
+    </script>
 </body>
 </html>

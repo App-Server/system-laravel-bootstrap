@@ -9,10 +9,10 @@
                             <div class="card-body">
                                 <div class="row">
                                     <div class="col-md-12">
-                                        <label for="validationCustom04" class="form-label"><strong>Cliente:</strong>{{ $serviceorder->customer }}</label>
+                                        <label for="validationCustom04" class="form-label"><strong>Cliente:</strong> {{ $serviceorder->customer }}</label>
                                     </div>
                                     <div class="col-md-12">
-                                        <label for="validationCustom04" class="form-label"><strong>Serviço:</strong>{{ $serviceorder->service }}</label>
+                                        <label for="validationCustom04" class="form-label"><strong>Serviço:</strong> {{ $serviceorder->service }}</label>
                                     </div>
                                     <div class="col-md-1 text-end">
                                         <a href="{{ route('service-order-comments.index', $serviceorder->id) }}" style="color: black">

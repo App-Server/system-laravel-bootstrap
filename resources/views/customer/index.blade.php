@@ -29,6 +29,14 @@
                         </div>
                     </div>
                 </div>
+                <div class="col-sm-3 mb-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <p class="card-text">Relatório graficos</p>
+                            <a href="#" class="btn btn-secondary">Relatorio</a>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <x-validation-alert />
