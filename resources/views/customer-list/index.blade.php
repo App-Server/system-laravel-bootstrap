@@ -5,7 +5,7 @@
             <div class="row">
                 @foreach ($customerTable as $customer)
                     <div class="col-sm-3 mb-3">
-                        <div class="card" style="width: 18rem;">
+                        <div class="card">
                             <div class="card-body">
                                 <div class="row">
                                     <div class="col-md-12">

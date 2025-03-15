@@ -10,7 +10,7 @@ class CustomerList extends Controller
 {
     public function index()
     {
-        $customerTable = CustomerModels::paginate(54);
+        $customerTable = CustomerModels::paginate(2);
         return view('customer-list.index', compact('customerTable'));
     }
 }
